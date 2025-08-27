@@ -1,10 +1,7 @@
----
-license: apache-2.0
----
-
 # ReasonZoo Evaluation Framework
 
 [![arXiv](https://img.shields.io/badge/arXiv-2508.15754-b31b1b.svg)](https://arxiv.org/abs/2508.15754)
+[![Hugging Face Datasets](https://img.shields.io/badge/Hugging%20Face-Dataset-blue.svg)](https://huggingface.co/datasets/opencompass/ReasonZoo)
 
 This repository contains the evaluation code for assessing language models on the ReasonZoo benchmark.  
 The dataset are also provided on [Hugging Face Datasets](https://huggingface.co/datasets/opencompass/ReasonZoo).
