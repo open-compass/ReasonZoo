@@ -1,6 +1,9 @@
 # ReasonZoo Evaluation Framework
 
+[![arXiv](https://img.shields.io/badge/arXiv-2508.15754-b31b1b.svg)](https://arxiv.org/abs/2508.15754)
+
 This repository contains the evaluation code for assessing language models on the ReasonZoo benchmark.
+
 
 ## Repository Structure
 
@@ -130,4 +133,4 @@ save_prompt: True
 
 ## Acknowledgements
 
-This work builds on the core evaluation strategies pioneered by [KOR-Bench](https://github.com/KOR-Bench/KOR-Bench), in particular its task taxonomy and split-management framework, which we integrate into our end-to-end workflow. Our work further enriches these foundations with a high-throughput, parallel inference engine, an LLM-based adjudication layer, and both “program-of-thought” and function-calling agent modes within a sandboxed environment, etc. We acknowledge with gratitude the  [vLLM](https://github.com/vllm-project/vllm) and SandboxFusion [SandboxFusion](https://github.com/bytedance/SandboxFusion) projects for furnishing the high-performance inference framework and sandboxed execution environment, respectively, which were indispensable to this work. Together, these components enable fast, reproducible benchmarking across a wide variety of reasoning tasks. This repository contains the core evaluation logic for ReasonZoo; the full codebase and accompanying documentation will be released upon paper acceptance.
+This work builds on the core evaluation strategies pioneered by [KOR-Bench](https://github.com/KOR-Bench/KOR-Bench), in particular its task taxonomy and split-management framework, which we integrate into our end-to-end workflow. Our work further enriches these foundations with a high-throughput, parallel inference engine, an LLM-based adjudication layer, and both “program-of-thought” and function-calling agent modes within a sandboxed environment, etc. We acknowledge with gratitude the  [vLLM](https://github.com/vllm-project/vllm) and SandboxFusion [SandboxFusion](https://github.com/bytedance/SandboxFusion) projects for furnishing the high-performance inference framework and sandboxed execution environment, respectively, which were indispensable to this work. Together, these components enable fast, reproducible benchmarking across a wide variety of reasoning tasks.
