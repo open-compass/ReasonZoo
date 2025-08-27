@@ -1,0 +1,460 @@
+boolean_logic_prompt_format:
+  - |
+   Please solve the following problem step by step. During your reasoning process, 
+     if needed, you can choose to write python code to enhance your reasoning. 
+    The code executor will run your code and provide the execution results back to you 
+    to support your reasoning process. Please put the final answer within [[]].
+    Continue this process until you explicitly indicate task completion.
+
+    ### Code Execution Guidelines:
+
+    1. **Reason step-by-step** about the problem in natural language
+    2. **Use Python code** when computation, data analysis, or verification is needed
+    3. **Iterate between reasoning and coding** as necessary
+    4. **Build up your solution incrementally**
+
+    **Available Tool:**
+    - `run_python`: Execute Python code and see the results immediately
+      - Use this when you need to compute, analyze data, test hypotheses, or verify results
+      - The code runs in a sandbox environment with common libraries available
+
+    **Guidelines:**
+    - Start by understanding the problem through reasoning
+    - Write code to explore, compute, or test your ideas
+    - Analyze the code output and continue reasoning
+    - Break complex problems into smaller, manageable steps
+    - Use code to verify your reasoning and provide concrete results
+    - Don't just describe what code would do - actually run it!
+    - ALWAYS include print() statements to output key values and results
+
+
+    **Example workflow:**
+    1. Reason: "I need to analyze this dataset to find patterns..."
+    2. Code: Use `run_python` to load and explore the data
+    3. Reason: "The results show X, which means I should try Y..."
+    4. Code: Use `run_python` to implement approach Y
+    5. Continue iterating until solved
+    ### Logic Calculation Rule:
+
+    {}
+
+    ### Question:
+    {}
+
+    ### Answer:
+
+
+operation_prompt_format: 
+  - |
+    Please solve the following problem step by step. During your reasoning process, 
+     if needed, you can choose to write python code to enhance your reasoning. 
+    The code executor will run your code and provide the execution results back to you 
+    to support your reasoning process. Please put the final answer within [[]].
+    Continue this process until you explicitly indicate task completion.
+
+    ### Code Execution Guidelines:
+
+    1. **Reason step-by-step** about the problem in natural language
+    2. **Use Python code** when computation, data analysis, or verification is needed
+    3. **Iterate between reasoning and coding** as necessary
+    4. **Build up your solution incrementally**
+
+    **Available Tool:**
+    - `run_python`: Execute Python code and see the results immediately
+      - Use this when you need to compute, analyze data, test hypotheses, or verify results
+      - The code runs in a sandbox environment with common libraries available
+
+    **Guidelines:**
+    - Start by understanding the problem through reasoning
+    - Write code to explore, compute, or test your ideas
+    - Analyze the code output and continue reasoning
+    - Break complex problems into smaller, manageable steps
+    - Use code to verify your reasoning and provide concrete results
+    - Don't just describe what code would do - actually run it!
+    - ALWAYS include print() statements to output key values and results
+    
+
+    **Example workflow:**
+    1. Reason: "I need to analyze this dataset to find patterns..."
+    2. Code: Use `run_python` to load and explore the data
+    3. Reason: "The results show X, which means I should try Y..."
+    4. Code: Use `run_python` to implement approach Y
+    5. Continue iterating until solved
+    ### Operation Rule:
+
+    {}
+
+    ### Question:
+    {}
+
+    ### Answer:
+
+
+
+dailylogic_prompt_format:
+  - |
+    Please solve the following problem step by step. During your reasoning process, 
+     if needed, you can choose to write python code to enhance your reasoning. 
+    The code executor will run your code and provide the execution results back to you 
+    to support your reasoning process. Please put the final answer within [[]].
+    Continue this process until you explicitly indicate task completion.
+
+    ### Code Execution Guidelines:
+
+    1. **Reason step-by-step** about the problem in natural language
+    2. **Use Python code** when computation, data analysis, or verification is needed
+    3. **Iterate between reasoning and coding** as necessary
+    4. **Build up your solution incrementally**
+
+    **Available Tool:**
+    - `run_python`: Execute Python code and see the results immediately
+      - Use this when you need to compute, analyze data, test hypotheses, or verify results
+      - The code runs in a sandbox environment with common libraries available
+
+    **Guidelines:**
+    - Start by understanding the problem through reasoning
+    - Write code to explore, compute, or test your ideas
+    - Analyze the code output and continue reasoning
+    - Break complex problems into smaller, manageable steps
+    - Use code to verify your reasoning and provide concrete results
+    - Don't just describe what code would do - actually run it!
+    - ALWAYS include print() statements to output key values and results
+    
+
+    **Example workflow:**
+    1. Reason: "I need to analyze this dataset to find patterns..."
+    2. Code: Use `run_python` to load and explore the data
+    3. Reason: "The results show X, which means I should try Y..."
+    4. Code: Use `run_python` to implement approach Y
+    5. Continue iterating until solved
+
+    ### Puzzle Rule:
+    {}
+
+    ### Question:
+    {}
+
+    ### Answer:
+
+communication_code_prompt_format:
+- |
+  Please solve the following problem step by step. During your reasoning process, 
+     if needed, you can choose to write python code to enhance your reasoning. 
+    The code executor will run your code and provide the execution results back to you 
+    to support your reasoning process. Please put the final answer within [[]].
+    Continue this process until you explicitly indicate task completion.
+
+    ### Code Execution Guidelines:
+
+    1. **Reason step-by-step** about the problem in natural language
+    2. **Use Python code** when computation, data analysis, or verification is needed
+    3. **Iterate between reasoning and coding** as necessary
+    4. **Build up your solution incrementally**
+
+    **Available Tool:**
+    - `run_python`: Execute Python code and see the results immediately
+      - Use this when you need to compute, analyze data, test hypotheses, or verify results
+      - The code runs in a sandbox environment with common libraries available
+
+    **Guidelines:**
+    - Start by understanding the problem through reasoning
+    - Write code to explore, compute, or test your ideas
+    - Analyze the code output and continue reasoning
+    - Break complex problems into smaller, manageable steps
+    - Use code to verify your reasoning and provide concrete results
+    - Don't just describe what code would do - actually run it!
+    - ALWAYS include print() statements to output key values and results
+    
+
+    **Example workflow:**
+    1. Reason: "I need to analyze this dataset to find patterns..."
+    2. Code: Use `run_python` to load and explore the data
+    3. Reason: "The results show X, which means I should try Y..."
+    4. Code: Use `run_python` to implement approach Y
+    5. Continue iterating until solved
+
+  ### Instructions:
+
+  {}
+
+  ### Question:
+  {}
+
+  ### Answer:
+
+operation_research_prompt_format:
+  - |
+    Please solve the following problem step by step. During your reasoning process, 
+     if needed, you can choose to write python code to enhance your reasoning. 
+    The code executor will run your code and provide the execution results back to you 
+    to support your reasoning process. Please put the final answer within [[]].
+    Continue this process until you explicitly indicate task completion.
+
+    ### Code Execution Guidelines:
+
+    1. **Reason step-by-step** about the problem in natural language
+    2. **Use Python code** when computation, data analysis, or verification is needed
+    3. **Iterate between reasoning and coding** as necessary
+    4. **Build up your solution incrementally**
+
+    **Available Tool:**
+    - `run_python`: Execute Python code and see the results immediately
+      - Use this when you need to compute, analyze data, test hypotheses, or verify results
+      - The code runs in a sandbox environment with common libraries available
+
+    **Guidelines:**
+    - Start by understanding the problem through reasoning
+    - Write code to explore, compute, or test your ideas
+    - Analyze the code output and continue reasoning
+    - Break complex problems into smaller, manageable steps
+    - Use code to verify your reasoning and provide concrete results
+    - Don't just describe what code would do - actually run it!
+    - ALWAYS include print() statements to output key values and results
+    
+
+    **Example workflow:**
+    1. Reason: "I need to analyze this dataset to find patterns..."
+    2. Code: Use `run_python` to load and explore the data
+    3. Reason: "The results show X, which means I should try Y..."
+    4. Code: Use `run_python` to implement approach Y
+    5. Continue iterating until solved
+    
+    ### Operation Research Rule:
+
+    {}
+
+    ### Question:
+    {}
+
+    ### Answer:
+    
+number_calculation_prompt_format:
+  - |
+    Please solve the following problem step by step. During your reasoning process, 
+     if needed, you can choose to write python code to enhance your reasoning. 
+    The code executor will run your code and provide the execution results back to you 
+    to support your reasoning process. Please put the final answer within [[]].
+    Continue this process until you explicitly indicate task completion.
+
+    ### Code Execution Guidelines:
+
+    1. **Reason step-by-step** about the problem in natural language
+    2. **Use Python code** when computation, data analysis, or verification is needed
+    3. **Iterate between reasoning and coding** as necessary
+    4. **Build up your solution incrementally**
+
+    **Available Tool:**
+    - `run_python`: Execute Python code and see the results immediately
+      - Use this when you need to compute, analyze data, test hypotheses, or verify results
+      - The code runs in a sandbox environment with common libraries available
+
+    **Guidelines:**
+    - Start by understanding the problem through reasoning
+    - Write code to explore, compute, or test your ideas
+    - Analyze the code output and continue reasoning
+    - Break complex problems into smaller, manageable steps
+    - Use code to verify your reasoning and provide concrete results
+    - Don't just describe what code would do - actually run it!
+    - ALWAYS include print() statements to output key values and results
+    
+
+    **Example workflow:**
+    1. Reason: "I need to analyze this dataset to find patterns..."
+    2. Code: Use `run_python` to load and explore the data
+    3. Reason: "The results show X, which means I should try Y..."
+    4. Code: Use `run_python` to implement approach Y
+    5. Continue iterating until solved
+    
+    ### Number Calculation Rule:
+    {}
+
+    ### Question:
+    {}
+
+    ### Answer:
+
+gradeschoolmath_prompt_format:
+  - |
+    Please solve the following problem step by step. During your reasoning process, 
+     if needed, you can choose to write python code to enhance your reasoning. 
+    The code executor will run your code and provide the execution results back to you 
+    to support your reasoning process. Please put the final answer within [[]].
+    Continue this process until you explicitly indicate task completion.
+
+    ### Code Execution Guidelines:
+
+    1. **Reason step-by-step** about the problem in natural language
+    2. **Use Python code** when computation, data analysis, or verification is needed
+    3. **Iterate between reasoning and coding** as necessary
+    4. **Build up your solution incrementally**
+
+    **Available Tool:**
+    - `run_python`: Execute Python code and see the results immediately
+      - Use this when you need to compute, analyze data, test hypotheses, or verify results
+      - The code runs in a sandbox environment with common libraries available
+
+    **Guidelines:**
+    - Start by understanding the problem through reasoning
+    - Write code to explore, compute, or test your ideas
+    - Analyze the code output and continue reasoning
+    - Break complex problems into smaller, manageable steps
+    - Use code to verify your reasoning and provide concrete results
+    - Don't just describe what code would do - actually run it!
+    - ALWAYS include print() statements to output key values and results
+    
+
+    **Example workflow:**
+    1. Reason: "I need to analyze this dataset to find patterns..."
+    2. Code: Use `run_python` to load and explore the data
+    3. Reason: "The results show X, which means I should try Y..."
+    4. Code: Use `run_python` to implement approach Y
+    5. Continue iterating until solved
+    
+    ### Gradeschool Math Rule:
+
+    {}
+
+    ### Question:
+    {}
+
+    ### Answer:
+
+formal_language_prompt_format:
+  - |
+    Please solve the following problem step by step. During your reasoning process, 
+     if needed, you can choose to write python code to enhance your reasoning. 
+    The code executor will run your code and provide the execution results back to you 
+    to support your reasoning process. Please put the final answer within [[]].
+    Continue this process until you explicitly indicate task completion.
+
+    ### Code Execution Guidelines:
+
+    1. **Reason step-by-step** about the problem in natural language
+    2. **Use Python code** when computation, data analysis, or verification is needed
+    3. **Iterate between reasoning and coding** as necessary
+    4. **Build up your solution incrementally**
+
+    **Available Tool:**
+    - `run_python`: Execute Python code and see the results immediately
+      - Use this when you need to compute, analyze data, test hypotheses, or verify results
+      - The code runs in a sandbox environment with common libraries available
+
+    **Guidelines:**
+    - Start by understanding the problem through reasoning
+    - Write code to explore, compute, or test your ideas
+    - Analyze the code output and continue reasoning
+    - Break complex problems into smaller, manageable steps
+    - Use code to verify your reasoning and provide concrete results
+    - Don't just describe what code would do - actually run it!
+    - ALWAYS include print() statements to output key values and results
+    
+
+    **Example workflow:**
+    1. Reason: "I need to analyze this dataset to find patterns..."
+    2. Code: Use `run_python` to load and explore the data
+    3. Reason: "The results show X, which means I should try Y..."
+    4. Code: Use `run_python` to implement approach Y
+    5. Continue iterating until solved
+    
+    ### Formal Language Rule:
+
+    {}
+
+    ### Question:
+    {}
+
+    ### Answer:
+
+
+
+physics_prompt_format:
+  - |
+    Please solve the following problem step by step. During your reasoning process, 
+     if needed, you can choose to write python code to enhance your reasoning. 
+    The code executor will run your code and provide the execution results back to you 
+    to support your reasoning process. Please put the final answer within [[]].
+    Continue this process until you explicitly indicate task completion.
+
+    ### Code Execution Guidelines:
+
+    1. **Reason step-by-step** about the problem in natural language
+    2. **Use Python code** when computation, data analysis, or verification is needed
+    3. **Iterate between reasoning and coding** as necessary
+    4. **Build up your solution incrementally**
+
+    **Available Tool:**
+    - `run_python`: Execute Python code and see the results immediately
+      - Use this when you need to compute, analyze data, test hypotheses, or verify results
+      - The code runs in a sandbox environment with common libraries available
+
+    **Guidelines:**
+    - Start by understanding the problem through reasoning
+    - Write code to explore, compute, or test your ideas
+    - Analyze the code output and continue reasoning
+    - Break complex problems into smaller, manageable steps
+    - Use code to verify your reasoning and provide concrete results
+    - Don't just describe what code would do - actually run it!
+    - ALWAYS include print() statements to output key values and results
+    
+
+    **Example workflow:**
+    1. Reason: "I need to analyze this dataset to find patterns..."
+    2. Code: Use `run_python` to load and explore the data
+    3. Reason: "The results show X, which means I should try Y..."
+    4. Code: Use `run_python` to implement approach Y
+    5. Continue iterating until solved
+    
+    ### Physics Rule:
+
+    {}
+
+    ### Question:
+    {}
+
+    ### Answer:
+
+puzzle_and_code_prompt_format:
+  - |
+    Please solve the following problem step by step. During your reasoning process, 
+     if needed, you can choose to write python code to enhance your reasoning. 
+    The code executor will run your code and provide the execution results back to you 
+    to support your reasoning process. Please put the final answer within [[]].
+    Continue this process until you explicitly indicate task completion.
+
+    ### Code Execution Guidelines:
+
+    1. **Reason step-by-step** about the problem in natural language
+    2. **Use Python code** when computation, data analysis, or verification is needed
+    3. **Iterate between reasoning and coding** as necessary
+    4. **Build up your solution incrementally**
+
+    **Available Tool:**
+    - `run_python`: Execute Python code and see the results immediately
+      - Use this when you need to compute, analyze data, test hypotheses, or verify results
+      - The code runs in a sandbox environment with common libraries available
+
+    **Guidelines:**
+    - Start by understanding the problem through reasoning
+    - Write code to explore, compute, or test your ideas
+    - Analyze the code output and continue reasoning
+    - Break complex problems into smaller, manageable steps
+    - Use code to verify your reasoning and provide concrete results
+    - Don't just describe what code would do - actually run it!
+    - ALWAYS include print() statements to output key values and results
+    
+
+    **Example workflow:**
+    1. Reason: "I need to analyze this dataset to find patterns..."
+    2. Code: Use `run_python` to load and explore the data
+    3. Reason: "The results show X, which means I should try Y..."
+    4. Code: Use `run_python` to implement approach Y
+    5. Continue iterating until solved
+    
+    ### Puzzle and Code Rule:
+
+    {}
+
+    ### Question:
+    {}
+
+    ### Answer:

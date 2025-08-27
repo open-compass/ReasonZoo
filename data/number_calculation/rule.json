@@ -1,0 +1,110 @@
+[
+    {
+        "idx": "1",
+        "title": "Complex Number to Polar Form Conversion",
+        "rule_content": "You are tasked with converting a given complex number to its polar form, which includes its amplitude and angle (in radians). Provide the answer in the format [[amplitude, angle]]. Keep 2 decimal places for the answer.",
+        "tag": "mathematics"
+    },
+    {
+        "idx": "2",
+        "title": "Polar to Rectangular Conversion (Complex Number)",
+        "rule_content": "Given a complex number in polar form, your task is to convert it into rectangular form (real part, imaginary part). Answer in the format [[real part, imaginary part]]. Keep 2 decimal places for the answer.",
+        "tag": "mathematics"
+    },
+    {
+        "idx": "3",
+        "title": "Decimal to Binary, Octal, and Hexadecimal Conversion",
+        "rule_content": "You are given a decimal number. Convert it into binary, octal, and hexadecimal representations. Answer in the format [[binary, octal, hexadecimal]].",
+        "tag": "mathematics"
+    },
+    {
+        "idx": "4",
+        "title": "Binary to Decimal, Octal, and Hexadecimal Conversion",
+        "rule_content": "You are given a binary number. Convert it into decimal, octal, and hexadecimal representations. Provide the answer in the format [[decimal, octal, hexadecimal]]. ",
+        "tag": "mathematics"
+    },
+    {
+        "idx": "5",
+        "title": "Two's Complement Calculation",
+        "rule_content": "You are given a decimal number and a bit-length. Calculate the two's complement of the number in the given bit-length and provide the answer in the format [[twos complement]]. ",
+        "tag": "mathematics"
+    },
+    {
+        "idx": "6",
+        "title": "Spherical Coordinates to Cartesian Coordinates Conversion",
+        "rule_content": "You are provided with spherical coordinates (radius, theta, phi). Convert them into Cartesian coordinates (x, y, z). Answer in the format [[x, y, z]]. Keep 2 decimal places for the answer.",
+        "tag": "mathematics"
+    },
+    {
+        "idx": "7",
+        "title": "Cartesian Coordinates to Spherical Coordinates Conversion",
+        "rule_content": "You are given Cartesian coordinates (x, y, z). Convert them into spherical coordinates (radius, theta, phi). Answer in the format [[radius, theta, phi]]. Keep 2 decimal places for the answer.",
+        "tag": "mathematics"
+    },
+    {
+        "idx": "8",
+        "title": "Amplitude and Phase to Complex Number",
+        "rule_content": "You are given the amplitude and phase of a complex number. Convert these values into the rectangular form of the complex number (real part, imaginary part). Provide the answer in the format [[real part, imaginary part]]. Keep 2 decimal places for the answer.",
+        "tag": "mathematics"
+    },
+    {
+        "idx": "9",
+        "title": "Coordinate Transformation (2D Rotation)",
+        "rule_content": "You are given a 2D point (x, y) and an angle for rotation. Rotate the point by the given angle and return the new coordinates in the format [[x', y']]. Keep 2 decimal places for the answer.",
+        "tag": "mathematics"
+    },
+    {
+        "idx": "10",
+        "title": "Unit Conversion (Length, Area, Volume)",
+        "rule_content": "You are provided with measurements in various units (length in meters, area in square meters, and volume in cubic meters). Convert these measurements into their respective units (kilometers, centimeters, square kilometers, and liters). Provide the answer in the format [[length_km, length_cm, area_km2, volume_liters]]. Keep 2 decimal places for the answer. ",
+        "tag": "conversion"
+    },
+    {
+        "idx": "11",
+        "title": "Rotate a 2D point around a center point",
+        "rule_content": "You are given a 2D point (x, y) and a center point (cx, cy). Rotate the point around the center point by the given angle and return the new coordinates in the format [[x', y']]. Keep 2 decimal places for the answer.",
+        "tag": "mathematics"
+    },
+    {
+        "idx": "12",
+        "title": "Projection of a 3D point onto a plane",
+        "rule_content": "You are given a 3D point (x, y, z) and a plane equation ax + by + cz + d = 0. Project the point onto the plane and return the new coordinates in the format [[x', y', z']]. Keep 2 decimal places for the answer.",
+        "tag": "mathematics"
+    },
+    {
+        "idx": "13",
+        "title": "Rotate a 3D point around an arbitrary axis",
+        "rule_content": "You are given a 3D point (x, y, z) and an arbitrary axis of rotation defined by a unit vector (ux, uy, uz). You are also given an angle \u03b8 (in radians). Rotate the point around the axis by the given angle \u03b8 and return the new coordinates in the format [[x', y', z']]. Keep 2 decimal places for the answer. Note that when we say axis 2, we start from 0, and the axis 2 can be seen as axis z.",
+        "tag": "mathematics, geometry"
+    },
+    {
+        "idx": "14",
+        "title": "Intersection of two lines in 3D space",
+        "rule_content": "You are given two lines in 3D space, each defined by two points. Line 1 passes through points (x1, y1, z1) and (x2, y2, z2), and Line 2 passes through points (x3, y3, z3) and (x4, y4, z4). Determine if the two lines intersect, and if they do, return the coordinates of the intersection point in the format [[x', y', z']]. If they don't intersect, return 'No intersection.' Keep 2 decimal places for the answer.",
+        "tag": "mathematics, geometry, algebra" 
+    },
+    {
+        "idx": "15",
+        "title": "Transformation of a 3D point using a transformation matrix",
+        "rule_content": "You are given a 3D point (x, y, z) and a 4x4 transformation matrix. Apply the transformation matrix to the point and return the new coordinates in the format [[x', y', z']].Keep 2 decimal places for the answer.",
+        "tag": "mathematics, linear algebra, geometry"
+    },
+    {
+        "idx": "16",
+        "title": "Distance from a point to a plane in 3D space",
+        "rule_content": "You are given a point (x0, y0, z0) and a plane equation ax + by + cz + d = 0. Compute the perpendicular distance from the point to the plane and return the distance as a scalar value.Keep 2 decimal places for the answer.",
+        "tag": "mathematics, geometry"
+    },
+    {
+        "idx": "17",
+        "title": "Projection of a 3D point onto a 3D line",
+        "rule_content": "You are given a 3D point (x, y, z) and a line defined by two points (x1, y1, z1) and (x2, y2, z2). Project the point onto the line and return the coordinates of the projected point in the format [[x', y', z']].Keep 2 decimal places for the answer.",
+        "tag": "mathematics, geometry, algebra"
+    },
+    {
+        "idx": "18",
+        "title": "Combination of multiple transformations",
+        "rule_content": "You are given one or multiple n-diminsional points and a series of transformation, please apply the transformations to the points and return the new coordinates in the format [[x', y', z']]. Keep 2 decimal places for the answer.Note that when we say axis 2, we start from 0, and the axis 2 can be seen as axis z.",
+        "tag": "mathematics, geometry, algebra"
+    }
+]

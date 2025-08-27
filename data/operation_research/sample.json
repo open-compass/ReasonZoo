@@ -1,0 +1,814 @@
+[
+  {
+    "idx": "1",
+    "question": "An investment bank has a total budget of 14 million euros, and can make 4 types of investments (numbered 1, 2, 3, 4). The following tables specifies the amount to be invested and the net revenue for each investment. Each investment must be made in full if made at all. \n\nInvestment | 1 | 2 | 3 | 4\nAmount | 5 | 7 | 4 | 3\nNet revenue | 16 | 22 | 12 | 8\n\nFormulate an integer linear program to maximize the total net revenue. Suggest a way, beside the simplex algorithm, to solve the continuous relaxation of the problem, and use it within a Branch-and-Bound algorithm to solve the problem. Please only answer the maximum revenue, in the format of [[24]] if the maximum revenue is 24.",
+    "answer": "[[42]]",
+    "needle": "The formulation of the problem is as follows:max 16x1 + 22x2 + 12x3 + 8x4 5x1 + 7x2 + 4x3 + 3x4 \u2264 14 x1, x2, x3, x4 \u2208 {0, 1}. In order to solve the continuous relaxation of this integer programming problem, we order the ratios between revenue and cost of each investment: (16/5, 22/7, 12/4, 8/3) = (3.2, 3.14, 3, 2.66). It follows that 1,2,3,4 is the preference order given by revenue per unit investment cost. We now take fractions of the various investments in the given preference order (recall we are solving the continuous relaxation now, so fractions are allowed) so that (a) the fractions grow to be at most 1 and (b) the knapsack constraint 5x1 + 7x2 + 4x3 + 3x4 \u2264 14 is satisfied. For exoperation search programe, at node 1 we have x1 = 1 (total invested amount: 5 million euros), x2 = 1 (total invested amount: 5+7=12 million euros), x3 = 12(total invested amount: 12+2=14 million euros). We can use this solution method within a Branch and Boundalgorithm. The latter adds constraints of the type xi \u2264 0 or xi \u2265 1 at each relaxed subproblem, which must be easily taken into account by forcing either the zero or the total investment of particular type.",
+    "difficulty": "3",
+    "rule_id": "1",
+    "length": "682"
+  },
+  {
+    "idx": "2",
+    "question": "One practical problem encountered during the DNA mapping process is that of compactly storing extremely long DNA sequences of the same length which do not differ greatly. We consider here a simplified version of the problem with sequences of 2 symbols only (0 and 1). The Hamming distance between two sequences a, b \u2208 F2^n is defined as \u03a3ni=1 |ai - bi|, i.e. the number of bits which should be flipped to transform a into b. For exoperation search programe, on the following set of 6 sequences below, the distance matrix is as follows:\n\n1. 011100011101\n2. 101101011001\n3. 110100111001\n4. 101001111101\n5. 100100111101\n6. 010101011100\n\n1 2 3 4 5 6\n1 0 4 4 4 5 4 3\n2 2 0 4 3 4 4 5\n3 3 0 5 2 5 5\n4 4 - - 0 3 6\n5 5 - - 0 5\n6 6 - - - 0\n\nAs long as the Hamming distances are not too large, a compact storage scheme can be envisaged where we only store one complete sequence and all the differences which allow the reconstruction of the other sequences. Explain how this problem can be formulated to find a spanning tree of minimum cost in a graph. Solve the problem for the instance given above. Only answer the minimum cost, in the format of [[24]] if the minimum cost is 24.",
+    "answer": "[[15]]",
+    "needle": "This problem can be formulated as a minimum cost spanning tree problem on a complete undirected graph, where each vertex represents a sequence and the weight of an edge {i, j} is given by the Hamming distance between sequence i and sequence j. To each edge {i, j} we also associate the sequence of bit flips necessary to transform sequence i into sequence j. The goal is to find a minimum cost spanning tree in this graph to recover all possible sequences starting from one sequence.",
+    "difficulty": "3",
+    "rule_id": "1",
+    "length": "1169"
+  },
+  {
+    "idx": "3",
+    "question": "A firm is planning the production of 3 products A1, A2, A3. In a month production can be active for 22 days. In the following tables are given: maximum demands (units=100kg), price ($/100Kg), production costs (per 100Kg of product), and production quotas (maximum amount of 100kg units of product that would be produced in a day if all production lines were dedicated to the product).\n\nProduct | A1 | A2 | A3\nMaximum demand | 5300 | 4500 | 5400\nSelling price | $124 | $109 | $115\nProduction cost | $73.30 | $52.90 | $65.40\nProduction quota | 500 | 450 | 550\n\n1. Formulate an operation search program model to determine the production plan to maximize the total income.\n\n2. Change the mathematical modeland the operation search program model to cater for a fixed activation cost on the production line, as follows:\n\nProduct | A1 | A2 | A3\nActivation cost | $170000 | $150000 | $100000\n\n3. Change the mathematical modeland the operation search program model to cater for both the fixed activation cost and for a minimum production batch:\n\nProduct | A1 | A2 | A3\nMinimum batch | 20 | 20 | 16, please only answer the numeric output for the last model and answer the quantity of product i to produce in the format of [[A1=1, A2=2, A3=3]] if the quantity of product 1,2,3 to produce is 1, 2, 3 respectively.",
+    "answer": "[[A1=0, A2=4500, A3=5400]]",
+    "needle": "The CPLEX solution found the optimal production plan as follows:\nA1: 0 units\nA2: 4500 units\nA3: 5400 units\nThe activation status for the products is:\nA1: Not activated\nA2: Activated\nA3: Activated",
+    "difficulty": "3",
+    "rule_id": "1",
+    "length": "1252"
+  },
+  {
+    "idx": "4",
+    "question": "A firm is planning the production of 3 products A1, A2, A3 over a time horizon of 4 months (January to April). Demand for the products over the months is as follows:\n\nProduct | A1 | A2 | A3\nJanuary | 5300 | 4500 | 4400\nFebruary | 1200 | 5400 | 6700\nMarch | 7400 | 6500 | 12500\nApril | 5300 | 7200 | 13200\n\nPrices, production costs, production quotas, activation costs and minimum batches (see Ex. 4.3 for definitions of these quantities) are:\n\nProduct | A1 | A2 | A3\nUnit prices | $124 | $109 | $115\nActivation costs | $150000 | $150000 | $100000\nProduction costs | $73.30 | $52.90 | $65.40\nProduction quotas | 500 | 450 | 550\nMinimum batches | 20 | 20 | 16\n\nThe firm also has 800 units of storage space available at a cost of $3.50 for A1, $4.00 for A2, and $3.00 for A3. Please formulate the optimization model and provide the solution to maximize total revenue. Only answer the maximum total revenue, in the format of [[24]] if the maximum total revenue is 24.",
+    "answer": "[[1581550]]",
+    "needle": "Formulation: Indices: i \u2208 {A1, A2, A3}, j \u2208 {1, 2, 3, 4}; Parameters: P_j, d_{ij}, v_i, c_i, q_i, a_i, l_i, m_i, C; Variables: x_{ij}, w_{ij}, z_{ij}, y_{ij}; Objective: max \u2211_{i=1}^{3} (v_i \u2211_{j=1}^{4} w_{ij} - c_i \u2211_{j=1}^{4} x_{ij} - m_i \u2211_{j=1}^{4} z_{ij} - a_i \u2211_{j=1}^{4} y_{ij}); Constraints: Demand: \u2211_{j=1}^{4} w_{ij} \u2264 d_{ij}; Production: \u2211_{i=1}^{3} x_{ij}/q_i \u2264 P_j; Activation: \u2211_{j=1}^{4} x_{ij} \u2264 P_j q_i y_{ij}; Minimum batch: x_{ij} \u2265 l_i y_{ij}; Storage: \u2211_{i=1}^{3} z_{ij} \u2264 C.",
+    "difficulty": "4",
+    "rule_id": "1",
+    "length": "963"
+  },
+  {
+    "idx": "5",
+    "question": "A rich aristocrat passes away, leaving the following legacy:\n\u2022 A Caillebotte picture: 25000$\n\u2022 A bust of Diocletian: 5000$\n\u2022 A Yuan dynasty Chinese vase: 20000$\n\u2022 A 911 Porsche: 40000$\n\u2022 Three diamonds: 12000$ each\n\u2022 A Louis XV sofa: 3000$\n\u2022 Two very precious Jack Russell race dogs: 3000$ each (the will asserts that they may not be separated)\n\u2022 A sculpture dated 200 A.D.: 10000$\n\u2022 A sailing boat: 15000$\n\u2022 A Harley Davidson motorbike: 10000$\n\u2022 A piece of furniture that once belonged to Cavour: 13000$, which must be shared between the two sons.\n\nWhat is the partition that minimizes the difference between the values of the two parts? Formulate a mathematical modeland solve it with operation search program Only answer the minimum difference, in the format of [[24]] if the minimum difference is 24.",
+    "answer": "[[92000]]",
+    "needle": "The problem can be formulated as a Subset-Sum problem. The objective is to partition the set of objects between two brothers in such a way that the absolute difference in the value of the inheritance is minimized. Let the set of objects be denoted as A, where v(a) is the value of each object a \u2208 A. We introduce binary variables x_a and y_a for each object a \u2208 A, where x_a = 1 if object a is assigned to brother x, and y_a = 1 if object a is assigned to brother y. The constraint is that for each object, either x_a + y_a = 1. The objective function can be formulated as: min | \u2211_{a \u2208 A_1} v(a) - \u2211_{a \u2208 A_2} v(a) | = | \u2211_{a \u2208 A_1} v(a) - \u2211_{a \u2208 A} v(a) + \u2211_{a \u2208 A_1} v(a) |. This is subject to the constraints: \u2200 a \u2208 A, x_a + y_a = 1, x_a, y_a \u2208 {0, 1}. The objective is to minimize the total value difference between the two sets of objects assigned to the brothers. The total value of the inheritance is denoted by V = \u2211_{a \u2208 A} v(a). This can be solved by formulating it as a Mixed Integer Linear Programming (MILP) problem. The two possible LP formulations are as follows: max \u2211_{a \u2208 A} v(a) x_a s.t. \u2211_{a \u2208 A} v(a) x_a \u2264 V/2, x_a \u2208 {0, 1} \u2200 a \u2208 A or alternatively minimizing the inheritance for one brother with constraints to ensure it is within a certain range of the total inheritance value. After formulating the mathematical program, it can be solved using operation search program.",
+    "difficulty": "4",
+    "rule_id": "1",
+    "length": "804"
+  },
+  {
+    "idx": "6",
+    "question": "The independent state of Carelland mainly exports four goods: steel, engines, electronic components and plastics. The Chancellor of the Exchequer (a.k.a. the minister of economy) of Carelland wants to maximize exports and minimize imports. The unit prices on the world markets for steel, engines, electronics and plastics, expressed in the local currency (the Klunz) are, respectively: 500, 1500, 300, 1200. Producing 1 steel unit requires 0.02 engine units, 0.01 plastics units, 250 Klunz in other imported goods and 6 man-months of work. Producing 1 engine unit requires 0.8 steel units, 0.15 electronics units, 0.11 plastics units, 300 Klunz in imported goods and 1 man-year. One electronics unit requires: 0.01 steel units, 0.01 engine units, 0.05 plastics units, 50 Klunz in imported goods and 6 man-months. One plastics unit requires: 0.03 engine units, 0.2 steel units, 0.05 electronics units, 300 Klunz in imported goods and 2 man-years. Engine production is limited to 650000 units, plastics production to 60000 units. The total available workforce is 830000 each year. Steel, engines, electronics and plastics cannot be imported. Find the method that maximizes the gross internal product and solve the problem with operation search program. Only answer the maximum gross internal product, in the format of [[24]] if the maximum gross internal product is 24.",
+    "answer": "[[435431250]]",
+    "needle": "Maximize the gross internal product by optimizing the production and export of steel, engines, electronics, and plastics, subject to constraints on workforce, raw material requirements, and production limits using linear programming.",
+    "difficulty": "4",
+    "rule_id": "1",
+    "length": "1367"
+  },
+  {
+    "idx": "7",
+    "question": "An Italian transportation firm should carry some empty containers from its 6 stores (in Verona, Perugia, Rome, Pescara, Taranto and Lamezia) to the main national ports (Genoa, Venice, Ancona, Naples, Bari). The container stocks at the stores are the following:\n\nStore | Empty containers\nVerona | 10\nPerugia | 12\nRome | 20\nPescara | 24\nTaranto | 18\nLamezia | 40\n\nThe demands at the ports are as follows:\n\nPort | Container demand\nGenoa | 20\nVenice | 15\nAncona | 25\nNaples | 33\nBari | 21\n\nTransportation is carried out by a fleet of lorries. The transportation cost for each container is proportional to the distance travelled by the lorry, and amounts to 30 euro / km. Every lorry can carry at most 2 containers. Distances are as follows:\n\nStore | Genoa | Venice | Ancona | Naples | Bari\nVerona | 290 km | 115 km | 355 km | 715 km | 810 km\nPerugia | 380 km | 340 km | 165 km | 380 km | 610 km\nRome | 505 km | 530 km | 285 km | 220 km | 450 km\nPescara | 655 km | 450 km | 155 km | 240 km | 315 km\nTaranto | 1010 km | 840 km | 550 km | 305 km | 95 km\nLamezia | 1072 km | 1097 km | 747 km | 372 km | 333 km\n\nTry to find the minimal cost transportation policy. Please answer in the format of [[minimal cost]]",
+    "answer": "[[4685100]]",
+    "needle": "Minimize the transportation cost by optimizing the number of containers and lorries to transport from stores to ports subject to store availability, port demand, and lorry capacity constraints.",
+    "difficulty": "4",
+    "rule_id": "1",
+    "length": "1202"
+  },
+  {
+    "idx": "8",
+    "question": "10 tasks must be run on 3 CPUs at 1.33, 2 and 2.66 GHz (each processor can run only one task at a time). The number of elementary operations of the tasks (expressed in billions of instructions (BI)) is as follows:\n\nTask | 1 | 2 | 3 | 4 | 5 | 6 | 7\nBI   | 1.1 | 2.1 | 3 | 1 | 0.7 | 5 | 3\n\nSchedule tasks to processors so that the completion time of the last task is minimized. Only answer the completion time of the last task, in the unit of seconds, format of [[24]] if the completion time of the last task is 24. Keep the answer to 9 decimal places.",
+    "answer": "[[2.781954887]]",
+    "needle": "The mathematical formulation involves minimizing the completion time of the last task by scheduling tasks on CPUs such that the total computation time is minimized while respecting the constraints on task lengths, CPU assignment, and overlapping tasks. This can be formulated as a linear programming problem with variables for task start times, CPU assignments, and completion times, subject to non-overlapping constraints between tasks on CPUs, task lengths, and CPU speed limitations.",
+    "difficulty": "4",
+    "rule_id": "1",
+    "length": "550"
+  },
+  {
+    "idx": "9",
+    "question": "A fabric dyeing plant has 3 dyeing baths. Each batch of fabric must be dyed in each bath in the order: first, second, third bath. The plant must color five batches of fabric of different sizes. Dyeing batch i in bath j takes a time s_ij expressed in hours in the matrix below:\n\n[ \\begin{pmatrix} 3 & 1 & 1 \\\\ 2 & 1.5 & 1 \\\\ 3 & 1.2 & 1.3 \\\\ 2 & 2 & 2 \\\\ 2.1 & 2 & 3 \\end{pmatrix} ]\n\nSchedule the dyeing operations in the baths so that the ending time of the last batch is minimized. Only answer the ending time of the last batch, in the unit of hours, format of [[24]] if the ending time of the last batch is 24. Keep the answer to 9 decimal places.",
+    "answer": "[[14.1]]",
+    "needle": "Formulate the problem as an optimization task minimizing the completion time of the last batch subject to constraints ensuring that tasks are dyed sequentially in each bath, and that overlapping or incorrect task orderings are avoided. Use integer programming to model the task scheduling.",
+    "difficulty": "4",
+    "rule_id": "1",
+    "length": "649"
+  },
+  {
+    "idx": "10",
+    "question": "On Dantzig Street cars can be parked on both sides of the street. Mr. Edmonds, who lives at number 1, is organizing a party for around 30 people, who will arrive in 15 cars. The length of the i-th car is \u03bbi, expressed in meters as follows:\n\nCar index | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15\n\u03bbi (meters) | 4 | 4.5 | 5 | 4.1 | 2.4 | 5.2 | 3.7 | 3.5 | 3.2 | 4.5 | 2.3 | 3.3 | 3.8 | 4.6 | 3\n\nIn order to avoid bothering the neighbours, Mr. Edmonds would like to arrange the parking on both sides of the street so that the length of the street occupied by his friends' cars should be minimum. Only answer the minimum length of the street occupied by his friends' cars, in the unit of meters, format of [[24]] if the minimum length of the street occupied by his friends' cars is 24. Keep the answer to 9 decimal places.",
+    "answer": "[[42.1]]",
+    "needle": "Formulate the problem by minimizing the maximum length of parking on both sides of the street subject to constraints on the car assignments and lengths, ensuring cars are parked on either side with the total length fitting the street.",
+    "difficulty": "3",
+    "rule_id": "1",
+    "length": "839"
+  },
+  {
+    "idx": "11",
+    "question": "An expression parser is a program that reads mathematical expressions (input by the user as strings) and evaluates their values on a set of variable values. This is done by representing the mathematical expression as a directed binary tree. The leaf nodes represent variables or constants; the other nodes represent binary (or unary) operators such as arithmetic (+, -, *, /, power) or transcendental (sin, cos, tan, log, exp) operators. The unary operators are represented by a node with only one arc in its outgoing star, whereas the binary operators have two arcs. The figure below is the binary expression tree for (x + 2)e^x.\n\nThe expression parser consists of several subroutines.\n\n\u2022 main(): the program entry point;\n\u2022 parse(): reads the string containing the mathematical expression and transforms it into a binary expression tree;\n\u2022 gettoken(): returns and deletes the next semantic token (variable, constant, operator, brackets) from the mathematical expression string buffer;\n\u2022 ungettoken(): pushes the current semantic token back in the mathematical expression string buffer;\n\u2022 readexpr(): reads the operators with precedence 4 (lowest: +,-);\n\u2022 readterm(): reads the operators with precedence 3 (*, /);\n\u2022 readpower(): reads the operators with precedence 2 (power);\n\u2022 readprimitive(): reads the operators of precedence 1 (functions, expressions in brackets);\n\u2022 sum(term a, term b): make a tree + a / b;\n\u2022 difference(term a, term b): make a tree - a / b;\n\u2022 product(term a, term b): make a tree * a / b;\n\u2022 fraction(term a, term b): make a tree / a / b;\n\u2022 power(term a, term b): make a tree ^ a / b;\n\u2022 minus(term a): make a tree - -> a;\n\u2022 logarithm(term a): make a tree make a tree log -> a;\n\u2022 exponential(term a): make a tree make a tree exp -> a;\n\u2022 sine(term a): make a tree make a tree sin -> a;\n\u2022 cosine(term a): make a tree make a tree cos -> a;\n\u2022 tangent(term a): make a tree make a tree tan -> a;\n\u2022 variable(var x): make a leaf node x;\n\u2022 number(double d): make a leaf node d;\n\u2022 readdata(): reads a table of variable values from a file;\n\u2022 evaluate(): computes the value of the binary tree when substituting each variable with the corresponding value;\n\u2022 printresult(): print the results.\n\nFor each function we give the list of called functions and the quantity of data to be passed during the call.\n\n\u2022 main: readdata (64KB), parse (2KB), evaluate (66KB), printresult(64KB)\n\u2022 evaluate: evaluate (3KB)\n\u2022 parse: gettoken (0.1KB), readexpr (1KB)\n\u2022 readprimitive: gettoken (0.1KB), variable (0.5KB), number (0.2KB), logarithm (1KB), exponential (1KB), sine (1KB), cosine (1KB), tangent (1KB), minus (1KB), readexpr (2KB)\n\u2022 readpower: power (2KB), readprimitive (1KB)\n\u2022 readterm: readpower (2KB), product (2KB), fraction (2KB)\n\u2022 readexpr: readterm (2KB), sum (2KB), difference (2KB) gettoken: ungettoken (0.1KB)\n\nEach function call requires a bidirectional data exchange between the calling and the called function. In order to guarantee data integrity during the function call, we require that a checksum operation be performed on the data exchanged between the pair (calling function, called function). Such pairs are called checksum pairs. Since the checksum operation is costly in terms of CPU time, we limit these operations so that no function may be involved in more than one checksum pair. Naturally though, we would like to maximize the total quantity of data undergoing a checksum. Only answer in the format of total quantity",
+    "answer": "[[73.1]]",
+    "needle": "Formulate a mathematical modelto maximize the total quantity of data undergoing a checksum operation between function pairs, while ensuring that each function is involved in at most one checksum pair.",
+    "difficulty": "5",
+    "rule_id": "1",
+    "length": "3441"
+  },
+  {
+    "idx": "12",
+    "question": "A firm which produces only one type of product has 40 workers. Each one of them produces 20 units per month. The demand varies during the semester according to the following table:\n\nMonth 1 2 3 4 5 6\nDemand (units) 700 600 500 800 900 800\n\nIn order to increase/decrease production depending on the demand, the firm can offer some (paid) extra working time (each worker can produce at most 6 additional units per month at unit cost of 5 euros), use a storage space (10 euros/month per unit of product), employ or dismiss personnel (the number of employed workers can vary by at most \u00b15 per month at an additional price of 500 euros per employment and 700 euros per dismissal).\nAt the outset, the storage space is empty, and we require that it should be empty at the end of the semester. Formulate a mathematical model that maximizes the revenues and answer in the format of [[revenue]]",
+    "answer": "[[10000]]",
+    "needle": "The problem can be formulated as a Mixed-Integer Linear Program (MILP) where the objective is to minimize the total costs incurred from hiring and firing employees, offering overtime, and using storage space, while maximizing production to meet the demand for each month. Let the decision variables include: \n- xi: number of employees in month i, \n- yi: extra units produced in month i, \n- zi: storage units at the end of month i, \n- wi: hiring/firing costs in month i.\n\nThe objective function is:\n\nminimize \u03a3 (Cs * yi + Cm * zi + wi) \nwhere Cs = 5 (cost per extra unit produced), Cm = 10 (cost per unit stored), wi includes both hiring and firing costs, and the constraints include:\n1. production capacity: yi <= Us * xi (maximum production per employee),\n2. employee hiring: xi - xi-1 <= V (maximum workforce variation per month),\n3. employee firing: xi-1 - xi <= V (maximum workforce reduction per month),\n4. stock balance: Px * xi + zi-1 + yi = ri + zi (ensures stock balance for each month),\n5. hiring cost: wi >= Ca(xi - xi-1) (cost of hiring employees),\n6. firing cost: wi >= Cl(xi-1 - xi) (cost of firing employees).\n\nWhen relaxing the variables to be continuous, the problem becomes easier to solve as the integer constraints on the number of employees and the binary decision on whether to hire or fire are removed, allowing the use of linear programming techniques.",
+    "difficulty": "4",
+    "rule_id": "1",
+    "length": "884"
+  },
+  {
+    "idx": "13",
+    "question": "A travelling salesman must visit 7 customers in 7 different locations whose (symmetric) distance matrix is: \n1 2 3 4 5 6 7\n1 - 86 49 57 31 69 50\n2 - - 68 79 93 24 5\n3 - - - 16 7 72 67\n4 - - - -90 69 1\n5 - - - - - 86 59\n6 - - - - - - 81. Formulate a mathematical model to determine a visit sequence starting at ending at location 1, which minimizes the travelled distance, and solve it with your math model. Only answer the minimum distance with format [[distance]]",
+    "answer": "[[137]]",
+    "needle": "The formulation of the TSP requires decision variables x_ij, which are binary, representing whether the salesman travels directly from location i to location j. The objective function to minimize is the sum of the distances between locations, expressed as: \nMinimize: sum(i, j) distance_ij * x_ij. \nThe constraints are: \n- Each location must be visited exactly once: sum(j) x_ij = 1 for all i, sum(i) x_ij = 1 for all j. \n- The triangular inequality is enforced: x_ij + x_jk >= x_ik for all i, j, k. \nTo solve this problem using your math model, we would define the distance matrix and the binary decision variables, write the objective function and constraints, and use a suitable solver. For the heuristic method, the nearest neighbor algorithm can be employed, where the salesman starts at location 1 and iteratively chooses the nearest unvisited location until all locations are visited.",
+    "rule_id": "1",
+    "length": "464"
+  },
+  {
+    "idx": "14",
+    "question": "A rocket of mass m is launched at sea level and has to reach an altitude H within time T. Let y(t) be the altitude of the rocket at time t and u(t) the force acting on the rocket at time t in the vertical direction. Assume u(t) may not exceed a given value b, that the rocket has constant mass m throughout, and that the gravity acceleration g is constant in the interval [0, H]. Discretizing time t \u2208 [0, T] in n intervals, propose a linear program to determine, for each k \u2264 n, the force u(tk) acting on the rocket so that the total consumed energy is minimum. Solve the problem with your math model with the following data: m = 2140kg, H = 23km, T = 1min, b = 10000N, n = 20. Hint: The problem can be formulated as a linear program by discretizing the time into n intervals, defining the force acting on the rocket at each time step, and minimizing the total energy consumed by the rocket during its ascent. The energy consumption is proportional to the force applied over the time intervals. Let y(tk) denote the altitude at time tk and u(tk) the applied force at time tk. The objective is to minimize the sum of energy across all intervals. The constraints include the dynamics of rocket motion, the force constraints, and initial and final conditions on altitude and velocity. Only answer the minimum energy with format [[energy]] and approximate to integer.",
+    "answer": "[[103801]]",
+    "needle": "The problem can be formulated as a linear program by discretizing the time into n intervals, defining the force acting on the rocket at each time step, and minimizing the total energy consumed by the rocket during its ascent. The energy consumption is proportional to the force applied over the time intervals. Let y(tk) denote the altitude at time tk and u(tk) the applied force at time tk. The objective is to minimize the sum of energy across all intervals. The constraints include the dynamics of rocket motion, the force constraints, and initial and final conditions on altitude and velocity. The resulting linear program is:\n\nminimize \u03a3 w_k \n\nsubject to the following constraints:\n- yk+1 - yk = vk\u0394t \n- vk+1 - vk = (uk/m - g)\u0394t \n- |uk| <= b \n- y1 = 0, y(n+1) = H, v1 = 0, 0 \u2264 yk \u2264 H, vk \u2265 0, uk \u2265 0\n- -wk \u2264 uk \u2264 wk for each k \u2264 n+1.",
+    "rule_id": "1",
+    "length": "1364"
+  },
+  {
+    "idx": "15",
+    "question": "There are n data flows that must be routed from a source node s to a destination node t following one of two possible links, with capacity u1 = 1 and u2 = 2 respectively. The company handling link 2 is 30% more expensive than the company handling link 1. The table below specifies the demands to be routed and the cost on link 1.\n\nDemand | Required capacity (Mbps) | Cost on link 1\n1 | 0.3 | 200\n2 | 0.2 | 200\n3 | 0.4 | 250\n4 | 0.1 | 150\n5 | 0.2 | 200\n6 | 0.2 | 200\n7 | 0.5 | 700\n8 | 0.1 | 150\n9 | 0.1 | 150\n10 | 0.6 | 900\n\nFormulate a mathematical modelto minimize the routing cost of all the demands. Only ask in the form of [[minimum cost]]",
+    "answer": "[[3610]]",
+    "needle": "Formulate the problem as a minimum cost flow problem where the decision variables are the assignment of each demand to either link 1 or link 2. Let x_ij be the binary variable indicating whether demand i is routed on link j (1 if routed on link j, 0 otherwise). The objective function is to minimize the total cost, which includes the routing costs on both links. The constraints include the capacity constraints for both links (ensuring that the total demand routed on each link does not exceed its capacity) and the flow constraints for each demand (ensuring each demand is routed exactly once).\n\nThe objective function to minimize is:\n\nparam n > 0; set F := 1..n; param a{F} >= 0; param c{F} >= 0; param p default 0.3; param u1 >= 0; param u2 >= 0; var x1{F} binary; var x2{F} binary; minimize objfun: sum{i in F} (c[i] * x1[i] + (1 + p) * c[i] * x2[i]); subject to knapsack1: sum{i in F} a[i] * x1[i] <= u1; subject to knapsack2: sum{i in F} a[i] * x2[i] <= u2; subject to assignment {i in F}: x1[i] + x2[i] = 1;.",
+    "rule_id": "1",
+    "length": "643"
+  },
+  {
+    "idx": "16",
+    "question": "The main telephone network backbone connecting the different campuses of the Politecnico di Milano (at Milano, Como, Lecco, Piacenza, Cremona) has grown over the years to its present state without a clear organized plan. Politecnico asked its main network provider to optimize the routing of all the traffic demands to see whether the installed capacity is excessive. The network topology is as depicted below. For each link there is a pair (u, c) where u is the link capacity (Mb/s) and c the link length (km).\n\n1. Como, Lecco: (200, 30)\n2. Como, Milano: (260, 50)\n3. Como, Piacenza: (200, 110)\n4. Lecco, Milano: (260, 55)\n5. Lecco, Cremona: (200, 150)\n6. Milano, Piacenza: (260, 72)\n7. Milano, Cremona: (260, 90)\n8. Piacenza, Cremona: (200, 100)\n\nThe traffic demands to be routed (in Mb/s) are as follows.\n\n1. Como, Lecco: 20\n2. Como, Piacenza: 30\n3. Milano, Como: 50\n4. Milano, Lecco: 40\n5. Milano, Piacenza: 60\n6. Milano, Cremona: 25\n7. Cremona, Lecco: 35\n8. Cremona, Piacenza: 30\n\nThe current routing is as given below:\n\n1. Como \u2192 Lecco\n2. Como \u2192 Milano \u2192 Piacenza\n3. Milano \u2192 Lecco \u2192 Como\n4. Milano \u2192 Como \u2192 Lecco\n5. Milano \u2192 Piacenza\n6. Milano \u2192 Piacenza \u2192 Cremona\n7. Cremona \u2192 Milano \u2192 Piacenza \u2192 Como \u2192 Lecco\n8. Cremona \u2192 Milano \u2192 Como \u2192 Lecco \u2192 Milano \u2192 Piacenza\n\nFormulate a mathematical modelto find an optimal network routing. Only give the traffic assigned to these paths in this format with correct traffic you get rather than the arbitary number value here: [[path 1 13.0, path 5 62.0, path 9 33.0, path 10 31.0, path 11 31.0 path 12 52.0, path 13 11.0, path 14 30.0]]",
+    "answer": "[[path 1 20.0, path 5 60.0, path 9 30.0, path 10 35.0, path 11 30.0 path 12 50.0, path 13 25.0, path 14 40.0]]",
+    "needle": "The problem can be formulated as a minimum cost flow problem in which the objective is to minimize the total cost of routing the traffic demands while satisfying the capacity constraints of the network links. The decision variables are the amount of traffic routed along each path, and the objective function is to minimize the sum of the costs associated with routing the traffic over the network links, considering the link capacities and the traffic demands.\n\n**Indices**: \n- i, j \u2208 V (set of vertices representing campuses), s, t \u2208 V (source and destination campuses).\n- p \u2208 P (set of paths between campus pairs).\n\n**Parameters**: \n- dst: traffic demand for s \u2260 t.\n- uij: capacity installed on link {i, j}.\n- cij: length (cost) of link {i, j}.\n\n**Variables**: \n- xp: quantity of traffic routed on path p.\n\n**Objective function**: \nminimize \u03a3_{i,j \u2208 E} (c_ij * f_ij) \nwhere f_ij is the flow on arc {i,j}.\n\n**Constraints**: \n1. (demand satisfaction) for each s, t \u2208 V such that dst > 0: \n \u03a3_{p \u2208 Pst} xp = dst;\n2. (link capacities) for each link {i, j} \u2208 E: \n \u03a3_{p \u2208 Pij} xp \u2264 uij.\n\nThe iterative solution approach involves solving a master problem and auxiliary problems that are smaller in size than the complete formulation. The master problem contains an initial set of paths P0 and solves for the optimal flow distribution over those paths. If no more paths are found with a reduced cost below zero, the algorithm terminates. If such paths are found, they are added to the master problem. The auxiliary problems solve the shortest paths for the routing between s and t, where the reduced cost path must satisfy a specific condition. In each iteration, the master problem is updated with the results of the auxiliary problems until convergence. The approach is a variant of the column generation algorithm used for solving large-scale routing problems efficiently.",
+    "rule_id": "1",
+    "length": "1584"
+  },
+  {
+    "idx": "17",
+    "question": "Two types of crude A, B whose unitary cost and sulphur percentage are 6$, 16$ and 3%, 1% respectively enter the pool through two input valves. The output of the pool is then carried to the mixers, together with some crude of type C (unit cost 10$, sulphur percentage 2%) which enters the plant through a third input valve. Mixer 1 must produce petrol containing at most 2.5% sulphur, which will be sold at a unitary price of 9$. Mixer 2 must produce a more refined petrol containing at most 1.5% sulphur, sold at a unitary price of 15$. The maximum market demand for the refined petrol 1 is of 100 units, and of 200 units for refined petrol 2. Formulate a (nonlinear) mathematical modelto maximize revenues. Only answer the maximum revenue with format [[maximum revenue]]",
+    "answer": "[[400]]",
+    "needle": "The problem aims to maximize revenue from the sale of two types of refined petrol produced by two mixers, while considering constraints related to costs, sulphur content, mass balance, and market demand. The mathematical formulation involves the following variables and constraints:\n\n**Variables**: \n- xA, xB, xC: crude in input valves A, B, and C, respectively.\n- y11, y12: petrol between pool and mixer 1.\n- y21, y22: petrol between input valve C and mixer 1 and 2.\n- p: sulphur percentage in petrol out of the pool.\n\n**Objective function**: \nMaximize revenue: 9(y11 + y21) + 15(y12 + y22)\n\n**Constraints**:\n1. Cost: -(6xA + 16xB + 10xC)\n2. Mass balance in pool: xA + xB - y11 - y12 = 0\n3. Mass balance in C: xC - y21 - y22 = 0\n4. Market demand for petrol 1: y11 + y21 \u2264 100\n5. Market demand for petrol 2: y12 + y22 \u2264 200\n6. Sulphur balance in pool: 3xA + xB = p(y11 + y12)\n7. Quality petrol 1: p(y11 + y21) \u2264 2.5\n8. Quality petrol 2: p(y12 + y22) \u2264 1.5\n9. Variables domains: xA, xB, xC, y11, y12, y21, y22 \u2265 0, p \u2208 [0, 1].\n\nThis is a nonlinear optimization problem due to the bilinear terms in the constraints. The bilinear form comes from the interactions between sulphur content (p) and flow variables (y).",
+    "rule_id": "1",
+    "length": "771"
+  },
+  {
+    "idx": "18",
+    "question": "A university has budgeted $1,500,000 for bonuses and merits among 503 teachers based on three criteria: (1) performance evaluation (CM1), (2) general service contributions (CM2), and (3) professional development (CM3). Each teacher is rated on a scale of 1 to 5 for each criterion, and the total points accumulated in 2001 were CM1 = 1,625, CM2 = 1,409, and CM3 = 1,387. The university board has set the following constraints: (1) No teacher should receive more than $5,000 in total, (2) A CM1 point is worth twice a CM2 point, and a CM1 point is worth twice a CM3 point, (3) The value assigned to one of CM1, CM2, or CM3 should be maximized while staying within budget. Define an LP model that maximizes the total assigned value while satisfying these constraints. What is the optimal sum of the three compensation values? Please answer in the format of [[optimal sum]]",
+    "answer": "[[992.39]]",
+    "difficulty": "3",
+    "rule_id": "1",
+    "length": "870"
+  },
+  {
+    "idx": "19",
+    "question": "ORGASA, a global firm operating in the United States, Great Britain, India, and Spain, frequently transfers money to meet cash requirements in different regions. The company has surpluses in some currencies and deficits in others. The exchange rates for converting between these currencies are known, and the goal is to determine the most efficient way to transfer money to maximize the final value in US dollars (USD) while ensuring that all minimum cash requirements are met. \n\nThe company's financial situation is as follows:\n\nCurrency surpluses and requirements:\n- Euro (EUR): Surplus = 2.4 million, Requirement = 0\n- Pound Sterling (GBP): Surplus = 0, Requirement = 2.1 million\n- US Dollar (USD): Surplus = 0, Requirement = 5 million\n- Indian Rupee (INR): Surplus = 350 million, Requirement = 0\n\nCurrency exchange rates (bank sale prices for conversions):\n- 1 USD = 1.61520 GBP, 1.00600 EUR, 43.52200 INR\n- 1 GBP = 0.61880 USD, 1.00000 GBP, 0.62230 EUR, 0.01422 INR\n- 1 EUR = 0.99350 USD, 1.60540 GBP, 1.00000 EUR, 0.02282 INR\n- 1 INR = 0.02297 USD, 70.29670 GBP, 43.78310 EUR, 1.00000 INR\n\nGiven these constraints, formulate a linear programming model that optimizes currency transfers and determines the maximum achievable value in USD. What is the maximum achievable value in USD in this optimization problem? Answer in the format of [[maximum value]] with the unit of million USD. Keep four decimal places for your answer. If the answer is 2.3413 million USD, please answer in the format of [[2.3413]]",
+    "answer": "[[7.0617]]",
+    "difficulty": "3",
+    "rule_id": "1",
+    "length": "1510"
+  },
+  {
+    "idx": "20",
+    "question": "A firm has realized that it will not have sufficient storage space for the next three months. To meet its requirements, it plans to rent additional space on a short-term basis. At the beginning of each month, the firm can rent any amount of space for any number of months. It can pay separate rents for different quantities of space and/or over different periods of time. For example, during the first month, it could rent 20,000 m\u00b2 for two months and rent 5,000 m\u00b2 separately for one month. The firm may also acquire new rented spaces before the previous ones expire. The objective is to determine a rental policy that meets the space requirements at a minimum cost.\n\nThe storage space requirements for the next three months are as follows:\n- January: 25,000 m\u00b2\n- February: 10,000 m\u00b2\n- March: 20,000 m\u00b2\n\nThe rental costs per 1,000 m\u00b2 based on duration are:\n- 1-month rent: $280\n- 2-month rent: $450\n- 3-month rent: $600\n\nFormulate a linear programming model that determines the optimal rental policy that meets storage requirements at a minimum cost. What is the minimum cost to satisfy the storage requirements? Answer in the format of [[minimum cost]] with unit of m^2, which means if the answer is 100 m^2, please answer in the format of [[100]]",
+    "answer": "[[13000000]]",
+    "difficulty": "3",
+    "rule_id": "1",
+    "length": "1249"
+  },
+  {
+    "idx": "21",
+    "question": "A firm in Valencia manufactures aluminium and copper wires. Each kg of aluminium wire requires 5 kWh of electricity and 0.25 hours of labour. Each kg of copper wire requires 2 kWh of electricity and 0.5 hours of labour. Copper wire production is further limited by a maximum availability of 60 kg/day. The total electricity available is 500 kWh/day, and the total labour available is 40 hours/day. The firm earns a profit of $0.25 per kg of aluminium wire and $0.40 per kg of copper wire. \n\nFormulate a linear programming model to determine the optimal quantity of each type of wire to be produced in order to maximize profit, while adhering to resource constraints. What is the maximum profit achievable under these conditions?",
+    "answer": "[[36.25]]",
+    "difficulty": "2",
+    "rule_id": "1",
+    "length": "728"
+  },
+  {
+    "idx": "22",
+    "question": "A carpentry firm produces tables and chairs. Each table requires 4 m\u00b2 of wood panels, while each chair requires 3 m\u00b2. Wood costs $1 per m\u00b2, and a total of 4,000 m\u00b2 of wood is available (Constraint C1). Additionally, 2 hours of skilled labor are required to produce one unfinished table or chair. To transform an unfinished table into a finished one, 3 more hours are needed, while transforming an unfinished chair into a finished one requires 2 additional hours. There are a total of 6,000 hours of skilled labor available (Constraint C2).\n\nThe sale prices of products are as follows:\n- Unfinished table (X1): $70\n- Finished table (X2): $140\n- Unfinished chair (X3): $60\n- Finished chair (X4): $110\n\nFormulate a linear programming model that maximizes the firm's profit while ensuring that wood and labor constraints are met. What is the maximum achievable profit?",
+    "answer": "[[106666.7000]]",
+    "difficulty": "3",
+    "rule_id": "1",
+    "length": "864"
+  },
+  {
+    "idx": "23",
+    "question": "The firm Inversiones Internacionales, S.A.U. has up to $5 million available to invest in six possible investments. The profitability and risk of each investment option are provided in the table below:\n\n| Investments       | Profitability (%) | Risk |\n|------------------|------------------|------|\n| Trade credits    | 7                | 1.7  |\n| Corporate bonds  | 10               | 1.2  |\n| Stocks of gold   | 19               | 3.7  |\n| Stocks of platinum | 12             | 2.4  |\n| Mortgage bonds   | 8                | 2.0  |\n| Building loans   | 14               | 2.9  |\n\nThe firm follows these constraints:\n1. No more than 25% of the total investment should be placed in any single option.\n2. At least 30% of the total investment must be allocated to precious metals (gold and platinum).\n3. At least 45% of the total investment must be allocated to trade credits and corporate bonds.\n4. The overall risk limit of the entire portfolio must not exceed 2.0.\n\nFormulate a linear programming model that maximizes the profitability of the firm's investments while satisfying the given constraints. What is the maximum profitability value in dollars?",
+    "answer": "[[520000.00]]",
+    "difficulty": "3",
+    "rule_id": "1",
+    "length": "1153"
+  },
+  {
+    "idx": "24",
+    "question": "ORGASA has a portfolio of investments in shares, bonds, and other investment alternatives. It has available funds amounting to $200,000, which must be allocated among four investment alternatives. The financial details of these investments are as follows:\n\n| Financial details | Telef\u00f3nita | Sankander | Ferrofial | Gamefa |\n|------------------|-----------|-----------|-----------|--------|\n| Price per share ($) | 100 | 50 | 80 | 40 |\n| Annual rate of return | 0.12 | 0.08 | 0.06 | 0.10 |\n| Measure of risk per $ invested | 0.10 | 0.07 | 0.05 | 0.08 |\n\nORGASA has stipulated the following conditions for its investment:\n1. The annual rate of return from this portfolio must be at least 9%.\n2. No single investment can represent more than 50% of the total investment in dollars.\n\n(a) Use a linear programming model to develop a portfolio of investments that minimizes the risk while satisfying these conditions. Answer the minimum risk in the format of [[minimum risk]]",
+    "answer": "[[14666.66662]]",
+    "difficulty": "3",
+    "rule_id": "1",
+    "length": "969"
+  },
+  {
+    "idx": "25",
+    "question": "ORGASA has a portfolio of investments in shares, bonds, and other investment alternatives. It has available funds amounting to $200,000, which must be allocated among four investment alternatives. The financial details of these investments are as follows:\n\n| Financial details | Telef\u00f3nita | Sankander | Ferrofial | Gamefa |\n|------------------|-----------|-----------|-----------|--------|\n| Price per share ($) | 100 | 50 | 80 | 40 |\n| Annual rate of return | 0.12 | 0.08 | 0.06 | 0.10 |\n| Measure of risk per $ invested | 0.10 | 0.07 | 0.05 | 0.08 |\n\nORGASA has stipulated the following conditions for its investment:\n1. The annual rate of return from this portfolio must be at least 9%.\n2. No single investment can represent more than 50% of the total investment in dollars.\n\n(a) If the firm ignores the risk involved and instead uses a maximum return strategy, Use a linear programming model to find the maximum return? Answer the maximum return in the format of [[maximum return]]",
+    "answer": "[[22000.00]]",
+    "difficulty": "3",
+    "rule_id": "1",
+    "length": "986"
+  },
+  {
+    "idx": "26",
+    "question": "A small investor has $12,000 to invest and three different funds to choose from. Guaranteed investment funds offer an expected rate of return of 7%, mixed funds (partially guaranteed capital) have an expected rate of return of 8%, while an investment on the Stock Exchange has an expected rate of return of 12%, but without guaranteed investment capital. To minimize risk, the investor has decided to invest no more than $2,000 in the Stock Exchange. Additionally, for tax reasons, the investor must invest at least three times more in guaranteed investment funds than in mixed funds.\n\nAssuming that at the end of the year, returns match expectations, formulate a linear programming model to determine the optimal investment amounts that maximize the investor's return while satisfying these constraints. What is the maximum investment return achievable?",
+    "answer": "[[965]]",
+    "difficulty": "2",
+    "rule_id": "1",
+    "length": "854"
+  },
+  {
+    "idx": "27",
+    "question": "An automobile assembly plant assembles two types of vehicles: a four-door saloon and a people carrier. Both vehicle types must pass through a painting plant and an assembly plant. If the painting plant only paints four-door saloons, it can paint up to 2,000 vehicles each day, whereas if it paints only people carriers, it can paint up to 1,500 vehicles each day. Similarly, if the assembly plant only assembles either four-door saloons or people carriers, it can assemble up to 2,200 vehicles daily.\n\nEach people carrier provides an average profit of $3,000, whereas each four-door saloon provides an average profit of $2,100.\n\nUse linear programming to determine the optimal daily production plan that maximizes the vehicle assembly plant's daily profit while satisfying the following constraints:\n\n- The total fraction of the painting plant's daily capacity used must not exceed 1.\n  - Painting time per four-door saloon: 1/2000 days per vehicle\n  - Painting time per people carrier: 1/1500 days per vehicle\n- The total fraction of the assembly plant's daily capacity used must not exceed 1.\n  - Assembly time per four-door saloon: 1/2200 days per vehicle\n  - Assembly time per people carrier: 1/2200 days per vehicle\n- Non-negativity constraint: The number of vehicles produced cannot be negative.\n\nWhat is the maximum achievable daily profit?",
+    "answer": "[[4500000]]",
+    "difficulty": "3",
+    "rule_id": "1",
+    "length": "1347"
+  },
+  {
+    "idx": "28",
+    "question": "The REGIORG firm in Athens manufactures aluminium windows of three quality types: normal, economic, and luxury. The relevant production data is as follows:\n\n| Operation | Hours/month required (Normal) | Hours/month required (Economic) | Hours/month required (Luxury) | Hours/month available |\n|-----------|-------------------------------|---------------------------------|-------------------------------|-----------------------|\n| 1         | 1                             | 3                               | 2                             | 400                   |\n| 2         | 2                             | 0                               | 3                             | 600                   |\n| 3         | 1                             | 4                               | 0                             | 600                   |\n\nThe unit profit of each quality type is:\n- Normal: $30 per unit\n- Economic: $20 per unit\n- Luxury: $40 per unit\n\nFormulate a linear programming model that determines the optimal product mix to maximize the firm's profit while adhering to the production constraints. What is the maximum achievable profit?",
+    "answer": "[[3555000.00]]",
+    "difficulty": "3",
+    "rule_id": "1",
+    "length": "1142"
+  },
+  {
+    "idx": "29",
+    "question": "Sa\u00fal Cort\u00e9s, an Industrial Organization Engineer, wishes to form his own portfolio of investments to employ the minimum initial investment possible while generating specific amounts of capital over the next six years. His goal is to plan his daughter Susana\u2019s university expenses, which begin in year 3. Sa\u00fal\u2019s financial requirements are as follows:\n\n| Year | Required Amount ($) |\n|------|---------------------|\n| 3    | 20,000             |\n| 4    | 22,000             |\n| 5    | 24,000             |\n| 6    | 26,000             |\n\nHe has four investment choices with the following characteristics:\n\n| Choice | Profitability (%) | Maturity (years) |\n|--------|------------------|------------------|\n| A      | 5                | 1                |\n| B      | 13               | 2                |\n| C      | 28               | 3                |\n| D      | 40               | 4                |\n\nProducts C and D involve risks, so Sa\u00fal does not want to invest more than 20% of the total investment in them.\n\nFormulate a linear programming model that minimizes the initial investment while ensuring the required funds are available for each year\u2019s expenses. What is the minimum initial investment required?",
+    "answer": "[[73314.71470000001]]",
+    "difficulty": "3",
+    "rule_id": "1",
+    "length": "1207"
+  },
+  {
+    "idx": "30",
+    "question": "A textile firm produces five types of fabric. Each fabric can be woven on one or more of the factory\u2019s 38 looms. The Sales Department has forecasted demand for the upcoming month, as detailed below:\n\n| Fabric | Demand (metres) | Sale price ($/m) | Variable cost ($/m) | Purchase price ($/m) |\n|--------|---------------|----------------|------------------|------------------|\n| 1      | 16,500        | 3.99           | 2.66             | 2.86             |\n| 2      | 22,000        | 3.86           | 2.55             | 2.70             |\n| 3      | 62,000        | 4.10           | 2.49             | 2.60             |\n| 4      | 7,500         | 4.24           | 2.51             | 2.70             |\n| 5      | 62,000        | 3.70           | 2.50             | 2.70             |\n\nThe factory has two loom types:\n- **Jacquard looms**, which can weave all five fabric types.\n- **Ratier looms**, which can only weave three fabric types.\n\nThe loom speeds for each fabric type are:\n\n| Fabric | Jacquard (m/h) | Ratier (m/h) |\n|--------|---------------|-------------|\n| 1      | 4.63          | \u2013           |\n| 2      | 4.63          | \u2013           |\n| 3      | 5.23          | 5.23        |\n| 4      | 5.23          | 5.23        |\n| 5      | 4.17          | 4.17        |\n\nThe factory operates **24 hours per day for 30 days**. Given these constraints, the firm must determine how many metres of each fabric should be produced internally and how much should be acquired externally to **maximize profit**. What is the maximum profit it can get?",
+    "answer": "[[251280.90399999998]]",
+    "difficulty": "3",
+    "rule_id": "1",
+    "length": "1544"
+  },
+  {
+    "idx": "31",
+    "question": "A firm from Ja\u00e9n has three production plants located in Ja\u00e9n, Seville, and Almer\u00eda. The estimated production capacities for the next three months are:\n\n| Plant   | Production capacity (kg) |\n|---------|--------------------------|\n| Ja\u00e9n    | 5,000                    |\n| Seville | 6,000                    |\n| Almer\u00eda | 2,500                    |\n\nThe firm distributes olives to four regional distribution centres located in Valencia, Madrid, Barcelona, and La Coru\u00f1a. The forecasted demand for the next three months is:\n\n| Distribution Centre | Demand (kg) |\n|---------------------|------------|\n| Valencia           | 6,000      |\n| Madrid             | 4,000      |\n| Barcelona          | 2,000      |\n| La Coru\u00f1a         | 1,500      |\n\nThe unit transport costs (in $ per kg) from each production plant to each distribution centre are:\n\n| Origin/Destination | Valencia | Madrid | Barcelona | La Coru\u00f1a |\n|--------------------|---------|--------|----------|-----------|\n| Ja\u00e9n              | 30      | 20     | 70       | 60        |\n| Seville           | 70      | 50     | 20       | 30        |\n| Almer\u00eda           | 20      | 50     | 40       | 50        |\n\nAdditionally, the firm follows these transport constraints:\n- At least 60% of the total production from Ja\u00e9n must be sent to Valencia.\n- Deliveries from Seville to Valencia will have a fixed cost of $200.\n- Only Seville or Almer\u00eda can deliver to La Coru\u00f1a, but never both.\n\nFormulate a linear programming model that minimizes transport costs while meeting demand and adhering to the given constraints. What is the optimal transport cost?",
+    "answer": "[[395000]]",
+    "difficulty": "3",
+    "rule_id": "1",
+    "length": "1603"
+  },
+  {
+    "idx": "32",
+    "question": "The PRODA, S.A. industrial products firm must schedule the weekly production of its three products (P1, P2, and P3). These products are sold to large industrial firms, and PRODA, S.A. aims to maximize its profitability.\n\nEach product requires three operations: smelting, mechanisation, and assembly/packaging. The smelting operations for products P1 and P2 can be subcontracted, but the smelting operation for product P3 requires special equipment, preventing subcontracting. The resource usage per unit of product and the available weekly capacities are as follows:\n\n**Resource Usage Per Unit (minutes):**\n\n| Product | Smelting (PRODA) | Smelting (Subcontract) | Mechanisation | Assembly/Packaging |\n|---------|------------------|------------------------|---------------|---------------------|\n| P1      | 6               | 6                      | 6             | 3                   |\n| P2      | 10              | 10                     | 3             | 2                   |\n| P3      | 8               | -                      | 8             | 2                   |\n\n**Weekly Capacity Constraints:**\n- Smelting: 8,000 minutes\n- Mechanisation: 12,000 minutes\n- Assembly/Packaging: 10,000 minutes\n\nThe objective function to maximize weekly profits is given by:\n\nMaximize **z = 0.7X\u2081 + 0.5X\u2082 + X\u2083 + 0.9X\u2084 + 1.1X\u2085**, subject to:\n\n- **Smelting capacity constraint:** 6X\u2081 + 10X\u2083 + 8X\u2085 \u2264 8000\n- **Mechanisation capacity constraint:** 6X\u2081 + 6X\u2082 + 3X\u2083 + 3X\u2084 + 8X\u2085 \u2264 12000\n- **Assembly/packaging capacity constraint:** 3X\u2081 + 3X\u2082 + 2X\u2083 + 2X\u2084 + 2X\u2085 \u2264 10000\n- **Non-negativity constraint:** X\u2081, X\u2082, X\u2083, X\u2084, X\u2085 \u2265 0\n\nDetermine the optimal weekly production quantities for each product and the maximum achievable weekly profit. What is the optimal objective function value?",
+    "answer": "[[3680]]",
+    "difficulty": "3",
+    "rule_id": "1",
+    "length": "1765"
+  },
+  {
+    "idx": "33",
+    "question": "A bricks factory produces four different types of breeze blocks. The manufacturing process involves three key stages:\n1. Mixing\n2. Vibration\n3. Inspection\n\nEach type of block requires different amounts of machining time at each stage. The factory aims to maximize its profit while ensuring that the total machining hours available for each stage are not exceeded.\n\n### Factory Constraints\n- The factory has **800 machining hours available for mixing**.\n- There are **1,000 machining hours available for vibration**.\n- The inspection process is limited to **340 man-hours**.\n\n### Block Production Details\n| Block Type | Mixing Hours per Unit | Vibration Hours per Unit | Inspection Hours per Unit | Profit per Unit |\n|------------|----------------------|------------------------|------------------------|---------------|\n| A         | 1                    | 1.5                    | 0.5                    | $8           |\n| B         | 2                    | 2                      | 0.6                    | $14          |\n| C         | 10                   | 4                      | 1                      | $30          |\n| D         | 16                   | 5                      | 2                      | $50          |\n\n### Student Tasks\n1. Define decision variables representing how many of each type of block should be produced.\n2. Construct an **objective function** to maximize the total profit.\n3. Identify and formulate **constraints** based on the available resources for mixing, vibration, and inspection.\n4. Ensure non-negativity constraints are incorporated into the model.\n\n### Expected Outcome\nStudents should be able to develop a **linear programming model** that captures the given constraints and maximizes profit. Please answer in the format of [[maximum profit]] in unit of $. If the answer is 100$, please answer in the format of [[100]]",
+    "answer": "[[6000.00]]",
+    "difficulty": "3",
+    "rule_id": "1",
+    "length": "1864"
+  },
+  {
+    "idx": "34",
+    "question": "A citrus firm in Valencia possesses 120 acres (1 acre = 4,074 m\u00b2) and is planning to sow at least three crops: A, B, and C. The cost of seeds per acre is:\n\n- Crop A: $40\n- Crop B: $20\n- Crop C: $30\n\nThe firm intends to invest a maximum of $3,400 in seeds.\n\nEach crop requires a specific number of working days per acre:\n\n- Crop A: 1 day per acre\n- Crop B: 2 days per acre\n- Crop C: 1 day per acre\n\nThe firm has 170 working days available. The profit per acre for each crop is:\n\n- Crop A: $100\n- Crop B: $300\n- Crop C: $200\n\nFormulate a linear programming model to determine the optimal allocation of acres to each crop that maximizes profit while satisfying the constraints on land availability, seed investment, and working days. What is the maximum achievable profit?",
+    "answer": "[[29000.0000]]",
+    "difficulty": "2",
+    "rule_id": "1",
+    "length": "769"
+  },
+  {
+    "idx": "35",
+    "question": "A Post Office requires a different number of full-time postmen and postwomen for different days of the week. The number of full-time postmen/women required per day is given in the table below:\n\n| Day       | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday |\n|-----------|--------|---------|-----------|----------|--------|----------|--------|\n| Required  | 17     | 13      | 15        | 19       | 14     | 16       | 11     |\n\nAccording to Trade Union rules:\n- Each full-time employee must work 5 consecutive days and then rest for 2 days.\n- For example, an employee starting on Monday will work from Monday to Friday and rest on Saturday and Sunday.\n\nThe Post Office seeks to determine the **minimum** number of full-time employees required to meet these constraints while ensuring all daily requirements are satisfied.\n\nFormulate a mathematical model to determine the minimum number of full-time postmen/women required. What is the minimum number required?",
+    "answer": "[[23]]",
+    "difficulty": "2",
+    "rule_id": "1",
+    "length": "981"
+  },
+  {
+    "idx": "36",
+    "question": "A North American air-conditioning firm has production plants in Portland and Flint. It needs to distribute a certain number of units to its distribution centers in Los Angeles and Atlanta. The delivery costs per unit are provided below:\n\n| Production Plant | Distribution Centre | Delivery Cost ($) |\n|-----------------|---------------------|------------------|\n| Portland       | Los Angeles         | 30               |\n| Portland       | Atlanta             | 40               |\n| Flint          | Los Angeles         | 60               |\n| Flint          | Atlanta             | 50               |\n\nThe available supply and required demand (in number of units) are as follows:\n\n| Location | Available Units | Required Units |\n|----------|----------------|---------------|\n| Portland | 200            | -             |\n| Flint    | 600            | -             |\n| -        | Los Angeles    | 300           |\n| -        | Atlanta        | 400           |\n\nFormulate an integer linear programming model that determines the optimal deliveries from Portland and Flint to minimize the total delivery cost while meeting demand constraints. What is the optimal transport cost?",
+    "answer": "[[32000]]",
+    "difficulty": "3",
+    "rule_id": "1",
+    "length": "1175"
+  },
+  {
+    "idx": "37",
+    "question": "A carpentry business has received more orders for its Pombal bookcase than it can currently produce. Over the next four weeks, the required bookcase production is:\n\n- Week 1: 52\n- Week 2: 65\n- Week 3: 70\n- Week 4: 85\n\nCurrently, there are six artisan carpenters. To meet production requirements, the firm has decided to contract new staff. A novice can be trained for one week, then work as an apprentice in the second week. By the third week, the apprentice becomes an artisan.\n\nEach artisan can train up to two novices per week. Any surplus weekly production can be stored to meet future demand. The estimated production and salaries of different worker categories are:\n\n| Worker Type                          | Production (Bookcases/week) | Salary ($/week) |\n|-------------------------------------|---------------------------|----------------|\n| Artisan working on production only  | 10                        | 300            |\n| Artisan working on production and training | 5                   | 400            |\n| Apprentice                          | 5                         | 150            |\n| Novice                              | 1                         | 50             |\n\nThe firm's analysts estimate that exceeding 90 bookcases per week is difficult. A decision was made to finish the period with **no novices or apprentices**, but with at least **nine artisans**. Trade Union rules forbid dismissals due to layoffs.\n\nFormulate a linear programming model that determines the number of contracts to be issued to meet the commercial commitments at a **minimum cost**. What is the optimal minimum cost?",
+    "answer": "[[275]]",
+    "difficulty": "3",
+    "rule_id": "1",
+    "length": "1617"
+  },
+  {
+    "idx": "38",
+    "question": "Consider the production of a single product over a planning horizon of T periods. If production occurs during a given period t (where t = 1, ..., T), a fixed cost cf_t is incurred. Any excess products manufactured in earlier periods can be stored to meet the demand for later periods. All demand must be met during each period, and production capacity constraints are not considered.\n\nFor each period t:\n- **d_t** represents the demand for the product,\n- **cp_t** represents the cost of production,\n- **ca_t** represents the cost of storage.\n- **cf_t** represents the fixed cost incurred when production occurs in a given period.\n\nThe following table provides the true data for the problem:\n\n| Period t | Demand (d_t) | Production Cost (cp_t) | Storage Cost (ca_t) | Fixed Cost (cf_t) |\n|----------|-------------|------------------------|----------------------|--------------------|\n| 1        | 20          | 5                      | 2                    | 10                 |\n| 2        | 30          | 6                      | 3                    | 12                 |\n| 3        | 25          | 4                      | 1                    | 8                  |\n| 4        | 35          | 7                      | 2                    | 15                 |\n| 5        | 40          | 5                      | 3                    | 10                 |\n\nFormulate an integer linear programming model that minimizes the total costs of production, storage, and fixed costs while ensuring that all demand is met. What is the optimal minimum cost? Solve the problem using the given data.",
+    "answer": "[[795]]",
+    "difficulty": "3",
+    "rule_id": "1",
+    "length": "1593"
+  },
+  {
+    "idx": "39",
+    "question": "The firm MMM has obtained a contract to tarmac the streets in the centre of Exeter. The Department of Traffic Engineering and Planning estimated that at least the number of employees indicated in Table 2.11 are required for each 4-hour interval over a standard 24-hour period.\n\nAll MMM staff work 8-hour shifts, beginning at one of six possible times. The number of personnel required in each 4-hour time block is as follows:\n\n| Time Period | Personnel Required |\n|------------|-------------------|\n| 06:00\u201310:00 | 70 |\n| 10:00\u201314:00 | 20 |\n| 14:00\u201318:00 | 80 |\n| 18:00\u201322:00 | 30 |\n| 22:00\u201302:00 | 10 |\n| 02:00\u201306:00 | 10 |\n\nStaff members are paid a uniform salary per hour, except those working the 20:00 h and 00:00 h shifts, who receive a 50% increase. Moreover, salaries are 100% higher between 00:00 h and 06:00 h.\n\nAdditionally, the ETS temporary work firm offers more flexible 4-hour shifts beginning at the start of each time period in the table. ETS staff costs 80% more per shift compared to the daily cost of MMM's staff.\n\n(a) Formulate a linear programming model that determines the number of employees required in each MMM shift to **minimize salary costs** while meeting personnel requirements.\n(b) Modify the model to determine the optimal mix of using MMM's and ETS' staff to **minimize overall costs** while meeting personnel requirements. What is the optimal cost?",
+    "answer": "[[1380]]",
+    "difficulty": "3",
+    "rule_id": "1",
+    "length": "1383"
+  },
+  {
+    "idx": "40",
+    "question": "A firm must transport machines from production plants A, B, and C to warehouses X, Y, and Z. The demand and supply constraints are as follows:\n\n- Warehouses require:\n  - X: 5 machines\n  - Y: 4 machines\n  - Z: 3 machines\n- Production plants have available machines:\n  - A: 8 machines\n  - B: 5 machines\n  - C: 3 machines\n\nThe transport costs (in dollars) between plants and warehouses are given below:\n\n| Plant/Warehouse | X  | Y  | Z  |\n|----------------|----|----|----|\n| A              | 50 | 60 | 30 |\n| B              | 60 | 40 | 20 |\n| C              | 40 | 70 | 30 |\n\nFormulate an **integer linear programming model** that minimizes the transport costs while ensuring that all warehouse demands are met and that the machine supply from each plant does not exceed availability. What is the minimum transport cost?",
+    "answer": "[[460]]",
+    "difficulty": "3",
+    "rule_id": "1",
+    "length": "817"
+  },
+  {
+    "idx": "41",
+    "question": "A firm that produces automobile seats manufactures three seat types on two different production lines. Up to **30 workers** can be used at the same time on each line to produce any seat type. Each worker is paid **$400 per week** on **production line 1**, and **$600 per week** on **production line 2**. Additionally, organizing one week of production costs **$1,000** on production line 1 and **$2,000** on production line 2.\n\nThe weekly production capacity per worker on each production line is:\n\n| Production Line | Seat Type 1 (thousands) | Seat Type 2 (thousands) | Seat Type 3 (thousands) |\n|----------------|------------------------|------------------------|------------------------|\n| 1              | 20                     | 30                     | 40                     |\n| 2              | 50                     | 35                     | 45                     |\n\nThe weekly seat demand is:\n- **Seat 1:** At least 120,000 units\n- **Seat 2:** At least 150,000 units\n- **Seat 3:** At least 200,000 units\n\nFormulate an **integer linear programming model** that determines the optimal number of workers and production lines to minimize the total weekly production cost while meeting demand constraints. Note that If each worker on Line 1 can simultaneously produce all three seat types at the given rates (20k Seat 1, 30k Seat 2, and 40k Seat 3 per week), then we should not assign workers to specific seat types. Instead, a single variable represents the number of workers on Line 1, and their total production contributes to all three demands. What is the minimum production cost?",
+    "answer": "[[3400]]",
+    "difficulty": "3",
+    "rule_id": "1",
+    "length": "1594"
+  },
+  {
+    "idx": "42",
+    "question": "An auxiliary company from the footwear sector produces different types of materials to make shoes: leather, canvas, and rubber. Each material requires specific production times to produce 100 square feet in three different factory sections (A, B, and C), as shown below:\n\n| Material | Section A (hours) | Section B (hours) | Section C (hours) |\n|----------|------------------|------------------|------------------|\n| Leather  | 7                | 8                | 6                |\n| Canvas   | 3                | 2                | 5                |\n| Rubber   | 5                | 5                | 3                |\n\nThe available production time in each factory section is:\n- **Section A:** 4,000 hours\n- **Section B:** 5,000 hours\n- **Section C:** 6,000 hours\n\nThe profit per square foot for each material is:\n- **Leather:** $15\n- **Canvas:** $7\n- **Rubber:** $3\n\n",
+    "answer": "[[917600]]",
+    "difficulty": "3",
+    "rule_id": "1",
+    "length": "875"
+  },
+  {
+    "idx": "43",
+    "question": "An auxiliary company from the footwear sector produces different types of materials to make shoes: leather, canvas, and rubber. Each material requires specific production times to produce 100 square feet in three different factory sections (A, B, and C), as shown below:\n\n| Material | Section A (hours) | Section B (hours) | Section C (hours) |\n|----------|------------------|------------------|------------------|\n| Leather  | 7                | 8                | 6                |\n| Canvas   | 3                | 2                | 5                |\n| Rubber   | 5                | 5                | 3                |\n\nThe available production time in each factory section is:\n- **Section A:** 4,000 hours\n- **Section B:** 5,000 hours\n- **Section C:** 6,000 hours\n\nThe profit per square foot for each material is:\n- **Leather:** $15\n- **Canvas:** $7\n- **Rubber:** $3 After modeling to get the maximum profit, the company is interested if a second shift is valuable. Assume that a second working shift can be used with an additional cost of 500 dollars/shift in each factory section (A, B and C) that would add 3,500, 2,500 and 3,000 h in production time, respectively. Amend the former model to contemplate whether a second shift in each factory section is an interesting option or not. Find the new maximum profit after the second shift.\n\n",
+    "answer": "[[1666100]]",
+    "difficulty": "3",
+    "rule_id": "1",
+    "length": "1347"
+  },
+  {
+    "idx": "44",
+    "question": "The firm Orgasa has received five orders (P1, P2, P3, P4, P5), which must be assigned to one of five available machines (M1, M2, M3, M4, M5). Each machine can process only one order, and every order must be assigned to exactly one machine. The cost of carrying out each order on each machine is as follows:\n\n| Order/Machine | M1  | M2  | M3  | M4  | M5  |\n|--------------|----|----|----|----|----|\n| P1           | 16 | 4  | 9  | 5  | 6  |\n| P2           | 2  | 14 | 7  | 5  | 13 |\n| P3           | 8  | 10 | 3  | 12 | 11 |\n| P4           | 3  | 7  | 6  | 10 | 5  |\n| P5           | 3  | 6  | 8  | 11 | 7  |\n\nFormulate an **integer linear programming model** that determines the **optimal allocation** of orders to machines while minimizing the total cost. Each order must be assigned to exactly one machine, and each machine can process only one order. What is the minimum achievable cost?",
+    "answer": "[[20]]",
+    "difficulty": "3",
+    "rule_id": "1",
+    "length": "890"
+  },
+  {
+    "idx": "45",
+    "question": "SAMSUNG, a manufacturer of LED televisions, is considering opening a new assembly plant to produce three TV models: high-, medium-, and low-range models. There are two possible locations: 1 and 2. The investment required to construct the factory at location 1 is **$2,000,000** and **$1,750,000** at location 2. The unit profits for production at each location are:\n\n**Location 1:**\n- High-range model: **$15** per unit\n- Medium-range model: **$13** per unit\n- Low-range model: **$10** per unit\n\n**Location 2:**\n- High-range model: **$16** per unit\n- Medium-range model: **$12** per unit\n- Low-range model: **$9** per unit\n\nAt least **75,000 units** of the high-range model, **100,000 units** of the medium-range model, and **200,000 units** of the low-range model must be produced annually.\n\nFormulate an **integer linear programming model** to determine the optimal location to construct **only one** assembly plant, aiming to **minimize costs** while meeting production constraints. What is the minimum cost?",
+    "answer": "[[5950000]]",
+    "difficulty": "3",
+    "rule_id": "1",
+    "length": "1011"
+  },
+  {
+    "idx": "46",
+    "question": "SAMSUNG, a manufacturer of LED televisions, is considering opening a new assembly plant to produce three TV models: high-, medium-, and low-range models. There are two possible locations: 1 and 2. The investment required to construct the factory at location 1 is **$2,000,000** and **$1,750,000** at location 2. The unit profits for production at each location are:\n\n**Location 1:**\n- High-range model: **$15** per unit\n- Medium-range model: **$13** per unit\n- Low-range model: **$10** per unit\n\n**Location 2:**\n- High-range model: **$16** per unit\n- Medium-range model: **$12** per unit\n- Low-range model: **$9** per unit\n\nAt least **75,000 units** of the high-range model, **100,000 units** of the medium-range model, and **200,000 units** of the low-range model must be produced annually.\n\nAdditional constraints:\n- If **low-range** televisions are produced at **Location 1**, a subsidy of **$1,000,000** is granted.\n- The **high-range** model can be produced **only at one of the two locations**.\n\nFormulate an **integer linear programming model** to determine the optimal **allocation of production between the two plants**, aiming to **minimize costs** while meeting production constraints. What is the minimum cost?",
+    "answer": "[[5425000.0]]",
+    "difficulty": "3",
+    "rule_id": "1",
+    "length": "1222"
+  },
+  {
+    "idx": "47",
+    "question": "Orgasa Estudios de Mercado, S.A. (OEM) has been contracted to conduct 1,000 door-to-door surveys for a client company. The surveys are conducted in homes with and without children, in both the morning and the afternoon. The guidelines for the surveys are as follows:\n\n- At least **400 homes with children** will be surveyed.\n- At least **400 homes without children** will be surveyed.\n- The total number of surveys conducted in the afternoon will be **equal** to the number of surveys conducted in the morning.\n- At least **40%** of the surveys conducted at homes with children will be held in the morning.\n- At least **60%** of the surveys conducted at homes with children will be held in the afternoon.\n\nThe cost of a survey depends on the type of home and the time of day as shown in the table below:\n\n| Type of Home       | Cost of Survey in Morning ($) | Cost of Survey in Afternoon ($) |\n|--------------------|-------------------------------|---------------------------------|\n| With children      | 20                            | 25                              |\n| Without children   | 18                            | 20                              |\n\nFormulate a **linear programming model** to determine the optimal number of surveys to conduct in each category (morning/afternoon and with/without children) that **minimizes the total cost** while meeting all the specified constraints. What is the minimum cost for conducting the surveys?",
+    "answer": "[[19800]]",
+    "difficulty": "3",
+    "rule_id": "1",
+    "length": "1451"
+  },
+  {
+    "idx": "48",
+    "question": "A toy firm is planning the production of two new toys. The fixed cost of configuring the production plant and the unit profit per toy type are provided below:\n\n| Toy | Cost of Configuration ($) | Unit Profit ($/toy) |\n|-----|---------------------------|---------------------|\n| 1   | 45,000                    | 12                  |\n| 2   | 76,000                    | 16                  |\n\nThe firm has two factories capable of producing these toys. The production rates per toy type and factory are as follows:\n\n| Factory | Toy 1 (units/hour) | Toy 2 (units/hour) |\n|---------|-------------------|-------------------|\n| 1       | 52                | 38                |\n| 2       | 42                | 23                |\n\nFactories 1 and 2 can provide a total of **480** and **720 hours** respectively, to produce these toys. The firm wants to decide where and how many toys should be produced in order to maximize profits.\n\nIntroduce decision variables 0\u20131 and formulate the problem as an **integer linear programming** model. The model must decide which factories should be configured for each toy type and the corresponding fixed configuration costs must apply. Additionally, the model must decide how many of each type must be produced in each factory.\n\nFormulate the model that maximizes profits and minimizes configuration costs. What is the optimal solution?",
+    "answer": "[[654720]]",
+    "difficulty": "3",
+    "rule_id": "1",
+    "length": "1370"
+  },
+  {
+    "idx": "49",
+    "question": "A lawyer's office has five new cases, and each case can be handled by one of five partners. Due to differences in experience and practice, the time required to complete each case differs for each lawyer. The time requirements (in hours) for each lawyer are given in the table below:\n\n| Lawyer    | Case 1 | Case 2 | Case 3 | Case 4 | Case 5 |\n|-----------|--------|--------|--------|--------|--------|\n| Lawyer 1  | 45     | 22     | 30     | 65     | 15     |\n| Lawyer 2  | 180    | 163    | 85     | 148    | 68     |\n| Lawyer 3  | 21     | 17     | 193    | 59     | 65     |\n| Lawyer 4  | 18     | 83     | 16     | 70     | 115    |\n| Lawyer 5  | 97     | 75     | 20     | 70     | 71     |\n\nThe task is to determine the **optimal allocation** of cases to lawyers such that each lawyer takes on **exactly one case** and the **total time** spent on all cases is **minimized**. Formulate this problem as an **integer linear programming model** to minimize the total hours spent. What is the minimum total time?",
+    "answer": "[[175]]",
+    "difficulty": "3",
+    "rule_id": "1",
+    "length": "1014"
+  },
+  {
+    "idx": "50",
+    "question": "An Organization Engineer is working on a firm\u2019s monthly production for the next 6 months. The firm can work each month using a normal shift or an extended shift. The details of the shifts are as follows:\n\n- **Normal shift:** Costs **$100,000** a month and can produce up to **5,000 units** per month.\n- **Extended shift:** Costs **$180,000** a month and can produce up to **7,500 units** per month.\n\nThe costs incurred for each shift type are fixed and independent of the quantity produced. If the firm decides not to produce in a given month, no costs are incurred.\n\nIf the firm switches from a normal shift in one month to an extended shift in the next month, an additional cost of **$15,000** is incurred. There are no additional costs when switching from an extended shift to a normal shift.\n\nThe cost of storing stock is estimated at **$2 per unit** per month (based on existing stock at the end of each month), and the initial stock is **3,000 units** (produced from a normal shift). The quantity of stock at the end of **month 6** should be at least **2,000 units**.\n\nThe **demand** for the firm\u2019s product in the next 6 months is as follows:\n\n| Month | Demand (in units) |\n|-------|-------------------|\n| 1     | 6,000             |\n| 2     | 6,500             |\n| 3     | 7,500             |\n| 4     | 7,000             |\n| 5     | 6,000             |\n| 6     | 6,000             |\n\nThe production constraints are such that if the firm produces something in a particular month, it must produce at least **2,000 units**.\n\nFormulate a **mathematical model** to help the Organization Engineer devise a production plan for the next 6 months, ensuring that stockouts are avoided. What is the optimal production plan?",
+    "answer": "[[604000]]",
+    "difficulty": "3",
+    "rule_id": "1",
+    "length": "1719"
+  },
+  {
+    "idx": "51",
+    "question": "The Studies Coordinator for the Industrial Organisation Engineering degree at EPSA is attempting to solve the 'academic schedule problem'. The objective is to associate the classrooms and times of subject matters with an academic programme divided into two courses. It is considered that three classrooms and 5 hours, respectively, are available to teach eight subject matters. These subject matters are grouped into two teachers and two academic courses. The set of all the subject matters is: A = {a1, a2, a3, a4, a5, a6, a7, a8}. Teacher 1 teaches three subject matters. The set of Teacher 1's subject matters is: AP1 = {a1, a2, a8}. Teacher 2 teaches five subject matters. The set of Teacher 2's subject matters is: AP2 = {a3, a4, a5, a6, a7}. The set of the subject matters in academic course 1 is: AC1 = {a1, a2, a3, a4}. The set of the subject matters in academic course 2 is: AC2 = {a5, a6, a7, a8}. We must bear in mind that: \n- Each teacher teaches all his/her subject matters. \n- Each teacher teaches one subject matter each hour at the most. \n- Each subject matter is taught only once. \n- Only one subject matter is taught in each classroom and each hour at the most. \n- One subject matter of each academic course is taught each hour at the most.\nCreate an integer linear programming model that associates three classrooms and 5 hours to the eight subject matters of the academic programme divided into two courses by accomplishing a compact schedule. Question: At which classroom and hour is subject matter a1 taught? Answer in format [[2, 3]] if a1 is taught in classroom 2 and hour 3.",
+    "answer": "[[1, 3]]",
+    "difficulty": "3",
+    "rule_id": "1",
+    "length": "1599"
+  },
+  {
+    "idx": "52",
+    "question": "A firm produces two products, A and B, using two imported components, C and D, which it also sells to its customers. The sales prices of these four products are $69 (product A), $57 (product B), $4.5 (component C), and $3.2 (component D). The assembling of product A requires 4 units of product C and 3 units of product D, while product B requires 6 units of product C and 9 units of product D. The purchase price of 1 unit of component C is $4, whereas component D costs $3. Product A and product B require 3 and 2 hours of assembling time, respectively. The cost of the assembling hours allocated to each product unit is $1/hour. It is estimated that 10,000 units of product C and 14,000 units of product D are available, with a total of 7,000 assembling hours for the next 6 months. Formulate an integer linear programming model that maximises this firm\u2019s gross profit margin for the next 6 months.  Answer in the format of [[maximum profit]].  Please note that all 'units' here are integers.",
+    "answer": "[[97387.2]]",
+    "difficulty": "4",
+    "rule_id": "1",
+    "length": "995"
+  },
+  {
+    "idx": "53",
+    "question": "A firm produces two products, A and B, using two imported components, C and D, which it also sells to its customers. The sales prices of these four products are $69 (product A), $57 (product B), $4.5 (component C), and $3.2 (component D). The assembling of product A requires 4 units of product C and 3 units of product D, while product B requires 6 units of product C and 9 units of product D. The purchase price of 1 unit of component C is $4, whereas component D costs $3. Product A and product B require 3 and 2 hours of assembling time, respectively. The cost of the assembling hours allocated to each product unit is $1/hour. It is estimated that 10,000 units of product C and 14,000 units of product D are available, with a total of 7,000 assembling hours for the next 6 months. Assume that a commercial constraint exists whereby one, and only one, of products A and B and either component C or D can be sold. Amend the original model to bear in mind this consideration.  Answer in the format of [[maximum profit]].  Please note that all 'units' here are integers.",
+    "answer": "[[97387.2]]",
+    "difficulty": "5",
+    "rule_id": "1",
+    "length": "1071"
+  },
+  {
+    "idx": "54",
+    "question": "A firm produces two products, A and B, using two imported components, C and D, which it also sells to its customers. The sales prices of these four products are $69 (product A), $57 (product B), $4.5 (component C), and $3.2 (component D). The assembling of product A requires 4 units of product C and 3 units of product D, while product B requires 6 units of product C and 9 units of product D. The purchase price of 1 unit of component C is $4, whereas component D costs $3. Product A and product B require 3 and 2 hours of assembling time, respectively. The cost of the assembling hours allocated to each product unit is $1/hour. It is estimated that 10,000 units of product C and 14,000 units of product D are available, with a total of 7,000 assembling hours for the next 6 months. Assume that only 3 of the 4 products available are expected to be sold. Add the appropriate constraints to the original model to contemplate this new commercial constraint.  Answer in the format of [[maximum profit]].  Please note that all 'units' here are integers.",
+    "answer": "[[97387.2]]",
+    "difficulty": "5",
+    "rule_id": "1",
+    "length": "1052"
+  },
+  {
+    "idx": "55",
+    "question": "A firm produces two products, A and B, using two imported components, C and D, which it also sells to its customers. The sales prices of these four products are $69 (product A), $57 (product B), $4.5 (component C), and $3.2 (component D). The assembling of product A requires 4 units of product C and 3 units of product D, while product B requires 6 units of product C and 9 units of product D. The purchase price of 1 unit of component C is $4, whereas component D costs $3. Product A and product B require 3 and 2 hours of assembling time, respectively. The cost of the assembling hours allocated to each product unit is $1/hour. It is estimated that 10,000 units of product C and 14,000 units of product D are available, with a total of 7,000 assembling hours for the next 6 months. Amend the original problem to consider a fixed cost of $6,000 for product A and of $4,000 for product B which is incurred when selling one product unit. These costs are not incurred if a decision is made to not sell these products.  Answer in the format of [[maximum profit]]. Please note that all 'units' here are integers.",
+    "answer": "[[103989]]",
+    "difficulty": "6",
+    "rule_id": "1",
+    "length": "1110"
+  },
+  {
+    "idx": "56",
+    "question": "The manager of the firm **TRONIC** must decide how to distribute an investment of **100 million dollars** for the following year among four concepts: R&D, Advertising, Technological Resources, and Human Resources.\n\nThe firm\u2019s consultant has established that the profit after 1 year of investing **X million dollars** is obtained according to the following formulas (see Table 3.1):\n\n| Concept                  | Profit Formula                                                                 |\n|--------------------------|---------------------------------------------------------------------------------|\n| R&D                      | 10 * (2*X)^1/3 - 2))                                                            |\n| Advertising              | 10 * (Ln(X - 2))                                                                |\n| Technological Resources  | 10 * (e^(X / 50 - 2))                                                          |\n| Human Resources          | 10 * (X / 50)                                                                   |\n\nIn accordance with the collective bargaining agreement signed 1 month ago, the minimum amount to be invested in **Human Resources** (promotions, bonuses, etc.) over the next year is **20 million dollars**.\n\nAdditionally, it is important to note that investments in **Technological Resources** offer good investment revenue when investments are small or moderate. However, the investment revenue offered by **R&D** or **advertising** is significantly higher for small investments. Due to pressure from competitors, the investment made in **Technological Resources** should be such that its contribution to the investment revenue must not be negative.\n\nFormulate a **linear programming model** to decide the optimal distribution of the 100 million dollars across the four concepts. Find the maximum profit",
+    "answer": "[[30.968]]",
+    "difficulty": "3",
+    "rule_id": "1",
+    "length": "1851"
+  },
+  {
+    "idx": "57",
+    "question": "A future businessperson wishes to locate a new stationery store in the vicinity of a primary school and a secondary school. On a map of coordinates, the locations of the schools and an existing stationery store are as follows:\n\n- Primary School at **A (20, 0)**\n- Secondary School at **B (0, 20)**\n- Existing stationery store at **(0, 0)**\n\nAccording to municipal laws, the new stationery store must be positioned at a distance of at least **400 meters** from the existing store. The objective is to determine the location of the new stationery store that **minimizes the sum of the squares of the distances** to the two schools.\n\nFormulate and solve a mathematical model to determine the optimal location that meets the municipal constraints while minimizing the objective function. Answer in the format of [[x, y]] for the best location.",
+    "answer": "[[282.84, 282.84]]",
+    "difficulty": "3",
+    "rule_id": "1",
+    "length": "839"
+  },
+  {
+    "idx": "58",
+    "question": "The intention is to place a handrail on a terrace with an empty space in its centre in such a way that the handrail goes around the interior and exterior terrace perimeters. This empty space, which is rectangular in shape, measures **10 m wide** by **18 m long**. Between the interior and the exterior terrace perimeters, a walkway must be left, which is the same width on all sides. The handrail measures **250 m**.The handrail measures **250 m**, which means the total perimeter of the exterior of the terrace, which consists of the sum of the outer and inner perimeters, does not exceed the 250-meter limit.\n\n(a) Formulate a **non-linear programming model** that maximizes the area occupied by the walkway in order to improve circulation in it. What is the optimal walkway area?\n\nThe dimensions of the terrace, the handrail, and the walkway must be taken into account in this model. Define the walkway width and the outer terrace sides, and optimize the area. Give the answer in the format of [[optimal walkway area]].",
+    "answer": "[[2156.25]]",
+    "difficulty": "3",
+    "rule_id": "1",
+    "length": "1021"
+  },
+  {
+    "idx": "59",
+    "question": "The intention is to place a handrail on a terrace with an empty space in its centre in such a way that the handrail goes around the interior and exterior terrace perimeters. This empty space, which is rectangular in shape, measures **10 m wide** by **18 m long**. Between the interior and the exterior terrace perimeters, a walkway must be left, which is the same width on all sides. The handrail measures **250 m**, which means the total perimeter of the exterior of the terrace, which consists of the sum of the outer and inner perimeters, does not exceed the 250-meter limit.\n\n(b) This problem could have been formulated by linear programming by maximizing the **walkway width**. Formulate the **linear programming model** that maximizes the walkway width under the constraint of the handrail length. What is the optimal walkway width?\n\nThe model should determine the width of the walkway in such a way that it maximizes the area while considering the total handrail length constraint. Give the answer in the format of [[optimal walkway width]].",
+    "answer": "[[17.25]]",
+    "difficulty": "3",
+    "rule_id": "1",
+    "length": "1048"
+  },
+  {
+    "idx": "60",
+    "question": "On a housing estate on the Alicante coastline, two types of homes are being built: apartments and penthouses, whose prices are **p1** and **p2**, respectively. The demand curve for apartments is **d1 = 100 - 2p1**, and for penthouses, it is **d2 = 150 - 3p2**.\n\nThe builder has already sold **60 apartments**, which lowers market demand for apartments (**d1**). He wishes to adjust demand so that no homes are left unsold. Additionally, he has calculated that he should build **15 times more apartments than penthouses**. The cost to build an apartment is **5 million dollars**, and the cost to build a penthouse is **3 million dollars**. The builder has a budget of **350 million dollars** for homes still to be sold.\n\n(a) **Formulate a linear programming model** to determine how many homes of each type must be built and what prices must be set in order to maximize the builder\u2019s profit. What is the optimal number of homes to be built and the prices to maximize profit? Answer in format [[max_profit]]",
+    "answer": "[[314.21861152141990]]",
+    "difficulty": "3",
+    "rule_id": "1",
+    "length": "1005"
+  },
+  {
+    "idx": "61",
+    "question": "A firm that packs refreshments and beers in Valencia (E Spain) employs the same syrup to produce its **1.5 L COLI** and **1.5 L PEPSA** products on its **S1 production line**. Once processed, each **hectolitre of syrup** produces **40 units of COLI** and **20 units of PEPSA**.\n\nIf **X1** units of **COLI** and **X2** units of **PEPSA** are produced, the firm estimates that the **daily income (in dollars)** is given by:\n\nf(X1, X2) = **49000X1 - X1\u00b2 + 30X2 - 2X2\u00b2**\n\nThe cost to **buy and process** each **hectolitre of syrup** is **$150**.\n\nThe **S1 packaging line** has a net capacity of producing **7,100 units** of **1.5 L product** per hour. The firm works **5 days a week** in **8-hour shifts**.\n\n### **Constraints:**\n- The firm is committed to producing **at least half as much PEPSA as COLI**.\n- The total **daily production capacity** must respect the S1 packaging line limits.\n- The firm wants to **optimize its daily profits** while considering its production planning.\n\n### **Objective:**\nFormulate a **non-linear programming model** to determine the **optimal daily production plan** for COLI and PEPSA in order to **maximize daily profit**.\n\nWhat is the **optimal number of units** of **COLI and PEPSA** to be produced to maximize profit?",
+    "answer": "[[287249204.16677666]]",
+    "difficulty": "4",
+    "rule_id": "1",
+    "length": "1253"
+  },
+  {
+    "idx": "62",
+    "question": "The Operations Department of the FORDASA automobile manufacturing and assembly firm must establish the daily production quantities of two families of cars (four-door saloon and people carrier) which maximise profits according to the production capacity constraints. The firm also wishes to respect the environment, and in the future to benefit its sales, given its commitment to increase the FFM (fleet fuel mileage) indicator; that is, the mileage efficiency per litre of fuel of produced fleet. To simplify this study case, a linear relation between the sale price and the quantity to be produced is assumed, given by the following function: q_i = a_i - b_i * p_i, where a_i and b_i are constants, and are provided in Table 3.2, and p_i is the mean unit price per family of cars in thousands of dollars. The data in Table 3.2 is as follows:\n\n| i | Family of Cars       | a   | b   | C (thousands of dollars) | R (s) | Kmpl |\n|---|----------------------|-----|-----|--------------------------|-------|------|\n| 1 | 4-door saloons       | 440 | 20  | 17                       | 54    | 12   |\n| 2 | People carriers      | 248 | 12  | 13                       | 56    | 20   |\n\nThe FFM indicator, which must at least be below 15 Kmpl, is calculated by the harmonic mean: FFM = (q_1 + q_2) / (q_1 / kmpl_1 + q_2 / kmpl_2). The only productive resource that restricts the system is the assembly line. It is estimated that the firm spends 1 hour every day on assembling four-door saloons and people carriers. The time required (R_i) to produce one unit of each family of cars is as follows: R_1 = 54 seconds for four-door saloons and R_2 = 56 seconds for people carriers. The firm aims to optimise production while meeting the constraints, including the FFM requirement and time limitations.Answer in the format of [[max_profit]]",
+    "answer": "[[270.1691957435285]]",
+    "difficulty": "4",
+    "rule_id": "1",
+    "length": "1825"
+  },
+  {
+    "idx": "63",
+    "question": "A certain physical\u2013chemical process requires two liquid components to obtain the end product. The pursued objective is to maximize the quality of the product obtained, measured as the difference between the Napierian logarithm of the product of the litres used of each component and the cube root of the summation of the first component litres as well as double the second component litres. For the obtained set to be stable, it is necessary that the squared difference between the litres employed of each component and the mean litres utilized of both components is below ten. Moreover, only 80 l fit in the mixture tank.\n\n(a) **Model the problem by considering that the units to be obtained cannot be an integer number**\n\n(b) **Consider the Kuhn-Tucker conditions to solve the problem**\n\n(c) **Solve the problem**\n\n(d) **Interpret the result**\n\n### Solution\n\n(a) Model the problem by considering that the units to be obtained cannot be an integer number\n\n#### Decision Variables:\nX1 = litres of the first component.\nX2 = litres of the second component.\n\n### Objective Function:\nMax f = Ln(X1 * X2) - (X1 + 2 * X2)^(1/3) Complete the rest of the problem and answer in the format of [[max_profit]] and use e+31 to represent 10^31",
+    "answer": "[[8.857344717388114e+31]]",
+    "difficulty": "4",
+    "rule_id": "1",
+    "length": "1229"
+  },
+  {
+    "idx": "64",
+    "question": "The consumer utility function is **U(x, y) = xy**, where **x** and **y** are the quantities consumed of products A and B, whose unit prices are **2** and **3** dollars, respectively. The intention is to:\n\n(a) **Maximise this consumer utility** by bearing in mind that no more than **90 dollars** can be spent on acquiring these products. Please answer in the format of [[max_utility]]",
+    "answer": "[[337.5]]",
+    "difficulty": "4",
+    "rule_id": "1",
+    "length": "384"
+  },
+  {
+    "idx": "65",
+    "question": "A research centre has to design and launch a balloon with an X-ray telescope and other scientific equipment. An approximate measure of performance can be expressed in terms of the height that the balloon reaches and the weight of the equipment raised. Evidently, height itself is given by the volume of the balloon. Based on past experience, it was concluded that to maximise a satisfactory function for performance, the performance function is as follows:\n\nP = f(V, W) = 100V - 0.3V\u00b2 + 80W - 0.2W\u00b2\n\nwhere **V** is the volume of the balloon and **W** is the weight of the equipment. The project budget is limited to 1,040 dollars. The cost associated with volume **V** is **2V**, and the cost of the equipment is **4W**. To obtain a reasonable balance between performance owing to the height and weight of the scientific equipment, the design must fulfil the constraint **80W \u2265 100V**.\n\n**Objective:** Obtain an optimum design in terms of the volume and weight of the equipment, and solve it using the **Kuhn-Tucker** algorithm. Please give the answer in the format of [[max_performance]] keeping two decimal places.",
+    "answer": "[[16194.29]]",
+    "difficulty": "4",
+    "rule_id": "1",
+    "length": "1028"
+  },
+  {
+    "idx": "66",
+    "question": "A firm must design a box of minimum dimensions to pack three circular objects with the following radii: **R1 = 6**, **R2 = 12**, and **R3 = 16** cm. By bearing in mind that the circles placed inside the box cannot overlap, consider a non-linear programming model that minimises the perimeter of the box.",
+    "answer": "[[24]]",
+    "difficulty": "4",
+    "rule_id": "1",
+    "length": "303"
+  },
+  {
+    "idx": "67",
+    "question": "A firm must design an oil-packing process for three products with constraints on packaging speed, oil cost, and demand. The packing costs, market shares, and rappel data for the products are provided in Table 3.3. The goal is to maximise the firm's profit by determining the number of units of each product to be packed. Packaging speeds for PVC and glass are 100,000 units/day and 35,000 units/day, respectively. The month consists of 20 working days with 8-hour shifts. Five employees are available. The cost to store oil is 2 cents per litre per month, which increases by 'Y' cents based on the percentage of each product. \n\nTable 3.3 - The problem data: \nProduct | Packing (l) | Cost of oil (cent/l) | Production cost (cent/unit) | Market (l) | Sale price (cent/l) | Rappel (l) | Y \n--- | --- | --- | --- | --- | --- | --- \nVirgin olive oil | Glass 1 | 345 | 75 | 175000 | 445 | 350000 | 8 \nOlive oil, 1\u00b0 | PVC | 270 | 15 | 900000 | 303 | 750000 | 4 \nOlive oil, 0.4\u00b0 | PVC | 280 | 15 | 750000 | 303 | 750000 | 4 \n\nPackaging speed depends on the packaging material: for products packed with PVC, the speed is 100,000 units/day, while those packed in glass reach 35,000 units/day. The month in question includes 20 working days, with 8-hour shifts, and there are 5 employees. \n\nUse math modeling to get the max profix and answer max profit in format [[max_profit]]",
+    "answer": "[[119695.39]]",
+    "difficulty": "5",
+    "rule_id": "1",
+    "length": "1366"
+  },
+  {
+    "idx": "68",
+    "question": "4.2 Planning Storage in a Library\nIn one of EPSA\u2019s libraries, shelving units for 200 books of 19 cm high, 150 books of 24 cm high, 100 books of 31 cm high, and 80 books of 35 cm high are needed. A mean thickness of 3 cm is considered for all the books. \nThere are several possibilities to store books. For instance, a shelving unit measuring 31 cm high can be built to store all the books of a height of less than or equal to 31 cm; and one measuring 35 cm high for books of 35 cm in height. Otherwise, a single shelving unit measuring 35 cm can be built to store all the books, etc. \nIt is estimated that the construction of the shelving unit costs $2,500 and that this incurs a cost of $5/cm2 for the available area to store books. Let us assume that the area required to store one book is the multiplication of shelving unit height by book thickness. \nConsider and solve the shortest path problem that could be used to help determine how to store books at a minimum cost.",
+    "answer": "[[209500]]",
+    "difficulty": "6",
+    "rule_id": "1",
+    "length": "974"
+  },
+  {
+    "question": "4.5 Designing a Communications Network\nA firm has eight warehouses distributed at the coordinates indicated in Table 4.4. All the warehouses are to be connected by means of a telephone network using the lines of the Telef\u00f3n firm. The cost to contract a line between two points is $50 per year and per km of line. The link between two points is considered a straight line. Sending information from one warehouse to another will be done only by the contracted lines, and this information will travel from one line to another (if required) through switch centres located on the nodes where lines cross.\nBy assuming that switch centres can be located only in the firm\u2019s eight warehouses and that the firm wishes to connect all the points with the shortest possible length of line, what is the telephone network with the minimum cost that the firm should contract? How much would it cost?\n\nTable 4.4 Location of warehouses\n| Warehouse | Coordinates (km) |\n|-----------|------------------|\n| A         | (50, 40)         |\n| B         | (90, 10)         |\n| C         | (50, 70)         |\n| D         | (50, 80)         |\n| E         | (90, 50)         |\n| F         | (30, 80)         |\n| G         | (50, 20)         |\n| H         | (10, 60)         |, Please answer in the format of [[minimum_cost]]",
+    "answer": "[[9475.77]]",
+    "difficulty": "7",
+    "rule_id": "1",
+    "length": "1296",
+    "idx": "69"
+  },
+  {
+    "idx": "70",
+    "question": "A lawyer\u2019s office has accepted five new cases, and each can be suitably managed by any of the five more recent partners. Owing to the difference in experience and practice, lawyers will employ different times on their cases. One of the most experienced partners has estimated time requirements (in hours) which are indicated in Table 4.5. \n\nFormulate this problem as a Graph Theory model to optimally determine the assignment of cases to lawyers so that each one is dedicated to a different case and that the total time spent in hours is minimum. \n\nTable 4.5 - Estimation of the time requirements per lawyer and case: \n\nCase 1 | Case 2 | Case 3 | Case 4 | Case 5 \n--- | --- | --- | --- | --- \nLawyer 1 | 145 | 122 | 130 | 95 | 115 \nLawyer 2 | 80 | 63 | 85 | 48 | 78 \nLawyer 3 | 121 | 107 | 93 | 69 | 95 \nLawyer 4 | 118 | 83 | 116 | 80 | 105 \nLawyer 5 | 97 | 75 | 120 | 80 | 111",
+    "answer": "[[436]]",
+    "difficulty": "5",
+    "rule_id": "1",
+    "length": "877"
+  },
+  {
+    "idx": "71",
+    "question": "ORGA, S.A., a firm that implements information systems, must finish implementing three projects over the next 4 months. Project 1 (P1) must be finished in 3 months and requires a consultant\u2019s work of 8 months. Project 2 (P2) has to finish within 4 months and needs 10 months of a consultant\u2019s work. Project 3 (P3) needs to end in 2 months and requires 12 months of a consultant\u2019s work. The consultancy firm has eight consultants specialised in information systems available each month but, according to operational rules, no more than six consultants can work on the same project.\n\n(b) Solve the problem and give the maximal flow that would circulate around the corresponding network. Answer in the format of [[your_answer]]",
+    "answer": "[[30]]",
+    "difficulty": "4",
+    "rule_id": "1",
+    "length": "724"
+  },
+  {
+    "idx": "72",
+    "question": "4.8 Production Planning in a Plastics Firms\nPLACASA, a supplier of plastic injection parts for the automobile sector, foresees the demand of an article for the following 4 months of 100, 140, 210 and 180 units, respectively. The firm can maintain only sufficient stock to meet the demand of each month or it can have excess stock to meet the demand of two successive months or more with a storage cost of $1.2 per month and unit of excessive stock.\nPLACASA calculates that the production cost for the following months, which varies depending on the units produced, is $15, $12, $10 and $14, respectively. A preparation cost of $200 is incurred every time a production order is placed. The firm wishes to develop a production plan that minimises the total costs of production orders, of production and of keeping an article in stock. Formulate and solve a shortest path model to find an optimum production plan.",
+    "answer": "[[7896]]",
+    "difficulty": "4",
+    "rule_id": "1",
+    "length": "910"
+  },
+  {
+    "idx": "73",
+    "question": "4.9 Overbooking on Airlines\nA low-cost airline, OrgaAir, operates four daily flights from Valencia to London at 10:00, 12:00, 14:00 and 16:00 hours. The first two flights hold 100 passengers and the last two can fly up to 150 passengers each. Should overbooking occur, which implies having sold more seats than the plane actually has, the airline can place a passenger on the later flight. Evidently each delayed traveller is compensated by being paid $200 plus $20 for each hour delayed. The firm always places delayed travellers on the flight leaving at 16:00 hours or on one of the other flights at 20:00 hours, which always has available seats (a capacity of 999 passengers is always considered) at no extra charge.\nLet us assume that at the beginning of the day we know that OrgaAir has sold 110, 160, 100 and 100 seats on its four daily flights, respectively. Model this problem as a maximal flow model at a minimum cost in order to minimise the airline\u2019s total overbooking cost.",
+    "answer": "[[26800]]",
+    "difficulty": "4",
+    "rule_id": "1",
+    "length": "985"
+  },
+  {
+    "idx": "74",
+    "question": "4.11 Fibre Optics Network Planning\nEPSA intends to reinforce its internal fibre optics network by placing new fibre between its two buildings, Ferr\u00e1ndiz and Carbonell. For this purpose, it wishes to use existing piping, whose lengths are indicated in Table 4.9.\n\n(a) Bear in mind that the cost is proportional to the wiring run length. Find out the lowest possible cost that connects 1 and 6. Indicate the piping through which one of the optimum runs passes.\n\nTable 4.9 Lengths of piping between network nodes\n\n| From \\ To | 1 | 2 | 3 | 4 | 5 | 6 |\n|-----------|---|---|---|---|---|---|\n| 1         | 4 | 3 | 5 | 1 | 3 | 5 |\n| 2         | 3 | 5 | 3 | 1 | 5 | 2 |\n| 3         | 5 | 3 | 5 | 3 | 5 | 2 |\n| 4         | 1 | 3 | 2 | 5 | 1 | 1 |\n| 5         | 3 | 6 | 5 | 2 | 5 | 1 |\n| 6         | 2 | 5 | 1 | 2 | 2 | 3 |\n\nTable 4.10 Fibre capacities between network nodes\n\n| From \\ To | 1 | 2 | 3 | 4 | 5 | 6 |\n|-----------|---|---|---|---|---|---|\n| 1         | 2 | 3 | 2 | 2 | 3 | 2 |\n| 2         | 3 | 4 | 5 | 5 | 5 | 5 |\n| 3         | 4 | 3 | 4 | 5 | 5 | 6 |\n| 4         | 2 | 4 | 3 | 3 | 2 | 6 |\n| 5         | 5 | 3 | 2 | 3 | 4 | 2 |\n| 6         | 2 | 5 | 6 | 5 | 5 | 6 |\n Give the answer in format [[lowest_cost]]",
+    "answer": "[[6]]",
+    "difficulty": "4",
+    "rule_id": "1",
+    "length": "1213"
+  },
+  {
+    "idx": "75",
+    "question": "4.11 Fibre Optics Network Planning\nEPSA intends to reinforce its internal fibre optics network by placing new fibre between its two buildings, Ferr\u00e1ndiz and Carbonell. For this purpose, it wishes to use existing piping, whose lengths are indicated in Table 4.9.\n\n(b) If each wired fibre segment has the capacities indicated in Table 4.10, determine the maximum total capacity between connections 1 and 6, as well as the runs required to achieve this maximum capacity.\n\nTable 4.9 Lengths of piping between network nodes\n\n| From \\ To | 1 | 2 | 3 | 4 | 5 | 6 |\n|-----------|---|---|---|---|---|---|\n| 1         | 4 | 3 | 5 | 1 | 3 | 5 |\n| 2         | 3 | 5 | 3 | 1 | 5 | 2 |\n| 3         | 5 | 3 | 5 | 3 | 5 | 2 |\n| 4         | 1 | 3 | 2 | 5 | 1 | 1 |\n| 5         | 3 | 6 | 5 | 2 | 5 | 1 |\n| 6         | 2 | 5 | 1 | 2 | 2 | 3 |\n\nTable 4.10 Fibre capacities between network nodes\n\n| From \\ To | 1 | 2 | 3 | 4 | 5 | 6 |\n|-----------|---|---|---|---|---|---|\n| 1         | 2 | 3 | 2 | 2 | 3 | 2 |\n| 2         | 3 | 4 | 5 | 5 | 5 | 5 |\n| 3         | 4 | 3 | 4 | 5 | 5 | 6 |\n| 4         | 2 | 4 | 3 | 3 | 2 | 6 |\n| 5         | 5 | 3 | 2 | 3 | 4 | 2 |\n| 6         | 2 | 5 | 6 | 5 | 5 | 6 |\n Answer the maximum total capacity between connections 1 and 6 in the [[]], for example, [[3]] if you get 3 units as the maximum total capacity between connections.",
+    "answer": "[[7]]",
+    "difficulty": "4",
+    "rule_id": "1",
+    "length": "1344"
+  },
+  {
+    "idx": "76",
+    "question": "4.12 Assigning Subject Matters to Teachers\nEPSA\u2019s Business Organisation Department has four teachers working part-time and it wishes to assign them five new subject matters. The head of the department knows from past experience that it is counterproductive to impose subject matters upon teachers. By bearing this in mind, teachers were asked to make a list of their preferences among the five subject matters, which are provided in Table 4.11.\n\nThe challenge the department faces is to assign as many subject matters as possible by respecting teachers\u2019 preferences at the same time.\n\nUse a Graph Theory model to determine the maximum number of subject matters that can be assigned and the assignment of the subject matters to the teachers.\n\nTable 4.11 Teachers\u2019 preferences\n\n| Teacher | Preferred subject matter |\n|---------|--------------------------|\n| P1      | 3, 4 or 5                |\n| P2      | 1                        |\n| P3      | 1 or 2                   |\n| P4      | 1, 2 or 5                |\n| P5      | 2                        | Answer the maximum number of subject matters that can be assigned in the format of [[max_subject_matters]]",
+    "answer": "[[4]]",
+    "difficulty": "3",
+    "rule_id": "1",
+    "length": "1155"
+  },
+  {
+    "idx": "77",
+    "question": "Table 4.12 shows the existing water connections between a given firm\u2019s different warehouses. Each arc indicates the maximum water transport capacity (m3/h) of the pipe or pipes connecting the warehouses.\n\n(a) What is the maximum quantity of water that can be held in warehouse F?\nTable 4.12 Capacities of the water connections between warehouses\n\n| Arc | Capacity | Arc | Capacity | Arc | Capacity |\n|-----|----------|-----|----------|-----|----------|\n| I\u2013A | 6        | B\u2013D | 1        | D\u2013F | 4        |\n| I\u2013B | 4        | B\u2013C | 3        | E\u2013F | 9        |\n| I\u2013C | 1        | B\u2013E | 3        | A\u2013D | 4        |\n|     |          | C\u2013E | 4        |       |          |",
+    "answer": "[[9]]",
+    "difficulty": "3",
+    "rule_id": "1",
+    "length": "666"
+  },
+  {
+    "idx": "78",
+    "question": "Table 4.12 shows the existing water connections between a given firm\u2019s different warehouses. Each arc indicates the maximum water transport capacity (m3/h) of the pipe or pipes connecting the warehouses.Formulate a linear programming model to help solve this problem. Answer in the format of [[max_water_flow]] \n\nTable 4.12 Capacities of the water connections between warehouses\n\n| Arc | Capacity | Arc | Capacity | Arc | Capacity |\n|-----|----------|-----|----------|-----|----------|\n| I\u2013A | 6        | B\u2013D | 1        | D\u2013F | 4        |\n| I\u2013B | 4        | B\u2013C | 3        | E\u2013F | 9        |\n| I\u2013C | 1        | B\u2013E | 3        | A\u2013D | 4        |\n|     |          | C\u2013E | 4        |       |          |",
+    "answer": "[[9]]",
+    "difficulty": "3",
+    "rule_id": "1",
+    "length": "699"
+  },
+  {
+    "idx": "79",
+    "question": "The star product of a baby clothes firm, Babid\u00e1, is babygro, whose size varies from 0 to 12 months. Monthly demand (in thousands of units) and variable cost (in dollars) of producing each babygro are provided in Table 4.13. A fixed cost of $1,000 is incurred to produce any babygro type on a monthly basis. If the firm wishes, demand corresponding to a given size can be met with a larger babygro size. Formulate and solve this problem with a Graph Theory model. The solution must minimize the cost of meeting the monthly demand of babygro.\n\nTable 4.13 Monthly demand and production costs\n\n| Size (months) | 0  | 1  | 3   | 4   | 6   | 9   | 12  |\n|---------------|----|----|-----|-----|-----|-----|-----|\n| Variable cost ($/unit) | 4  | 3  | 2.6 | 2.4 | 1.9 | 1.8 | 1.7 |\n| Monthly demand (thousands of units) | 400 | 300 | 500 | 700 | 400 | 200 | 700 | Answer in the format of [[min_cost]] and only give the value without the unit $",
+    "answer": "[[7024.000]]",
+    "difficulty": "3",
+    "rule_id": "1",
+    "length": "934"
+  },
+  {
+    "idx": "80",
+    "question": "A firm must transport machines from production plants A, B, and C to warehouses X, Y, and Z. Five machines are required in X, four in Y, and three in Z, and there are eight machines available in A, five in B, and three in C.\n\n(a) Contemplate and solve a Graph Theory model to determine the maximal flow of the machines that can be transported and the run of this flow.\n answer in the format of [[max_flow]]",
+    "answer": "[[12]]",
+    "difficulty": "3",
+    "rule_id": "1",
+    "length": "406"
+  },
+  {
+    "idx": "81",
+    "question": "A firm must transport machines from production plants A, B, and C to warehouses X, Y, and Z. Five machines are required in X, four in Y, and three in Z, and there are eight machines available in A, five in B, and three in C.\n\n(b) By assuming a mean cost of $45 per transported machine, what would the total cost be of transporting the machines obtained in the former section? answer in the format of [[total_cost]]",
+    "answer": "[[540]]",
+    "difficulty": "3",
+    "rule_id": "1",
+    "length": "414"
+  },
+  {
+    "idx": "82",
+    "question": "In Table 4.16, node A represents a fire station and node E is a nature reserve. The values associated with the arcs represent the time required to go from one node to another during the rush hour. Using an adequate algorithm, determine the quickest route to go from node A to node E during the rush hour. Clearly show your work for each iteration of the algorithm.\n\nTable 4.16 Times to travel between nodes\n\n| From/to | A  | B  | C   | D   | E   |\n|---------|----|----|-----|-----|-----|\n| A       | 0  | 100| \u221e   | \u221e   | \u221e   |\n| B       | \u221e  | 0  | 220 | 300 | 100 |\n| C       | 100| 80 | 0   | \u221e   | 90  |\n| D       | \u221e  | \u221e  | \u221e   | 0   | 230 |\n| E       | \u221e  | 130| 110 | 120 | 0   |\n\n In this chart \u221e means infinity. Answer in the format of [[min_time]]",
+    "answer": "[[200]]",
+    "difficulty": "4",
+    "rule_id": "1",
+    "length": "758"
+  },
+  {
+    "idx": "83",
+    "question": "The firm Orgasa has received five orders (P1, P2, P3, P4, P5) which must be served. For this purpose, there are five machines available (M1, M2, M3, M4, M5). Each machine can deal with each order at the cost shown in Table 4.17. To be able to determine the optimum assignment that minimises the total cost of serving these orders, by assuming that each machine can deal with one order and that all the orders must be served, contemplate a Graph Theory model that represents the problem set out.\n\nTable 4.17 Production costs\n\n| Order/Machine | M1 | M2 | M3 | M4 | M5 |\n|---------------|----|----|----|----|----|\n| P1            | 16 | 4  | 9  | 5  | 6  |\n| P2            | 2  | 14 | 7  | 5  | 13 |\n| P3            | 8  | 10 | 3  | 12 | 11 |\n| P4            | 3  | 7  | 6  | 10 | 5  |\n| P5            | 3  | 6  | 8  | 11 | 7  |",
+    "answer": "[[20]]",
+    "difficulty": "4",
+    "rule_id": "1",
+    "length": "825"
+  },
+  {
+    "idx": "84",
+    "question": "The firm SUN2 manufactures solar energy panels, and it has received an urgent order for 40 panels from a new German customer which is willing to pay 1,000$ per panel. SUN2 has committed its production capacity to other orders, and the only alternative left to serve the new order is to subcontract the production involved. SUN2 has located two possible suppliers: Supplier A, based in Romania, which would sell SUN2 each panel for 500$; Supplier B, from Poland, which would sell each panel for 550$. The cost to transport one batch of 40 panels from either of the two suppliers to the German firm is 1,000$. Nonetheless, the customer\u2019s technical specifications are very demanding, so SUN2 estimates that Supplier A could supply one correct batch with a probability of 70 %, whereas Supplier B could do it with a probability of 80 %. If the batch were incorrect, SUN2 could sell it to another customer at the price of 200$ per panel.\n\nSUN2 is considering the possibility of asking for a test panel from each supplier to test it before placing an order. SUN2\u2019s testing system guarantees that a faulty panel is always detected, while there is a 5 % margin of error with correct panels. The testing system is prepared to assess two test panels, and the overall cost (cost of the two panels + transport + cost of the test) comes to 2,000$. Draw the corresponding decision tree and indicate with a letter per branch the associated probability or the associated cost (depending on the case).\n\nSolve the decision tree and in this way, try to answer: Up to how much should SUN2 pay for the test? Answer in the format of [[max_cost]]",
+    "answer": "[[6.36]]",
+    "difficulty": "4",
+    "rule_id": "1",
+    "length": "1623"
+  },
+  {
+    "idx": "85",
+    "question": "Peter wishes to sell his 8-year-old car to buy a new one. He has placed a for sale ad on the Internet asking for $1,200 and indicating that the car has 1 month left before its MOT needs renewing. He has received two replies: Ray agrees to pay $1,200, but after the car has passed its MOT; James is willing to buy it now, but offers $1,000. Peter is not absolutely certain that his car will pass its MOT, but he estimates a 50 % probability of it passing it. Lewis, a friend of Peter\u2019s, runs a garaje and offers to test his car, and he would only charge $20. Lewis insists that his test never fails if the car does not pass its MOT, and that his test states that the car would not pass the MOT, but then it does, in only 20 % of cases. Lewis has also explained to Peter that if his car does not pass the MOT, he can mend the car to pass it for $300. An MOT costs $40 every time that a car takes it.\n\n(a) Draw the corresponding decision tree and indicate with a letter per branch the associated probability or the associated cost (depending on the case).\n(b) Solve the decision tree.\n(c) Up to what amount is Peter willing to pay for Lewis\u2019 test? Answer in the format of [[max_cost]]",
+    "answer": "[[64]]",
+    "difficulty": "4",
+    "rule_id": "1",
+    "length": "1181"
+  },
+  {
+    "idx": "86",
+    "question": "Smith is a big football fan and the 2010 World Cup final is played tomorrow. As his team did not classify, he wishes to bet 100$ on either of the finalists (Holland-Spain). He will place his bet on a well-known Internet portal. Right now, the bets are 2\u20131 for Spain. This means that if Smith bets for Holland and bets right, he will obtain a profit of 200$, whereas in the case of Spain, he will win a $50 profit. The Internet portal offers him the option of employing two counselling systems: the first provides him the winner\u2019s name according to fans, with a 60 % chance of getting it right, and it costs 5 % of the bet. The second option predicts the winner according to an expert system, and there is a 70 % chance of getting it right and it costs 20 % of the bet. Should Smith decide on contracting either counselling system, Smith will bet 100$ and will also pay the counselling cost.\n\n(a) Draw the corresponding decision tree and indicate with a letter per branch the associated probability or the associated cost (depending on the case).\n(b) Solve the decision tree.\n(c) What is the value of the imperfect information provided by both counselling services? Answer in the format of [[a,b]] if you get answer $a for fans and $b for the expert system",
+    "answer": "[[20,40]]",
+    "difficulty": "4",
+    "rule_id": "1",
+    "length": "1255"
+  },
+  {
+    "idx": "87",
+    "question": "ELECTROSEA is a firm that specialises in maritime measuring apparatus. The U.S. government has just published a public tender to acquire 100 thermosalino-graphs with some advanced options, which mean that the firm granted the public tender will have to provide a new design and its production. The top price paid per unit is 1,400$. ELECTROSEA has estimated that the final cost of each thermosalinograph is around 1,000$. Nonetheless, the possibility of the firms\u2019 main competitor, MEASURESEA, also entering the public tender is considered (they estimate that there is a 50 % probability of this happening). After analysing MEASURESEA\u2019s past performance in calls of this kind, it is deduced that it will not offer more than 1,399$ and it is estimated that the probability of its offer being below 1,300$ is 60 %. The remaining competitors do not worry ELECTROSEA as they do not have the technology to design and produce such advanced thermosalinographs.\n\nELECTROSEA can contract the services of CONCONSULT, a consultancy firm which specialises in counselling firms interested in participating in government public tenders. Specifically, CONCONSULT will conduct a study of MEASURESEA\u2019s current public projects and will give its opinion about whether or not this firm will participate in the advanced thermosalinographs call. CONCONSULT guarantees a success rate of 90 % in what it predicts of when a competitor participates, and one of 80 % when it does not. CONCONSULT\u2019s fees are 3,000$.\n\n(a) Draw the corresponding decision tree and indicate with a letter per branch the associated probability or the associated cost (depending on the case).\n(b) Solve the tree.\n(c) What is the price of the offer that ELECTROSEA should make? Answer in the format of [[a,b]] if ELECTROSEA should make an offer of $a given that MEASURESEA will participate in the tender and $b if MEASURESEA will not participate in the tender",
+    "answer": "[[1300,1400]]",
+    "difficulty": "4",
+    "rule_id": "1",
+    "length": "1908"
+  },
+  {
+    "idx": "88",
+    "question": "ELECTROSEA is a firm that specialises in maritime measuring apparatus. The U.S. government has just published a public tender to acquire 100 thermosalino-graphs with some advanced options, which mean that the firm granted the public tender will have to provide a new design and its production. The top price paid per unit is 1,400$. ELECTROSEA has estimated that the final cost of each thermosalinograph is around 1,000$. Nonetheless, the possibility of the firms\u2019 main competitor, MEASURESEA, also entering the public tender is considered (they estimate that there is a 50 % probability of this happening). After analysing MEASURESEA\u2019s past performance in calls of this kind, it is deduced that it will not offer more than 1,399$ and it is estimated that the probability of its offer being below 1,300$ is 60 %. The remaining competitors do not worry ELECTROSEA as they do not have the technology to design and produce such advanced thermosalinographs.\n\nELECTROSEA can contract the services of CONCONSULT, a consultancy firm which specialises in counselling firms interested in participating in government public tenders. Specifically, CONCONSULT will conduct a study of MEASURESEA\u2019s current public projects and will give its opinion about whether or not this firm will participate in the advanced thermosalinographs call. CONCONSULT guarantees a success rate of 90 % in what it predicts of when a competitor participates, and one of 80 % when it does not. CONCONSULT\u2019s fees are 3,000$.\n\n(a) Draw the corresponding decision tree and indicate with a letter per branch the associated probability or the associated cost (depending on the case).\n(b) Solve the tree.\n(c) Up to what amount can ELECTROSEA pay CONCONSULT? Answer in format [[a]] if you get $a as upper limit",
+    "answer": "[[3440]]",
+    "difficulty": "4",
+    "rule_id": "1",
+    "length": "1767"
+  },
+  {
+    "idx": "89",
+    "question": "ELECTROSEA is a firm that specialises in maritime measuring apparatus. The U.S. government has just published a public tender to acquire 100 thermosalino-graphs with some advanced options, which mean that the firm granted the public tender will have to provide a new design and its production. The top price paid per unit is 1,400$. ELECTROSEA has estimated that the final cost of each thermosalinograph is around 1,000$. Nonetheless, the possibility of the firms\u2019 main competitor, MEASURESEA, also entering the public tender is considered (they estimate that there is a 50 % probability of this happening). After analysing MEASURESEA\u2019s past performance in calls of this kind, it is deduced that it will not offer more than 1,399$ and it is estimated that the probability of its offer being below 1,300$ is 60 %. The remaining competitors do not worry ELECTROSEA as they do not have the technology to design and produce such advanced thermosalinographs.\n\nELECTROSEA can contract the services of CONCONSULT, a consultancy firm which specialises in counselling firms interested in participating in government public tenders. Specifically, CONCONSULT will conduct a study of MEASURESEA\u2019s current public projects and will give its opinion about whether or not this firm will participate in the advanced thermosalinographs call. CONCONSULT guarantees a success rate of 90 % in what it predicts of when a competitor participates, and one of 80 % when it does not. CONCONSULT\u2019s fees are 3,000$.\n\n(a) Draw the corresponding decision tree and indicate with a letter per branch the associated probability or the associated cost (depending on the case).\n(b) Solve the tree.\n(c) How efficient is the information offered by CONCONSULT? Answer in format of [[19.1%]] if you get 19% as the efficiency of the information offered by CONCONSULT",
+    "answer": "[[69.7]]",
+    "difficulty": "4",
+    "rule_id": "1",
+    "length": "1826"
+  },
+  {
+    "idx": "90",
+    "question": "Peter has decided to buy an elliptical trainer bike to practice sport from home. After looking at several models on the Internet, he cannot make up his mind between a standard model costing $300 and a professional one priced at $1,000. Peter estimates that if he buys the standard model, and this meets his expectations, the utilities from it might amount to 100, whereas if not, they would amount to 10 because, in this case, he would probably tire of it and would use it only occasionally. With the professional bike, these utilities would increase and lower 50 %, respectively. Peter estimates that the probability of a professional model meeting his expectations would be 90 %, whereas it would be 45 % with a standard model. Peter is considering asking Balti for counselling, who is an Elipdoor instructor and a friend of his. What he is not sure about is asking him for counselling on a standard bike or on a professional one. In exchange, Peter would invite Balti to a meal. In any case, Peter estimates that Balti\u2019s recommendation is not altogether reliable and assigns him a 10 % error margin.\n\nFigure 7.2 shows Peter\u2019s utility curve, which corresponds to the following equations: \nu = -e^(m/100) + 1 ; 0 <= m <= 400 \n\n \nu = m^2 / 10000 - m / 5 ; 400 < m <= 1000\n\n(a) Draw the corresponding decision tree and indicate with a letter per branch the associated probability or the associated cost (depending on the case).\n(b) Solve the tree.\n(c) What kind of restaurant must Peter take Balti to? That is, how much money is he interested in paying for the meal at the most? Give the answer in the format of [[max_cost]]",
+    "answer": "[[282]]",
+    "difficulty": "4",
+    "rule_id": "1",
+    "length": "1623"
+  },
+  {
+    "idx": "91",
+    "question": "CADTRAM S.A. manufactures driving chains for one customer from the capital goods sector at a selling price of \u20ac40 per unit, and it obtains a 100 % profit on the production cost price. Nevertheless, the current production process generates 10 % of chains which do not fulfil tolerance. The contract that CADTRAM holds with its customer states that, if a faulty chain is delivered, the firm has to reimburse it twice the selling price.\n\nThe firm owns a machine that can use a test to check whether the chain operates within the specified limits of tolerance. According to a record that it keeps, of the last 1,000 chains which passed this test, 45 were faulty. Moreover, of the 660 that did not pass the test, 33 were sound. The cost per test is \u20ac1 for each chain tested.\n\n(a) Draw the corresponding decision tree and indicate with a letter per branch the associated probability or the associated cost (depending on the case).\n(b) Solve the tree.\n(c) How much money is the firm willing to pay per test at the most? Answer in the format of [[max_cost]]",
+    "answer": "[[2.02]]",
+    "difficulty": "4",
+    "rule_id": "1",
+    "length": "1049"
+  },
+  {
+    "idx": "92",
+    "question": "Shane and Peter are two friends who are very keen on oenology. Peter has invited Shane to his house and has decided on a bet: Peter has randomly chosen one bottle from the wall of his wine cellar, where there are around 700 bottles of Rioja wines and some 300 bottles of Ribera del Duero wines, and he has filled a wine glass with the chosen wine.\n\nIf Shane correctly identifies Peter\u2019s wine, he must pay Shane $8, but if Shane fails, he must pay Peter $10.\n\nShane can try to guess which wine it is without smelling it or tasting it. He also has the option of smelling the wine if he pays $2 to Peter. Having smelt the wine, he can try guessing the type of wine, or can even taste it by paying Peter $2.\n\nShane estimates that the probability of succeeding by smell if it is a Rioja wine is 85 %, but this drops to 70 % for a Ribera del Duero wine. However, he also estimates that the probability of success when tasting a Rioja wine is 75 %, but it is 85 % for a Ribera del Duero wine.\n\n(a) Draw the corresponding decision tree and indicate with a letter per branch the associated probability or the associated cost (depending on the case).\n(b) Solve the tree. What strategy should Shane adopt? Should he smell first? Answer in the format of [[YES/NO]",
+    "answer": "[[YES]]",
+    "difficulty": "4",
+    "rule_id": "1",
+    "length": "1251"
+  },
+  {
+    "idx": "93",
+    "question": "The firm ADESA is thinking about doing some repairs on one of its production process machines. These repairs can be minor or major. Currently, the percentage of faulty articles that the machine produces appears to be constant, where p = 0.10 or p = 0.25. Faulty articles are produced randomly and there is no way that ADESA can certainly state if the machine needs minor or major repairs. If minor repairs are done when p = 0.25, the probability of obtaining faulty articles lowers to 0.05. If minor repairs are done when p = 0.10, or if major repairs are done when p = 0.10 or p = 0.25, the proportion of faulty parts comes down to 0. The a priori probability that the percentage of faulty parts in the machine is p = 0.10 is 0.70.\n\nADESA has just received an order of 1,000 articles. This means a profit of $50 per unit for ADESA, except in those cases in which the charge of $200 per faulty article has to be paid. Major machine repairs cost $10,000 while minor ones are priced at $6,000. The machine cannot be repaired after commencing the production process for the order.\n\nBefore starting the production process for the order, ADESA can sample one article from one test batch at a cost of $10 per part.\n\n(a) Draw the corresponding decision tree and indicate with a letter per branch the associated probability or the associated cost (depending on the case).\n(b) Solve the tree and obtain the most economic procedures.\n(c) Is the cost of the current sampling ($10/part) suitable? Up to what amount is it willing to pay for perfect information?",
+    "answer": "[[1800]]",
+    "difficulty": "4",
+    "rule_id": "1",
+    "length": "1548"
+  },
+  {
+    "idx": "94",
+    "question": "Jake Farlow, the Chair of Playaview Building, is thinking about presenting a bid to acquire property which will be sold in a sealed bid as part of a foreclosure to pay taxes in Alicante. Initially, the idea is to present an offer of 5 million $, with a probability of 0.2 of being the highest, for the purpose of obtaining the property for Playaview. Today the date is 1 June. The offers to acquire property must be presented before 15 August. The winning bid will be published on 1 September. If Playaview presents the highest bid and obtains the property, the firm can study constructing and selling a luxury apartments complex. However, a factor that complicates the issue is that the property is currently in an area used only for detached houses. Jake believes that a referendum can be organised in time for the November elections. If the referendum is passed, the property area will be changed and it will be possible to build apartment blocks.\n\nTable 7.1 Estimations of costs and income\n\n| Income from selling apartments | $15,000,000 |\n| Land                          | $5,000,000  |\n| Building                       | $8,000,000  |\n\nTable 7.2 Probabilities of obtaining accurate information\n\n| Changes in area approved | Changes in area not approved |\n|--------------------------|------------------------------|\n| Approved changes in area predicted | 0.9 | 0.2 |\n| Approved changes in area not predicted | 0.1 | 0.8 |\n\nThe sealed bid procedure entails Jake having to send a certified cheque covering 10 % of the amount offered. If the offer is rejected, the deposit paid will be returned. If the offer is accepted, the deposit will become the initial payment for the property. However, if the offer is accepted, and the bidder does not continue with the purchase, and does not meet the remaining financial obligations within the next 6 months, the deposit will be lost. In this case, the province of Alicante will offer the property to the next highest bid. In order to determine if Playaview must present the offer of 5 million $, Jake carried out a preliminary analysis which gave him an estimation of 0.3 for the probability of passing the referendum to change the area, which gave the estimations of the costs and income indicated in Table 7.1, which would be incurred if the apartments were built.\n\nIf Playaview acquires the property and the changes in the area are not approved in November, Jake thinks that the best option would be that the firm does not purchase the property.\n\nJake has suggested that the firm contracts a market research service to conduct a survey among voters, which should provide a better estimation of the possibility of deciding on the changes in the area by referendum. The market research firm is happy to conduct the study, which will be available by 1 August, at a price of 15,000$. Table 7.2 shows the estimations of probability related with the accuracy or preciseness of the market research information:\n\n(a) Draw a decision tree showing the logical sequence of the decision problem.\n(b) Indicate the decision strategy that Playaview should adopt if no market research study is done.\n(c) Justify if Playaview must resort to a market research firm or not. Answer in the format [[YES/NO]] after your solving process",
+    "answer": "[[YES]]",
+    "difficulty": "5",
+    "rule_id": "1",
+    "length": "3261"
+  },
+  {
+    "idx": "95",
+    "question": "Jake Farlow, the Chair of Playaview Building, is thinking about presenting a bid to acquire property which will be sold in a sealed bid as part of a foreclosure to pay taxes in Alicante. Initially, the idea is to present an offer of 5 million $, with a probability of 0.2 of being the highest, for the purpose of obtaining the property for Playaview. Today the date is 1 June. The offers to acquire property must be presented before 15 August. The winning bid will be published on 1 September. If Playaview presents the highest bid and obtains the property, the firm can study constructing and selling a luxury apartments complex. However, a factor that complicates the issue is that the property is currently in an area used only for detached houses. Jake believes that a referendum can be organised in time for the November elections. If the referendum is passed, the property area will be changed and it will be possible to build apartment blocks.\n\nTable 7.1 Estimations of costs and income\n\n| Income from selling apartments | $15,000,000 |\n| Land                          | $5,000,000  |\n| Building                       | $8,000,000  |\n\nTable 7.2 Probabilities of obtaining accurate information\n\n| Changes in area approved | Changes in area not approved |\n|--------------------------|------------------------------|\n| Approved changes in area predicted | 0.9 | 0.2 |\n| Approved changes in area not predicted | 0.1 | 0.8 |\n\nThe sealed bid procedure entails Jake having to send a certified cheque covering 10 % of the amount offered. If the offer is rejected, the deposit paid will be returned. If the offer is accepted, the deposit will become the initial payment for the property. However, if the offer is accepted, and the bidder does not continue with the purchase, and does not meet the remaining financial obligations within the next 6 months, the deposit will be lost. In this case, the province of Alicante will offer the property to the next highest bid. In order to determine if Playaview must present the offer of 5 million $, Jake carried out a preliminary analysis which gave him an estimation of 0.3 for the probability of passing the referendum to change the area, which gave the estimations of the costs and income indicated in Table 7.1, which would be incurred if the apartments were built.\n\nIf Playaview acquires the property and the changes in the area are not approved in November, Jake thinks that the best option would be that the firm does not purchase the property.\n\nJake has suggested that the firm contracts a market research service to conduct a survey among voters, which should provide a better estimation of the possibility of deciding on the changes in the area by referendum. The market research firm is happy to conduct the study, which will be available by 1 August, at a price of 15,000$. Table 7.2 shows the estimations of probability related with the accuracy or preciseness of the market research information:\n\n(a) Draw a decision tree showing the logical sequence of the decision problem.\n(b) Indicate the decision strategy that Playaview should adopt if no market research study is done.\n (c) Determine the value of the information provided by the market research firm. Answer in the format [[a]] if the value is $a. ",
+    "answer": "[[43990]]",
+    "difficulty": "5",
+    "rule_id": "1",
+    "length": "3261"
+  },
+  {
+    "idx": "96",
+    "question": "The Director of Logistics of a textile firm is in charge of deciding between buying a new electric forklift truck costing $25,000 or a second-hand 10-year-old costing $12,500, to handle textile parts weighing up to 2,100 kg and for a height of up to 4 m. The maintenance costs of a new forklift truck for the next 10 years are estimated at $1,000, whereas the costs of maintaining a second-hand truck are expected to double those of a new one.\n\nEvidently if the second-hand forklift truck operates properly, it entails a saving of $11,500, but if it is faulty, it will entail losing the money spent on not only purchasing it, but also on the purchase and maintenance of a new model. Evidently, the Director will be reprimanded by the Manager. Based on the statistical data provided by the seller, the Director of Logistics has established that the proportion of faulty second-hand equipment is 20 % and that the reliability of a new forklift truck is considered 100 %.\n\nBefore purchasing a second-hand forklift truck, two types of mechanical and electric tests can be done:\n\n\u2022 TEST A: at a cost of $1,000, whose diagnosis offers a percentage of failures of 5 % if it is faulty, and of 20 % if it operates properly.\n\n\u2022 TEST B: consists in two successive phases. In the first one, whose cost is $800, a preliminary diagnosis can be made whose probability of error is 15 %. The second phase entails deciding whether to buy or reject the forklift truck, or to complete the test, which costs a further $700, in order to be absolutely sure about the state the equipment is in.\n\n(a) Draw the corresponding decision tree and indicate with a letter per branch the associated probability or the associated cost (depending on the case).\n(b) Solve the decision tree and obtain the most economic decision.\n(c) What is the The perfect information value? Answer in format [[a]] if the The perfect information value is $a.",
+    "answer": "[[2500]]",
+    "difficulty": "5",
+    "rule_id": "1",
+    "length": "1906"
+  },
+  {
+    "idx": "97",
+    "question": "Let\u2019s assume that you have invented and patented a new irrigation system for house plants. You can opt between commercialising the product yourself or through a firm called PLANTASA, which is known in the market. PLANTASA offers you $20,000 to sign a contract. If the product is successful, it will sell 200,000 units in the Spanish market. If it is not, it will sell only 10,000 units. PLANTASA pays patent royalties at a rate of $1 per unit. A market research study done by PLANTASA indicates that there is a 70 % probability that the product will be a success. If, however, you go ahead and commercialise the product yourself, there will be an initial cost of $90,000 for production and marketing, but each unit will generate two net dollars.\n\n(a) Depending on the information provided, would you accept PLANTASA\u2019s offer or would you commercialise the product yourself?\n\nAnswer in the format of [[TRUE/FALSE]]",
+    "answer": "[[TRUE]]",
+    "difficulty": "4",
+    "rule_id": "1",
+    "length": "912"
+  },
+  {
+    "idx": "98",
+    "question": "Let\u2019s assume that you have invented and patented a new irrigation system for house plants. You can opt between commercialising the product yourself or through a firm called PLANTASA, which is known in the market. PLANTASA offers you $20,000 to sign a contract. If the product is successful, it will sell 200,000 units in the Spanish market. If it is not, it will sell only 10,000 units. PLANTASA pays patent royalties at a rate of $1 per unit. A market research study done by PLANTASA indicates that there is a 70 % probability that the product will be a success. If, however, you go ahead and commercialise the product yourself, there will be an initial cost of $90,000 for production and marketing, but each unit will generate two net dollars.\n\n(a) Depending on the information provided, would you accept PLANTASA\u2019s offer or would you commercialise the product yourself?\n\nAnswer in the format of [[YES/NO]] to indicate if you would commercialise the product yourself",
+    "answer": "[[YES]]",
+    "difficulty": "4",
+    "rule_id": "1",
+    "length": "968"
+  },
+  {
+    "idx": "99",
+    "question": "Let\u2019s assume that you have invented and patented a new irrigation system for house plants. You can opt between commercialising the product yourself or through a firm called PLANTASA, which is known in the market. PLANTASA offers you $20,000 to sign a contract. If the product is successful, it will sell 200,000 units in the Spanish market. If it is not, it will sell only 10,000 units. PLANTASA pays patent royalties at a rate of $1 per unit. A market research study done by PLANTASA indicates that there is a 70 % probability that the product will be a success. If, however, you go ahead and commercialise the product yourself, there will be an initial cost of $90,000 for production and marketing, but each unit will generate two net dollars.\n\n(b) Let\u2019s assume that you contract a consultancy firm to conduct some market research into the product\u2019s potential success. From past experience, the consultancy firm indicates that when a product is successful, the study fails in predicting the result in 20 % of cases. When the product is not successful, the study predicts correctly 85 % of times. How would the information provided by the consultancy firm affect your former decision? Answer in the format [[A]] or [[B]] to indicate you choice between A.contracting the consultancy firm and B.directly commercialising it yourself",
+    "answer": "[[A]]",
+    "difficulty": "4",
+    "rule_id": "1",
+    "length": "1330"
+  },
+  {
+    "idx": "100",
+    "question": "A film producer is considering filming a picture about the life of a singer who died recently. It is predicted that if the film is not successful, 15 million $ will be lost, but 45 million $ will be earned if it were a success.\n\nThe producer has estimated the probability of the film being a success based on these aspects:\n\n\u2022 The film script can centre only on the singer\u2019s professional life or can include details about the singer\u2019s private life. Irrespective of the script, there is a 10 % probability that the film will be successful.\n\n\u2022 If the film director is to be well-known Petro Dovar, who will only accept filming the film if it centres on the singer\u2019s private life, the probability of the film being a success becomes 50 %. In this case, both the predicted losses and earnings will increase or decrease in 5 million $, respectively, to cover the film\u2019s, the initially estimated profits and probabilities data will not change.\n\nBefore filming, the film producer has the option of paying a famous film critic 1 million $ to receive a view about the film\u2019s success. In the past, this famous film critic has predicted that films would be a success in 60 % of cases, and that they would flop in 90 % of cases. Evidently, the film critic\u2019s predictions will have to consider the film director\u2019s characteristics.\n\nThe film producer wishes to maximise the expected earnings.\n\n(a) Draw a decision tree to determine the best strategy. Indicate all the strategies to be adopted, the associated earnings and losses, and probabilities.\n(b) Establish the probabilities, solve the decision tree and indicate the best strategy.\n(c) What is the imperfect information value? Answer in the format [[imperfect information value]]",
+    "answer": "[[0]]",
+    "difficulty": "5",
+    "rule_id": "1",
+    "length": "1720"
+  }
+]

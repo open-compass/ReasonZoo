@@ -1,0 +1,802 @@
+[
+  {
+    "idx": "1",
+    "question": "As shownThere are two segments of rope, one connecting M and A, and another conntecting A and B, with length l1 and l2 seperately, i.e. the mass of block \\( m = 2 \\, \\text{kg} \\). A solid board is placed on a smooth horizontal surface. The mass of block \\( m = 2 \\, \\text{kg} \\) and the other block \\( m = 2 \\, \\text{kg} \\) (including visual quality points) is placed at the water surface in the front. The block is near the edge of the platform \\( d = 4.5 \\, \\text{m} \\), and the small car is nearby. The block at the car end is fixed. It is known that the dynamic friction coefficient between the car block and the small car is \\( \\mu_1 = 0.1 \\) and \\( \\mu_2 = 0.2 \\), and the maximum static friction coefficient for the car block is \\( \\mu_1 = 0.1 \\).\nThe acceleration \\( g = 10 \\, \\text{m/s}^2 \\), time \\( t = 0 \\), and forces acting on the blocks are as follows:\nAt \\( t = 0 \\), a force \\( F = 10 \\, \\text{N} \\) acts on the small block, and at \\( t = 3 \\) seconds, the force becomes a pulling force. If the block and the board collide, it will no longer open.\n\nQuestions:\n At time \\( t = 0 \\), what is the maximum acceleration of the block?\n Answer in the format [[your answer]] without units.",
+    "answer": "[[1]]",
+    "difficulty": "4",
+    "rule_id": "1",
+    "length": "1198"
+  },
+  {
+    "idx": "2",
+    "question": "As shownThere are two segments of rope, one connecting M and A, and another conntecting A and B, with length l1 and l2 seperately, i.e. the mass of block \\( m = 2 \\, \\text{kg} \\). A solid board is placed on a smooth horizontal surface. The mass of block \\( m = 2 \\, \\text{kg} \\) and the other block \\( m = 2 \\, \\text{kg} \\) (including visual quality points) is placed at the water surface in the front. The block is near the edge of the platform \\( d = 4.5 \\, \\text{m} \\), and the small car is nearby. The block at the car end is fixed. It is known that the dynamic friction coefficient between the car block and the small car is \\( \\mu_1 = 0.1 \\) and \\( \\mu_2 = 0.2 \\), and the maximum static friction coefficient for the car block is \\( \\mu_1 = 0.1 \\).\nThe acceleration \\( g = 10 \\, \\text{m/s}^2 \\), time \\( t = 0 \\), and forces acting on the blocks are as follows:\nAt \\( t = 0 \\), a force \\( F = 10 \\, \\text{N} \\) acts on the small block, and at \\( t = 3 \\) seconds, the force becomes a pulling force. If the block and the board collide, it will no longer open.\n\nQuestions:\nWhat is the final speed of the small car?\nAnswer in the format [[your answer]] without units.",
+    "answer": "[[5]",
+    "difficulty": "4",
+    "rule_id": "1",
+    "length": "1170"
+  },
+  {
+    "idx": "3",
+    "question": "As shownThere are two segments of rope, one connecting M and A, and another conntecting A and B, with length l1 and l2 seperately, i.e. the mass of block \\( m = 2 \\, \\text{kg} \\). A solid board is placed on a smooth horizontal surface. The mass of block \\( m = 2 \\, \\text{kg} \\) and the other block \\( m = 2 \\, \\text{kg} \\) (including visual quality points) is placed at the water surface in the front. The block is near the edge of the platform \\( d = 4.5 \\, \\text{m} \\), and the small car is nearby. The block at the car end is fixed. It is known that the dynamic friction coefficient between the car block and the small car is \\( \\mu_1 = 0.1 \\) and \\( \\mu_2 = 0.2 \\), and the maximum static friction coefficient for the car block is \\( \\mu_1 = 0.1 \\).\nThe acceleration \\( g = 10 \\, \\text{m/s}^2 \\), time \\( t = 0 \\), and forces acting on the blocks are as follows:\nAt \\( t = 0 \\), a force \\( F = 10 \\, \\text{N} \\) acts on the small block, and at \\( t = 3 \\) seconds, the force becomes a pulling force. If the block and the board collide, it will no longer open.\n\nQuestions:\nWhat is the final distance between the two blocks?\nAnswer in the format [[your answer]] without units.",
+    "answer": "[[4.875]]",
+    "difficulty": "4",
+    "rule_id": "1",
+    "length": "1179"
+  },
+  {
+    "idx": "4",
+    "question": "A vertical light rigid rod is fixed to the ground, with a lightweight spring at the top. A small sphere of mass m is attached to the spring, while another small sphere of mass m is fixed to the rod below the spring, as shown in the diagram. Initially, the spring is compressed, and the sphere A is held at the maximum compression position and then released. The following conditions and information are given: (1) When spheres A and B reach their maximum height together, their acceleration magnitude is 3g/2; (2) At this point, the spheres' velocity is zero, and the spring deformation is at its maximum. Assume the spring satisfies Hooke's law, with elastic potential energy given as Ep = 1/2 kx^2, where k is the spring constant and x is the spring deformation. The masses of A and B are identical and can be treated as point masses. Find: (1) The distance between the initial release point of sphere A and sphere B; Please answer in the format [[ ]]",
+    "answer": "[[8mg/k]]",
+    "difficulty": "3",
+    "length": "953",
+    "rule_id": "1"
+  },
+  {
+    "idx": "5",
+    "question": "In a physics experiment a circular rigid narrow groove is fixed horizontally on a table, containing three identical small balls labeled 1, 2, and 3. Their masses are m1, m2, and m3 respectively, where m2 = m3 = 2m1. The balls are in perfect contact with the groove walls with negligible friction. Initially, the three balls are positioned at points I, II, and III in the groove with equal distances between them. Balls 2 and 3 are stationary, while ball 1 moves along the groove with an initial velocity v0 = (1/2)\u03c0R, where R is the sum of the inner radius of the ring and the radius of the ball. Assuming all collisions between balls are elastic and collision times are negligible, find the velocities of the three balls after the first collision (express velocities in terms of v0). Please answer in the format [[answer_1, answer_2, answer_3]]",
+    "answer": "[[1/3 v0, 2/3 v0, 0]]",
+    "difficulty": "4",
+    "rule_id": "1",
+    "length": "845"
+  },
+  {
+    "idx": "6",
+    "question": "In a physics experiment a circular rigid narrow groove is fixed horizontally on a table, containing three identical small balls labeled 1, 2, and 3. Their masses are m1, m2, and m3 respectively, where m2 = m3 = 2m1. The balls are in perfect contact with the groove walls with negligible friction. Initially, the three balls are positioned at points I, II, and III in the groove with equal distances between them. Balls 2 and 3 are stationary, while ball 1 moves along the groove with an initial velocity v0 = (1/2)\u03c0R, where R is the sum of the inner radius of the ring and the radius of the ball. Assuming all collisions between balls are elastic and collision times are negligible, find the location of the third collision and the velocities of all three balls after this collision (express velocities in terms of v0).Answer in the format [[answer_1, answer_2, answer_3]]",
+    "answer": "[[0, 0, 0]]",
+    "difficulty": "4",
+    "rule_id": "1",
+    "length": "872"
+  },
+  {
+    "idx": "7",
+    "question": "In a physics experiment a circular rigid narrow groove is fixed horizontally on a table, containing three identical small balls labeled 1, 2, and 3. Their masses are m1, m2, and m3 respectively, where m2 = m3 = 2m1. The balls are in perfect contact with the groove walls with negligible friction. Initially, the three balls are positioned at points I, II, and III in the groove with equal distances between them. Balls 2 and 3 are stationary, while ball 1 moves along the groove with an initial velocity v0 = (1/2)\u03c0R, where R is the sum of the inner radius of the ring and the radius of the ball. Assuming all collisions between balls are elastic and collision times are negligible, find the period T of this three-ball system (show detailed calculations). Give the answer in the format [[answer]] without units.",
+    "answer": "[[20]]",
+    "difficulty": "4",
+    "rule_id": "1",
+    "length": "812"
+  },
+  {
+    "idx": "8",
+    "question": "In a physics experiment a circular rigid narrow groove is fixed horizontally on a table, containing three identical small balls labeled 1, 2, and 3. Their masses are m1, m2, and m3 respectively, where m2 = m3 = 2m1. The balls are in perfect contact with the groove walls with negligible friction. Initially, the three balls are positioned at points I, II, and III in the groove with equal distances between them. Balls 2 and 3 are stationary, while ball 1 moves along the groove with an initial velocity v0 = (1/2)\u03c0R, where R is the sum of the inner radius of the ring and the radius of the ball. Now, consider if 2024 identical balls were placed at equal distances in this circular groove, as shown in Figure B. Initially, ball 1 moves with velocity v0 while all other balls are stationary. Assuming frictionless conditions and elastic collisions with negligible collision times, propose what mass relationship between the balls would result in periodic motion similar to the three-ball system, and write the period T. Give the answer in the format [[answer]] without units.",
+    "answer": "[[8104]]",
+    "difficulty": "4",
+    "rule_id": "1",
+    "length": "1075"
+  },
+  {
+    "idx": "9",
+    "question": "A vertical light rigid rod is fixed to the ground, with a lightweight spring at the top. A small sphere of mass m is attached to the spring, while another small sphere of mass m is fixed to the rod below the spring, as shown in the diagram. Initially, the spring is compressed, and the sphere A is held at the maximum compression position and then released. The following conditions and information are given: (1) When spheres A and B reach their maximum height together, their acceleration magnitude is 3g/2; (2) At this point, the spheres' velocity is zero, and the spring deformation is at its maximum. Assume the spring satisfies Hooke's law, with elastic potential energy given as Ep = 1/2 kx^2, where k is the spring constant and x is the spring deformation. The masses of A and B are identical and can be treated as point masses. Find:  (2) The maximum elastic potential energy of the spring; Please answer in the format [[ ]]",
+    "answer": "[[25m^2g^2/(2k)]]",
+    "difficulty": "3",
+    "length": "933",
+    "rule_id": "1"
+  },
+  {
+    "idx": "10",
+    "question": "A vertical light rigid rod is fixed to the ground, with a lightweight spring at the top. A small sphere of mass m is attached to the spring, while another small sphere of mass m is fixed to the rod below the spring, as shown in the diagram. Initially, the spring is compressed, and the sphere A is held at the maximum compression position and then released. The following conditions and information are given: (1) When spheres A and B reach their maximum height together, their acceleration magnitude is 3g/2; (2) At this point, the spheres' velocity is zero, and the spring deformation is at its maximum. Assume the spring satisfies Hooke's law, with elastic potential energy given as Ep = 1/2 kx^2, where k is the spring constant and x is the spring deformation. The masses of A and B are identical and can be treated as point masses. Find:  (2) The maximum velocity of spheres A and B during their motion; Please answer in the format [[ ]]",
+    "answer": "[[\\sqrt(m/k)]]",
+    "difficulty": "3",
+    "length": "942",
+    "rule_id": "1"
+  },
+  {
+    "idx": "11",
+    "question": "A vertical light rigid rod is fixed to the ground, with a lightweight spring at the top. A small sphere of mass m is attached to the spring, while another small sphere of mass m is fixed to the rod below the spring, as shown in the diagram. Initially, the spring is compressed, and the sphere A is held at the maximum compression position and then released. The following conditions and information are given: (1) When spheres A and B reach their maximum height together, their acceleration magnitude is 3g/2; (2) At this point, the spheres' velocity is zero, and the spring deformation is at its maximum. Assume the spring satisfies Hooke's law, with elastic potential energy given as Ep = 1/2 kx^2, where k is the spring constant and x is the spring deformation. The masses of A and B are identical and can be treated as point masses. Find:  (3) If sphere A is replaced with sphere C of unknown mass, released from the same position and resting motionless, calculate the mass of C such that after collision, sphere B reaches the same maximum height as before. Provide your answers in terms of the given constants.",
+    "answer": "[[1/3 m]]",
+    "difficulty": "3",
+    "length": "1115",
+    "rule_id": "1"
+  },
+  {
+    "idx": "12",
+    "question": "A wooden plank with mass m1 = 1 kg is at rest on a frictionless horizontal surface. A lightweight spring with a spring constant k = 20 N/m is fixed to a vertical wall on the right, and the spring is initially in a natural state. A small block with mass m2 = 4 kg is sliding on the horizontal surface towards the spring from the left with an initial velocity v0 = 5/4 m/s. The coefficient of kinetic friction between the block and the plank is \u03bc = 0.1, and the maximum static friction equals the kinetic friction. The spring eventually compresses fully within its elastic limit, and the relationship between the elastic potential energy of the spring and deformation x is given as Ep = 1/2 kx^2. Assuming gravitational acceleration g = 10 m/s\u00b2, solve the following: (1) Find the velocity v1 of the plank just as it makes contact with the spring, and the distance x1 traveled by the plank's left edge before the block touches the spring; Please answer in the format [[2 m/s, 0.25 m]] if the answer is 2 m/s and 0.25 m, respectively.",
+    "answer": "[[1 m/s, 0.125 m]]",
+    "difficulty": "3",
+    "length": "1030",
+    "rule_id": "1"
+  },
+  {
+    "idx": "13",
+    "question": "A wooden plank with mass m1 = 1 kg is at rest on a frictionless horizontal surface. A lightweight spring with a spring constant k = 20 N/m is fixed to a vertical wall on the right, and the spring is initially in a natural state. A small block with mass m2 = 4 kg is sliding on the horizontal surface towards the spring from the left with an initial velocity v0 = 5/4 m/s. The coefficient of kinetic friction between the block and the plank is \u03bc = 0.1, and the maximum static friction equals the kinetic friction. The spring eventually compresses fully within its elastic limit, and the relationship between the elastic potential energy of the spring and deformation x is given as Ep = 1/2 kx^2. Assuming gravitational acceleration g = 10 m/s\u00b2, solve the following: (2) After the block and plank come into contact, determine the compression x2 of the spring and the velocity v2 of the plank at that moment; Please answer in the format [[0.25 m, \u221a(3/2) m/s]] if the answer is 0.25 m and \u221a(3/2) m/s, respectively.",
+    "answer": "[[0.25 m, \u221a(3/2) m/s]]",
+    "difficulty": "3",
+    "length": "1010",
+    "rule_id": "1"
+  },
+  {
+    "idx": "14",
+    "question": "A wooden plank with mass m1 = 1 kg is at rest on a frictionless horizontal surface. A lightweight spring with a spring constant k = 20 N/m is fixed to a vertical wall on the right, and the spring is initially in a natural state. A small block with mass m2 = 4 kg is sliding on the horizontal surface towards the spring from the left with an initial velocity v0 = 5/4 m/s. The coefficient of kinetic friction between the block and the plank is \u03bc = 0.1, and the maximum static friction equals the kinetic friction. The spring eventually compresses fully within its elastic limit, and the relationship between the elastic potential energy of the spring and deformation x is given as Ep = 1/2 kx^2. Assuming gravitational acceleration g = 10 m/s\u00b2, solve the following: (3) Knowing that the plank's velocity decreases from v2 to zero within time t0 during the process, calculate the total work done due to frictional force DU in the system during this interval. Please answer in the format [[t0^2 + 1]] if the answer if the answer is t0^2 + 1",
+    "answer": "[[4\u221a3t0 - 8t0^2]]",
+    "difficulty": "3",
+    "length": "1037",
+    "rule_id": "1"
+  },
+  {
+    "idx": "15",
+    "question": "A wooden plank with mass m1 = 1 kg is at rest on a frictionless horizontal surface. A lightweight spring with a spring constant k = 30 N/m is fixed to a vertical wall on the right, and the spring is initially in a natural state. A small block with mass m2 = 2 kg is sliding on the horizontal surface towards the spring from the left with an initial velocity v0 = 3 m/s. The coefficient of kinetic friction between the block and the plank is \u03bc = 0.2, and the maximum static friction equals the kinetic friction. The spring eventually compresses fully within its elastic limit, and the relationship between the elastic potential energy of the spring and deformation x is given as Ep = 1/2 kx^2. Assuming gravitational acceleration g = 10 m/s\u00b2, solve the following: (1) Find the velocity v1 of the plank just as it makes contact with the spring, and the distance x1 traveled by the plank's left edge before the block touches the spring; ",
+    "answer": "[[2 m/s, 0.5 m]]",
+    "difficulty": "3",
+    "length": "934",
+    "rule_id": "1"
+  },
+  {
+    "idx": "16",
+    "question": "A wooden plank with mass m1 = 1 kg is at rest on a frictionless horizontal surface. A lightweight spring with a spring constant k = 30 N/m is fixed to a vertical wall on the right, and the spring is initially in a natural state. A small block with mass m2 = 2 kg is sliding on the horizontal surface towards the spring from the left with an initial velocity v0 = 3 m/s. The coefficient of kinetic friction between the block and the plank is \u03bc = 0.2, and the maximum static friction equals the kinetic friction. The spring eventually compresses fully within its elastic limit, and the relationship between the elastic potential energy of the spring and deformation x is given as Ep = 1/2 kx^2. Assuming gravitational acceleration g = 10 m/s\u00b2, solve the following: (2) After the block and plank come into contact, determine the compression x2 of the spring and the velocity v2 of the plank at that moment; ",
+    "answer": "[[0.2 m, (3\u221a10)/5 m/s]]",
+    "difficulty": "3",
+    "length": "904",
+    "rule_id": "1"
+  },
+  {
+    "idx": "17",
+    "question": "During a heavy rainstorm, geological disasters such as landslides or debris flows may occur. There is a hillside C with an inclination angle of \u03b8 = 37\u00b0 (sin 37\u00b0 = 3/5) in a certain place. On it, there is a slate B with a mass of m, and its upper and lower surfaces are parallel to the slope. There is a pile of crushed stones A (containing a large amount of mud) on B. Both A and B are in a stationary state, as shown in the figure. Suppose that during a certain heavy rainstorm, the total mass of A after being soaked by rainwater is also m (which can be regarded as a slider with unchanged mass). In an extremely short period of time, the coefficient of kinetic friction \u03bc1 between A and B decreases to 3/8, and the coefficient of kinetic friction \u03bc2 between B and C decreases to 0.5. Then A and B start to move, and this moment is taken as the starting point of timing. At the end of the 2nd second, the upper surface of B suddenly becomes smooth, and \u03bc2 remains unchanged. It is known that when A starts to move, the distance between A and the lower edge of B is l = 27m, and C is long enough. Assume that the maximum static friction force is equal to the sliding friction force. Take the magnitude of the gravitational acceleration g = 10m/s\u00b2. Find: The total movement time of A on B. Answer in the format [[time]] without unit s",
+    "answer": "[[4]]",
+    "difficulty": "4",
+    "length": "1334",
+    "rule_id": "1"
+  },
+  {
+    "idx": "18",
+    "question": "A particle of mass m undergoes simple harmonic motion under the force F = -kx. The displacement of the particle follows the equation x = A sin(\u03c9t), where \u03c9 = sqrt(k/m). A spring with spring constant k is fixed inside a vertical tube. A small sphere A (mass m) is attached to the spring at its lower end and rests at the equilibrium position O. Another sphere B (mass m) is released from a height H above A and collides with A. After collision, both spheres move together. Given: H = 3mg/k, g = g\u2080, and Ep = 1/2 kx\u00b2, solve for: (2) The maximum displacement x\u2098 of A from the equilibrium position; ",
+    "answer": "[[x\u2098 = 3mg / k]]",
+    "difficulty": "4",
+    "length": "595",
+    "rule_id": "1"
+  },
+  {
+    "idx": "19",
+    "question": "A particle of mass m undergoes simple harmonic motion under the force F = -kx. The displacement of the particle follows the equation x = A sin(\u03c9t), where \u03c9 = sqrt(k/m). A spring with spring constant k is fixed inside a vertical tube. A small sphere A (mass m) is attached to the spring at its lower end and rests at the equilibrium position O. Another sphere B (mass m) is released from a height H above A and collides with A. After collision, both spheres move together. Given: H = 3mg/k, g = g\u2080, and Ep = 1/2 kx\u00b2, solve for: (3) The time t for A to reach equilibrium for the first time.",
+    "answer": "[[t = 2/3 \u03c0 sqrt(2m / k)]]",
+    "difficulty": "4",
+    "length": "588",
+    "rule_id": "1"
+  },
+  {
+    "idx": "20",
+    "question": "Two spheres, A with mass m and B with mass 7m, are connected by a lightweight soft rope of length L. Initially, sphere A is held such that sphere B is at a height L above the ground. Upon releasing, the two spheres fall freely, with sphere B hitting the ground first. The collision between the two spheres is perfectly elastic, and they continue moving with the same speed after the collision but in opposite directions. The time of impact is negligible, and the gravitational acceleration is g. Solve for: (1) The time t from release to the first collision between the two spheres; ",
+    "answer": "[[\\( \\sqrt{\\frac{2L}{g}} + \\sqrt{\\frac{L}{8g}} \\)]]",
+    "difficulty": "3",
+    "length": "583",
+    "rule_id": "1"
+  },
+  {
+    "idx": "21",
+    "question": "Two spheres, A with mass m and B with mass 7m, are connected by a lightweight soft rope of length L. Initially, sphere A is held such that sphere B is at a height L above the ground. Upon releasing, the two spheres fall freely, with sphere B hitting the ground first. The collision between the two spheres is perfectly elastic, and they continue moving with the same speed after the collision but in opposite directions. The time of impact is negligible, and the gravitational acceleration is g. Solve for: (2) The maximum distance d of sphere A from the ground after the collision. Answer in the format [[13/2L]] if the answer is 13/2L",
+    "answer": "[[3/2L]]",
+    "difficulty": "3",
+    "length": "636",
+    "rule_id": "1"
+  },
+  {
+    "idx": "22",
+    "question": "A basketball of mass m is dropped from a height H above the ground. After its first inelastic collision with the ground, it rebounds to a maximum height h. The basketball experiences air resistance, which is \u03bb times its weight (where 0 < \u03bb < H-h / H+h). The coefficient of restitution for each collision with the ground is k, defined as the ratio of the rebound velocity to the impact velocity. Gravitational acceleration is g. Solve for: (1) The coefficient of restitution k; ",
+    "answer": "[[k = sqrt((1+\u03bb)h / (1-\u03bb)H)]]",
+    "difficulty": "5",
+    "length": "477",
+    "rule_id": "1"
+  },
+  {
+    "idx": "23",
+    "question": "A basketball of mass m is dropped from a height H above the ground. After its first inelastic collision with the ground, it rebounds to a maximum height h. The basketball experiences air resistance, which is \u03bb times its weight (where 0 < \u03bb < H-h / H+h). The coefficient of restitution for each collision with the ground is k, defined as the ratio of the rebound velocity to the impact velocity. Gravitational acceleration is g. Solve for:   The force F varies with the height h as shown in Figure (b), where h0 is known. Find the magnitude of F0. Figure (b) is a graph depicting the relationship between the force F and the height y. The horizontal axis indicates the height y, while the vertical axis represents the force F. The graph begins at the origin (0, 0), with F = 0 up to y = h0. Subsequently, the force F rises linearly as y increases until a certain point, at which point the force attains the value F_{0} but the corresponding y is not given, and then the force linearly drops back to 0 where y = h.  ",
+    "answer": "[[(2mg(1-\u03bb)(H-h)) / (h-h0)]]",
+    "difficulty": "5",
+    "length": "1014",
+    "rule_id": "1"
+  },
+  {
+    "idx": "24",
+    "question": "A basketball of mass m is dropped from a height H above the ground. After its first inelastic collision with the ground, it rebounds to a maximum height h. The basketball experiences air resistance, which is \u03bb times its weight (where 0 < \u03bb < H-h / H+h). The coefficient of restitution for each collision with the ground is k, defined as the ratio of the rebound velocity to the impact velocity. Gravitational acceleration is g. Solve for: (3) The impulse I delivered to the basketball by a player after N bounces to return it to the original height H.",
+    "answer": "[[I = m sqrt((2g(1-\u03bb)(H-h)(H\u207f\u207a\u00b9 - h\u207f\u207a\u00b9)) / (h(H\u207f - h\u207f)))]]",
+    "difficulty": "5",
+    "length": "551",
+    "rule_id": "1"
+  },
+  {
+    "idx": "25",
+    "question": "A construction worker with a mass of 60 kg falls from a height but is protected by an elastic safety harness, which arrests the fall. The deceleration time of the harness is 1.2 s, and the harness length is 5 m. Ignoring air resistance and considering g = 10 m/s\u00b2, calculate the average force exerted by the harness on the worker during the deceleration process, answer only in magnitude, like [[12 N]] if the answer is 12 N",
+    "answer": "[[100 N]]",
+    "difficulty": "3",
+    "length": "424",
+    "rule_id": "1"
+  },
+  {
+    "idx": "26",
+    "question": "A block of mass 6 kg is initially at rest on a horizontal surface. It starts moving under the influence of a horizontal force F = 40 N. The coefficient of kinetic friction between the block and the surface is \u03bc = 0.3. After the force F is removed, how much longer will the block continue to move before coming to a stop? (Take g = 10 m/s\u00b2.)",
+    "answer": "[[9.78 s]]",
+    "difficulty": "1",
+    "length": "340",
+    "rule_id": "1"
+  },
+  {
+    "idx": "27",
+    "question": "A 50 kg acrobat falls from a height of 7.2 m but is arrested by an elastic safety harness. The deceleration time provided by the harness is 1 s, and its length is 3.2 m. Taking g = 10 m/s\u00b2, calculate the average force exerted by the harness on the acrobat during deceleration.",
+    "answer": "[[900 N]]",
+    "difficulty": "1",
+    "length": "276",
+    "rule_id": "1"
+  },
+  {
+    "idx": "28",
+    "question": "In a vertical plane, an inclined track is smoothly connected to a sufficiently - long horizontal track through a short smooth arc. A small block B is at rest at the left - most end of the horizontal track, as shown in Figure (a). At \\(t = 0\\), a small block A starts to slide down from rest on the inclined track. After a period of time, it makes an elastic collision with B (the collision time is extremely short). When A returns to point P on the inclined track (not marked in the figure), its velocity decreases to 0. At this time, an external force is applied to it so that it remains stationary on the inclined track. The \\(v - t\\) image of block A's motion is shown in Figure (b), where \\(v_1\\) and \\(t_1\\) are both unknown. It is known that the mass of A is \\(m\\), the initial height difference between A and B is \\(H\\), the magnitude of the gravitational acceleration is \\(g\\), and air resistance is neglected.Description of the motion situation: Block A is on an inclined plane with a height of \\(H\\), and block B is at the bottom end of the inclined plane. After block A slides down the inclined plane, both objects move onto a horizontal plane. The \\(v - t\\) function of block A is \\(v = f(t)=\\begin{cases}\\frac{v_1}{t_1}t, &t\\leq t_1\\\\\\frac{1.25v_1}{t_1}(t - 1.4t_1),&t_1 < t\\leq1.4t_1\\\\0,&t>1.4t_1\\end{cases}\\) (1) Find the mass of block B. ",
+    "answer": "[[3m]]",
+    "difficulty": "5",
+    "length": "1354",
+    "rule_id": "1"
+  },
+  {
+    "idx": "29",
+    "question": " In a vertical plane, an inclined track is smoothly connected to a sufficiently - long horizontal track through a short smooth arc. A small block B is at rest at the left - most end of the horizontal track, as shown in Figure (a). At \\(t = 0\\), a small block A starts to slide down from rest on the inclined track. After a period of time, it makes an elastic collision with B (the collision time is extremely short). When A returns to point P on the inclined track (not marked in the figure), its velocity decreases to 0. At this time, an external force is applied to it so that it remains stationary on the inclined track. The \\(v - t\\) image of block A's motion is shown in Figure (b), where \\(v_1\\) and \\(t_1\\) are both unknown. It is known that the mass of A is \\(m\\), the initial height difference between A and B is \\(H\\), the magnitude of the gravitational acceleration is \\(g\\), and air resistance is neglected.Description of the motion situation: Block A is on an inclined plane with a height of \\(H\\), and block B is at the bottom end of the inclined plane. After block A slides down the inclined plane, both objects move onto a horizontal plane. The \\(v - t\\) function of block A is \\(v = f(t)=\\begin{cases}\\frac{v_1}{t_1}t, &t\\leq t_1\\\\\\frac{1.25v_1}{t_1}(t - 1.4t_1),&t_1 < t\\leq1.4t_1\\\\0,&t>1.4t_1\\end{cases}\\)(2) In the entire motion process between t=0 and t=1.4t1 find the work done by block A against friction. Answer in format [[1/2]] if the work done is 1/2mgH",
+    "answer": "[[2/15]]",
+    "difficulty": "5",
+    "length": "1480",
+    "rule_id": "1"
+  },
+  {
+    "idx": "30",
+    "question": "In a vertical plane, an inclined track is smoothly connected to a sufficiently - long horizontal track through a short smooth arc. A small block B is at rest at the left - most end of the horizontal track, as shown in Figure (a). At \\(t = 0\\), a small block A starts to slide down from rest on the inclined track. After a period of time, it makes an elastic collision with B (the collision time is extremely short). When A returns to point P on the inclined track (not marked in the figure), its velocity decreases to 0. At this time, an external force is applied to it so that it remains stationary on the inclined track. The \\(v - t\\) image of block A's motion is shown in Figure (b), where \\(v_1\\) and \\(t_1\\) are both unknown. It is known that the mass of A is \\(m\\), the initial height difference between A and B is \\(H\\), the magnitude of the gravitational acceleration is \\(g\\), and air resistance is neglected.Description of the motion situation: Block A is on an inclined plane with a height of \\(H\\), and block B is at the bottom end of the inclined plane. After block A slides down the inclined plane, both objects move onto a horizontal plane. The \\(v - t\\) function of block A is \\(v = f(t)=\\begin{cases}\\frac{v_1}{t_1}t, &t\\leq t_1\\\\\\frac{1.25v_1}{t_1}(t - 1.4t_1),&t_1 < t\\leq1.4t_1\\\\0,&t>1.4t_1\\end{cases}\\) (3) It is known that the coefficients of kinetic friction between the two blocks and the track are equal. After block B stops moving, the coefficient of kinetic friction between the blocks and the track is changed. Then A is released from point P. After a period of time, A can just collide with B again. Find the ratio of the coefficient of kinetic friction before and after the change. ",
+    "answer": "[[11/9]]",
+    "difficulty": "5",
+    "length": "1712",
+    "rule_id": "1"
+  },
+  {
+    "idx": "31",
+    "question": "As shown in the figure, a light spring with original length $l_0$ is placed vertically, with one end fixed on the ground and the other end connected to a light horizontal wooden board X of mass $m_1$. A block Y with mass $m_2$ is placed on X. Now, block Y is pressed down vertically, making the height of X from the ground $l$. At this time, the elastic potential energy of the spring is $E_p$. It is released from rest, and all objects move vertically. Then ( )% Diagram Description (as we cannot include the image directly)% The figure shows a vertical spring with its lower end fixed on the ground.% A horizontal board X is connected to the upper end of the spring.% A block Y is placed on top of the board X.% The initial compressed state shows the board X at a height l from the ground.% The relaxed length of the spring is l_0.[A] If X and Y can separate, then $E_p = (m_1 + m_2)g(l_0 - l)$[B] If X and Y can separate, then $E_p = (m_1 + m_2)gl$[C] If X and Y can separate, the maximum height Y can reach is $\\dfrac{E_p}{(m_1 + m_2)g} + (l_0 - l)$[D] If X and Y can separate, the maximum height Y can reach is $\\frac{E_p}{(m_1 + m_2)g} + l. Answer in [[B,C]] if the answer is B,C.",
+    "answer": "[[A,D]]",
+    "difficulty": "1",
+    "length": "322",
+    "rule_id": "1"
+  },
+  {
+    "idx": "32",
+    "question": "**Main Problem Description:**A parallel plate capacitor with capacitance C has a plate separation of d. The plates are horizontal and sufficiently long, and the lower plate is grounded. The capacitor is connected with a switch S, resistors R1 and R2 to form a circuit (as would be shown in a diagram, though the diagram itself isn't text). Terminals a and b are two output terminals. When switch S is open, the space between the plates is filled with a uniform magnetic field of magnetic induction strength B, directed perpendicularly into the plane of the paper. A beam of charged particles, each with mass m and charge q (q > 0), enters the region between the plates horizontally with velocity v0 along the edge of the lower plate. The number of particles entering per unit time is n. The gravitational force on the charged particles is negligible, they do not come into contact with the lower plate, and edge effects of the plates as well as interactions between charged particles are to be ignored. To enable the charged particles to land on the upper plate of the capacitor, find the maximum plate separation $d_m$. Under the condition of (1) (i.e., with $d = d_m$), find the maximum charge $Q_m$ that the capacitor can store.Given $R_1 = 2R$ and $R_2 = R$. Switch S is closed, and the capacitor reaches a new steady state. To ensure that all charged particles entering the region between the plates land on the upper plate when an arbitrary load is connected to terminals a and b, find the condition that R must satisfy, and determine the maximum output power between terminals a and b under this condition. Only answer (3) in format [[The condition that R must satisfy, the maximum output power]] with n, m, q, v0, B, C, d, R.",
+    "answer": "[[R \\leq \\frac{Bd\\left(v_{0} - \\frac{Bqd}{2m}\\right)}{3nq}, \\frac{n^2q^2R}{2}]]",
+    "difficulty": "1",
+    "length": "335",
+    "rule_id": "1"
+  },
+  {
+    "idx": "33",
+    "question": "A block of mass \\( M \\) and length \\( L \\) is initially at rest on a frictionless horizontal surface. A bullet of mass \\( m \\) is fired horizontally into the block and embeds itself. The resistive force \\( f \\) experienced by the bullet inside the block is constant and proportional to its initial velocity, \\( f = k v_0 \\) (where \\( k \\) is a known constant). If the bullet's initial speed \\( v_0 \\) is varied, find the conditions that maximize the velocity of the block. Choose the correct option(s):(A) The bullet's initial velocity must be \\( v_0 = \\frac{2kL (m + M)}{mM} \\).(B) The time the bullet spends inside the block is \\( \\frac{2mM}{k(m + M)} \\).(C) The total kinetic energy lost by the block and bullet system is \\( \\frac{k^2 L^2 (m + M)}{mM} \\).(D) The distance the block moves while accelerating is \\( \\frac{mL}{m + M} \\). Answer in the format [[choices]], e.g., if the answer is A,B,D, please answer in the format [[A,B,D]]",
+    "answer": "[[A,D]]",
+    "difficulty": "4",
+    "length": "938",
+    "rule_id": "1"
+  },
+  {
+    "idx": "34",
+    "question": "A circular ring of radius \\( R \\) is fixed on a horizontal plane. Inside the ring, two small spheres of masses \\( m_A \\) and \\( m_B \\) are present, where \\( m_A > m_B \\). Initially, sphere \\( A \\) moves tangentially along the ring with velocity \\( v_0 \\), while sphere \\( B \\) is at rest. The two spheres collide, and friction between the spheres and the ring is ignored. Solve for:\n\n(2) If the collision between \\( A \\) and \\( B \\) is perfectly elastic and the collision positions form an equilateral triangle within the ring, determine the mass ratio \\( m_A / m_B \\). Give all possible answers in this form [[ratio_1, ratio_2, ...]]",
+    "answer": "[2, 5]]",
+    "difficulty": "3",
+    "length": "634",
+    "rule_id": "1"
+  },
+  {
+    "idx": "35",
+    "question": "A circular ring of radius \\( R \\) is fixed on a horizontal plane. Inside the ring, two small spheres of masses \\( m_A \\) and \\( m_B \\) are present, where \\( m_A > m_B \\). Initially, sphere \\( A \\) moves tangentially along the ring with velocity \\( v_0 \\), while sphere \\( B \\) is at rest. The two spheres collide, and friction between the spheres and the ring is ignored. If the collision is inelastic with a coefficient of restitution \\( e \\), where the relative velocity after each collision is \\( e \\) times the relative velocity before the collision (\\( 0 < e < 1 \\)), find the total distance traveled by sphere \\( B \\) between the first and \\( (2n+1) \\)-th collisions.",
+    "answer": "[[\\( \\frac{2 \\pi R m_A}{m_A + m_B} \\cdot \\frac{e^{2n} - 1}{e^n (e - 1)} \\)]]",
+    "difficulty": "4",
+    "length": "673",
+    "rule_id": "1"
+  },
+  {
+    "idx": "36",
+    "question": "A charged insulating plate with charge \\( q = +0.05 C \\) and mass \\( M = 1 \\) kg is placed on a frictionless horizontal surface. A non-charged small block of mass \\( 1 \\) kg is positioned at the right end of the plate. The coefficient of kinetic friction between the plate and the block is \\( \\mu = 0.75 \\). A fixed elastic barrier is positioned \\( L = 0.8 \\) m from the left end of the plate, and the barrier is at the same height as the plate. When the plate collides with the barrier, it rebounds elastically. A uniform electric field \\( E = 100 \\) N/C is present, directed horizontally to the left. The plate retains its charge throughout the process, and the block does not detach from the plate. Solve for:\n\n(1) The velocity of the plate just before its second collision with the barrier.\n Give the answer in the format [[1.0]] if the answer is 1.0 m/s",
+    "answer": "[[1.0]]",
+    "difficulty": 4,
+    "length": "858",
+    "rule_id": "1"
+  },
+  {
+    "idx": "37",
+    "question": "A charged insulating plate with charge \\( q = +0.05 C \\) and mass \\( M = 1 \\) kg is placed on a frictionless horizontal surface. A non-charged small block of mass \\( 1 \\) kg is positioned at the right end of the plate. The coefficient of kinetic friction between the plate and the block is \\( \\mu = 0.75 \\). A fixed elastic barrier is positioned \\( L = 0.8 \\) m from the left end of the plate, and the barrier is at the same height as the plate. When the plate collides with the barrier, it rebounds elastically. A uniform electric field \\( E = 100 \\) N/C is present, directed horizontally to the left. The plate retains its charge throughout the process, and the block does not detach from the plate. Solve for:\n\n(3) The total impulse imparted by the barrier on the plate from release until it comes to rest. Give the answer in the format [[1.0]] if the answer is 1.0 N \\dot s",
+    "answer": "[[3.0]]",
+    "difficulty": 4,
+    "length": "877",
+    "rule_id": "1"
+  },
+  {
+    "idx": "38",
+    "question": "Two sliding blocks, \\( A \\) and \\( B \\), have masses \\( m_A = 1 \\) kg and \\( m_B = 5 \\) kg, respectively. They are placed at opposite ends of a wooden plank, which is initially at rest on a horizontal surface. The coefficient of kinetic friction between the blocks and the plank is \\( \\mu_1 = 0.5 \\). The plank itself has a mass of \\( 4 \\) kg and experiences a kinetic friction coefficient of \\( \\mu_2 = 0.1 \\) with the ground. At a certain moment, blocks \\( A \\) and \\( B \\) begin sliding towards each other with an initial velocity of \\( v_0 = 3 \\) m/s. When they collide, block \\( A \\) and the plank momentarily come to rest relative to each other. Assume the maximum static friction equals the kinetic friction and take the gravitational acceleration as \\( g = 10 \\) m/s\u00b2. Solve for:\n\n(1) The velocity of the plank when block \\( B \\) comes to rest relative to it. Please give the answer in the format [[1.0]] if the answer is 1.0 m/s",
+    "answer": "[[1.0]]",
+    "difficulty": 4,
+    "length": "937",
+    "rule_id": "1"
+  },
+  {
+    "idx": "39",
+    "question": "Two sliding blocks, \\( A \\) and \\( B \\), have masses \\( m_A = 1 \\) kg and \\( m_B = 5 \\) kg, respectively. They are placed at opposite ends of a wooden plank, which is initially at rest on a horizontal surface. The coefficient of kinetic friction between the blocks and the plank is \\( \\mu_1 = 0.5 \\). The plank itself has a mass of \\( 4 \\) kg and experiences a kinetic friction coefficient of \\( \\mu_2 = 0.1 \\) with the ground. At a certain moment, blocks \\( A \\) and \\( B \\) begin sliding towards each other with an initial velocity of \\( v_0 = 3 \\) m/s. When they collide, block \\( A \\) and the plank momentarily come to rest relative to each other. Assume the maximum static friction equals the kinetic friction and take the gravitational acceleration as \\( g = 10 \\) m/s\u00b2. Solve for:\n\n(2) The distance between blocks \\( A \\) and \\( B \\) after they begin moving again. Please give the answer in the format [[1.0]] if the answer is 1.0 m",
+    "answer": "[[1.9]]",
+    "difficulty": 4,
+    "length": "939",
+    "rule_id": "1"
+  },
+  {
+    "idx": "40",
+    "question": "Two frictionless metal rails are placed parallel at a distance \\( l \\), consisting of a curved segment and an infinitely long horizontal segment. The horizontal part is in a uniform magnetic field \\( B \\) directed vertically downward. A conducting metal rod \\( cd \\) of mass \\( 2m \\) and resistance \\( 2r \\) is initially at rest on the horizontal rails. Another metal rod \\( ab \\) of mass \\( m \\) and resistance \\( r \\) starts from rest at point \\( M \\) and slides down along the curved track to reach the horizontal rails at point \\( N \\), making perfect contact with the rails. The circular arc \\( MN \\) has a radius \\( R \\) and subtends an angle of \\( 60^\\circ \\) at the center. Solve for:\n\n(2) The maximum velocity attained by rod \\( cd \\).\n",
+    "answer": "[[\\frac{1}{3} \\sqrt{gR}]]",
+    "difficulty": 4,
+    "length": "745",
+    "rule_id": "1"
+  },
+  {
+    "idx": "41",
+    "question": "Two frictionless metal rails are placed parallel at a distance \\( l \\), consisting of a curved segment and an infinitely long horizontal segment. The horizontal part is in a uniform magnetic field \\( B \\) directed vertically downward. A conducting metal rod \\( cd \\) of mass \\( 2m \\) and resistance \\( 2r \\) is initially at rest on the horizontal rails. Another metal rod \\( ab \\) of mass \\( m \\) and resistance \\( r \\) starts from rest at point \\( M \\) and slides down along the curved track to reach the horizontal rails at point \\( N \\), making perfect contact with the rails. The circular arc \\( MN \\) has a radius \\( R \\) and subtends an angle of \\( 60^\\circ \\) at the center. Solve for:(3) The total heat energy dissipated by the system as rod \\( cd \\) accelerates from rest to its maximum velocity.",
+    "answer": "[[\\frac{1}{3} mgR]]",
+    "difficulty": 4,
+    "length": "805",
+    "rule_id": "1"
+  },
+  {
+    "idx": "42",
+    "question": "A long U-shaped conducting rail is placed horizontally in a uniform vertical magnetic field of strength \\( B = 5 T \\). The rail has a width \\( L = 0.4 m \\) and is connected to a fixed resistor \\( R = 0.5 \\Omega \\) on the left. A conducting rod \\( ab \\) of mass \\( m = 2.0 \\) kg and resistance \\( r = 0.5 \\Omega \\) is placed on the rail. The coefficient of kinetic friction between the rod and the rail is \\( \\mu = 0.2 \\), and the rod's internal resistance is negligible. An external horizontal force \\( F = 10 N \\) is applied to the rod, causing it to move from rest. After traveling \\( x = 40 \\) cm, the rod reaches its maximum velocity. Given \\( g = 10 \\text{ m/s}^2 \\), solve for:\n\n(1) The maximum velocity of the rod.\n Please give the answer in the format [[1.0]] if the answer is 1.0 m/s",
+    "answer": "[[1.5]]",
+    "difficulty": 4,
+    "length": "792",
+    "rule_id": "1"
+  },
+  {
+    "idx": "43",
+    "question": "A long U-shaped conducting rail is placed horizontally in a uniform vertical magnetic field of strength \\( B = 5 T \\). The rail has a width \\( L = 0.4 m \\) and is connected to a fixed resistor \\( R = 0.5 \\Omega \\) on the left. A conducting rod \\( ab \\) of mass \\( m = 2.0 \\) kg and resistance \\( r = 0.5 \\Omega \\) is placed on the rail. The coefficient of kinetic friction between the rod and the rail is \\( \\mu = 0.2 \\), and the rod's internal resistance is negligible. An external horizontal force \\( F = 10 N \\) is applied to the rod, causing it to move from rest. After traveling \\( x = 40 \\) cm, the rod reaches its maximum velocity. Given \\( g = 10 \\text{ m/s}^2 \\), solve for:\n\n(3) The heat energy dissipated in resistor \\( R \\) while the rod accelerates to its maximum velocity.",
+    "answer": "[[0.075]]",
+    "difficulty": 4,
+    "length": "786",
+    "rule_id": "1"
+  },
+  {
+    "idx": "44",
+    "question": "A light insulating rod is fixed vertically on a horizontal table. Two small insulating spheres, each of mass \\( m \\), pass through the rod and can be considered as point charges, carrying charges \\( q \\) and \\( Q \\) respectively. The lower sphere (B) is initially at rest at the origin, while the upper sphere (A) starts from rest at \\( x = x_0 \\) and moves downward. The electrostatic potential energy between the spheres is given by: \n\n\\[ E_p = \\frac{k Q q}{r} \\]\n\nwhere \\( r \\) is the distance between the two charges, and \\( k \\) is a constant. The maximum static friction equals the kinetic friction, and the gravitational acceleration is \\( g \\). Select the correct option(s):(A) The lowest position reached by sphere A is \\( x^* = \\frac{kQq}{(mg + f)x_0} \\).(B) The position where velocity is maximum is \\( \\sqrt{\\frac{kQq}{mg - f}} \\).(C) The stopping position \\( x \\) is within the range: \\( \\sqrt{\\frac{kQq}{mg - f}} \\leq x \\leq \\frac{kQq}{mg - f} \\).(D) The condition for sphere A to return to the initial position is: \\( E_{p0} < (mg - f) \\sqrt{\\frac{kQq}{mg + f}} \\). Answer in the format [[choices]], e.g., if the answer is A,B,D, please answer in the format [[A,B,D]]",
+    "answer": "[[B,D]]",
+    "difficulty": "4",
+    "length": "1182",
+    "rule_id": "1"
+  },
+  {
+    "idx": "45",
+    "question": "A skater is initially at rest on a horizontal ice surface facing a fixed vertical barrier. The skater pushes a stationary 4.0 kg block towards the barrier with a speed of 5.0 m/s. The skater recoils backward. The block elastically collides with the barrier and reverses direction. Upon catching up to the skater, the skater again pushes the block towards the barrier at 5.0 m/s. This process repeats a total of 8 times. After the 8th push, the skater's recoil velocity exceeds 5.0 m/s, preventing the block from catching up. Neglecting friction with the ice, determine the possible mass of the skater. Answer the format in [[10 kg < m < 100 kg]]",
+    "answer": "[[52 kg < m < 60 kg]]",
+    "difficulty": 4,
+    "length": "645",
+    "rule_id": "1"
+  },
+  {
+    "idx": "46",
+    "question": "On a rainy day, a car is traveling at high speed on a straight highway. The driver suddenly notices a stationary small broken-down vehicle ahead. The driver applies the brakes forcefully, locking the wheels, but the car continues to slide forward and collides with the broken-down vehicle. The two vehicles then slide together over a distance before stopping. After the accident, measurements show that the car's braking point was a distance \\( L \\) from the broken-down vehicle, and after the collision, they slid together for a distance of \\( \\frac{L}{9} \\). Assuming the coefficient of kinetic friction \\( \\mu \\) is the same for both vehicles, and given that the mass of the broken-down vehicle is \\( m \\) and the mass of the moving car is \\( 2m \\), solve for:\n\n(1) The velocity of the car before braking.",
+    "answer": "[[\\frac{1}{2} \\sqrt{10 \\mu g L}]]",
+    "difficulty": "4",
+    "length": "808",
+    "rule_id": "1"
+  },
+  {
+    "idx": "47",
+    "question": "On a rainy day, a car is traveling at high speed on a straight highway. The driver suddenly notices a stationary small broken-down vehicle ahead. The driver applies the brakes forcefully, locking the wheels, but the car continues to slide forward and collides with the broken-down vehicle. The two vehicles then slide together over a distance before stopping. After the accident, measurements show that the car's braking point was a distance \\( L \\) from the broken-down vehicle, and after the collision, they slid together for a distance of \\( \\frac{L}{9} \\). Assuming the coefficient of kinetic friction \\( \\mu \\) is the same for both vehicles, and given that the mass of the broken-down vehicle is \\( m \\) and the mass of the moving car is \\( 2m \\), solve for:\n\n(2) The ratio of energy lost due to the collision to the total heat energy generated by friction during the entire process.",
+    "answer": "[[1:14]]",
+    "difficulty": "4",
+    "length": "888",
+    "rule_id": "1"
+  },
+  {
+    "idx": "48",
+    "question": "Two long frictionless horizontal conducting rails are spaced \\( l \\) apart in a uniform vertical magnetic field of strength \\( B \\) pointing upward. Two identical conducting rods are placed on the rails at a fixed distance apart, both having uniform mass distributions. The first rod, \\( a \\), has mass \\( m \\) and resistance \\( R \\), while the second rod, \\( b \\), has mass \\( 2m \\) and resistance \\( 2R \\). Initially, rod \\( a \\) is given a rightward velocity \\( v_0 \\). When the velocity of rod \\( a \\) is \\( \\frac{v_0}{2} \\), rod \\( b \\) hits an obstacle, and its velocity decreases to zero in a very short time \\( t_0 \\). Assuming rod \\( a \\) moves independently after release and does not collide with rod \\( b \\), solve for:\\n(2) The impulse force exerted by the obstacle on rod \\( b \\) when it stops.",
+    "answer": "[[\\frac{m v_0}{2 t_0}]]",
+    "difficulty": 4,
+    "length": "808",
+    "rule_id": "1"
+  },
+  {
+    "idx": "49",
+    "question": "We study the collective behavior of bosonic particles, which do not obey the Pauli exclusion principle. At sufficiently low temperatures or high densities, bosons undergo Bose\u2013Einstein condensation (BEC), a phase transition where a large number of particles occupy the same quantum state, behaving as a single wave. The transition occurs when the de Broglie wavelength of particles matches the interparticle distance.**C.2** Calculate the typical distance between gas particles, \\( \\ell \\), as a function of particle density \\( n \\), and then deduce the critical temperature \\( T_c \\) as a function of atomic mass, density, and physical constants.\n\nTo achieve BEC in the lab, gases are cooled to temperatures as low as \\( T_c = 100 \\) nK. Please only give the ciritical temperature in your answer in the [[]].",
+    "answer": "\\( T_c = \\frac{h^2 n^{2/3}}{3 m k_B} \\)",
+    "difficulty": "5",
+    "length": "809",
+    "rule_id": "1"
+  },
+  {
+    "idx": "50",
+    "question": "We study the collective behavior of bosonic particles, which do not obey the Pauli exclusion principle. At sufficiently low temperatures or high densities, bosons undergo Bose\u2013Einstein condensation (BEC), a phase transition where a large number of particles occupy the same quantum state, behaving as a single wave. The transition occurs when the de Broglie wavelength of particles matches the interparticle distance.\n\n**C.3** Determine the critical particle density \\( n_c \\) for \\( ^{87}Rb \\) gas at this temperature. Also, compute the 'ordinary' particle density \\( n_0 \\) of an ideal gas at standard temperature and pressure (STP), with \\( T_0 = 300 \\) K and \\( p_0 = 10^5 \\) Pa. Find the ratio \\( n_0 / n_c \\), assuming the atomic mass is 87 amu.",
+    "answer": "[[1.5 \\times 10^7]]",
+    "difficulty": 5,
+    "length": "751",
+    "rule_id": "1"
+  },
+  {
+    "idx": "51",
+    "question": "Suppose that a short earthquake occurs at the surface of some planet. The seismic waves originate from a line source at \\( z = x = 0 \\), where \\( x \\) is the horizontal coordinate and \\( z \\) is the depth below the surface. The seismic wave source is assumed to be much longer than any other length in this problem. \n\nAs a result of the earthquake, a uniform flux of longitudinal P waves is emitted in all directions in the x-z plane with a positive component along the z-axis. While wave theory in solids is complex, we consider only the P waves and neglect all other waves. The planet's crust is stratified so that the P-wave speed depends on depth as:\n\\[ v = v_0 (1+z/z_0) \\] \nwhere \\( v_0 \\) is the speed at the surface and \\( z_0 \\) is a known positive constant.\n\n### **B.1** (1.5 points) \nConsider a single ray emitted by the earthquake at an initial angle \\( \\theta_0 \\) with respect to the z-axis, traveling in the x-z plane. The ray follows an arc of a circle. Find the horizontal coordinate \\( x_1(\\theta_0) \\) at which this ray reaches the surface. Express it in the form \\( x_1(\\theta_0) = A \\cot(b\\theta_0) \\) and finding the constants \\( A \\) and \\( b \\). Please give the answer in the format [[A, b]]",
+    "answer": "[[2z_0, 1]]",
+    "difficulty": 5,
+    "length": "1215",
+    "rule_id": "1"
+  },
+  {
+    "idx": "52",
+    "question": "**Brief description of the picture**: The picture shows a simplified physical model diagram. There are two small blocks labeled A and B placed on a horizontal line. There is a compressed micro - spring between them.  Block A is closer to a vertical wall on the right - hand side, and the distance between block A and the wall is marked as lTwo small blocks A and B are stationary on a horizontal ground. Their masses are m_A = 1.0kg and m_B=4.0kg respectively. There is a compressed micro - spring between them. The distance between block A and the vertical wall on its right side is l = 1.0m, as shown in the figure. At a certain moment, the compressed micro - spring is released, causing A and B to separate instantaneously. The sum of the kinetic energies obtained by the two blocks is E_k = 10.0J. After release, A moves to the right in a direction perpendicular to the wall. The coefficient of kinetic friction between both A and B and the ground is \\(\\mu=0.20\\). The acceleration due to gravity is taken as \\(g = 10m/s^2\\). All collisions involved in the motion process of A and B are elastic collisions and the collision time is extremely short. Which one of the blocks A and B stops first? What is the distance between A and B when this block just stops? Answer in the format [[0.1]] without unit meter if the answer is 0.1m.",
+    "answer": "[[0.5]]",
+    "difficulty": 5,
+    "length": "1333",
+    "rule_id": "1"
+  },
+  {
+    "idx": "53",
+    "question": "Suppose that a short earthquake occurs at the surface of some planet. The seismic waves originate from a line source at \\( z = x = 0 \\), where \\( x \\) is the horizontal coordinate and \\( z \\) is the depth below the surface. The seismic wave source is assumed to be much longer than any other length in this problem. \n\nAs a result of the earthquake, a uniform flux of longitudinal P waves is emitted in all directions in the x-z plane with a positive component along the z-axis. While wave theory in solids is complex, we consider only the P waves and neglect all other waves. The planet's crust is stratified so that the P-wave speed depends on depth as:\n\\[ v = v_0 (1+z/z_0) \\] \nwhere \\( v_0 \\) is the speed at the surface and \\( z_0 \\) is a known positive constant.\n\n Consider a single ray emitted by the earthquake at an initial angle \\( \\theta_0 \\) with respect to the z-axis, traveling in the x-z plane. The ray follows an arc of a circle. We have found that the horizontal coordinate \\( x_1(\\theta_0) \\) at which this ray reaches the surface is given by \\( x_1(\\theta_0) = A \\cot(b\\theta_0) \\), where \\( A \\) = 2z_0 and b = 1. The total energy per unit length of the source released as P waves into the crust during the earthquake is \\( E \\).  The total energy per unit length of the source released as P waves is \\( E \\), and these waves are fully absorbed at the surface, and we find that  energy density per unit area \\( \\varepsilon(x) \\) equals \\( \\frac{2E z_0}{\\pi (4z_0^2 + x^2)} \\). From now on, assume that the waves are instead fully reflected when reaching the surface. Imagine a device positioned at \ud835\udc67 = \ud835\udc65 = 0 that has the same geometry as the previously considered earthquake source. The device is capable of emitting P waves in a freely chosen angular distribution. We make the device emit a signal with a narrow range of emission angles. In particular, the initial angle the signal makes with the vertical belongs to the interval \\( [\\theta_0 - \\frac{1}{2} \\delta \\theta_0, \\theta_0 + \\frac{1}{2} \\delta \\theta_0] \\), where \\( \\delta \\theta_0 \\ll 1 \\). Find the maximum distance \\( x_{\\max} \\) along the surface at which the signal is no longer received. Express your answer in terms of \\( \\theta_0 \\), \\( \\delta \\theta_0 \\), and other given constants.",
+    "answer": "[[\\frac{2z_0 \\cos^2 \\theta_0}{\\delta \\theta_0}]]",
+    "difficulty": 5,
+    "length": "2272",
+    "rule_id": "1"
+  },
+  {
+    "idx": "54",
+    "question": "**Brief description of the picture**: The picture shows a simplified physical model diagram. There are two small blocks labeled A and B placed on a horizontal line. There is a compressed micro - spring between them.  Block A is closer to a vertical wall on the right - hand side, and the distance between block A and the wall is marked as lTwo small blocks A and B are stationary on a horizontal ground. Their masses are m_A = 1.0kg and m_B=4.0kg respectively. There is a compressed micro - spring between them. The distance between block A and the vertical wall on its right side is l = 1.0m, as shown in the figure. At a certain moment, the compressed micro - spring is released, causing A and B to separate instantaneously. The sum of the kinetic energies obtained by the two blocks is E_k = 10.0J. After release, A moves to the right in a direction perpendicular to the wall. The coefficient of kinetic friction between both A and B and the ground is \\(\\mu=0.20\\). The acceleration due to gravity is taken as \\(g = 10m/s^2\\). All collisions involved in the motion process of A and B are elastic collisions and the collision time is extremely short. What is the distance between A and B after both A and B stop?. Answer in the format [[0.11]] without unit meter if the answer is 0.11m.",
+    "answer": "[[0.91]]",
+    "difficulty": "4",
+    "length": "1288",
+    "rule_id": "1"
+  },
+  {
+    "idx": "55",
+    "question": "We discuss the stability of large nuclei and estimate the mass of neutron stars theoretically and experimentally.\n\n### **Part A. Mass and Stability of Nuclei (2.5 points)**\nThe rest-energy of a nucleus \\( m(Z,N)c^2 \\) consisting of \\( Z \\) protons and \\( N \\) neutrons is smaller than the sum of the rest-energies of protons and neutrons, known as the binding energy \\( B(Z,N) \\), where \\( c \\) is the speed of light in vacuum. Ignoring minor corrections, we approximate the binding energy with terms:\n\n\\[ B(Z,N) = a_V A - a_S A^{2/3} - a_C \\frac{Z^2}{A^{1/3}} - a_{\\text{sym}} \\frac{(N - Z)^2}{A} \\]  \n\nwhere \\( A = Z + N \\) is the mass number and \\( m_N \\) is the nucleon mass. Given constants are:\n- \\( a_V \\approx 15.8 \\) MeV\n- \\( a_S \\approx 17.8 \\) MeV\n- \\( a_C \\approx 0.711 \\) MeV\n- \\( a_{\\text{sym}} \\approx 23.7 \\) MeV\n\n **A.3** (0.7pt) \nA nucleus with large \\( A \\) breaks into lighter nuclei through fission to minimize the total rest-mass energy. We consider a fission process where the nucleus \\( (Z, N) \\) splits into two equal nuclei. The energy condition for fission is:\n\n\\[ m(Z,N)c^2 > 2m(Z/2, N/2)c^2. \\]\n\nRewriting this as:\n\n\\[ \\frac{Z^2}{A} > C_{\\text{fission}} \\frac{a_S}{a_C}, \\]\n\nobtain \\( C_{\\text{fission}} \\) up to two significant digits. Answer in the format [[0.11]] if the answer is 0.11.",
+    "answer": "[[0.70]]",
+    "difficulty": "4",
+    "length": "1318",
+    "rule_id": "1"
+  },
+  {
+    "idx": "56",
+    "question": " Analysis of the Stability of a Star**\nIn this part, we study the stability of a single star. Consider a star containing a specific kind of matter with the equation of state \\( p = K \\rho^{\\gamma} \\), where \\( K \\) and \\( \\gamma \\) are constants. Let \\( p(r) \\) and \\( \\rho(r) \\) be the pressure and density at a distance \\( r \\) from the center of the star, respectively. The pressure and density at the center of the star are \\( p_c \\) and \\( \\rho_c \\), respectively. In all tasks of part B, take all outward vectors to be positive. Derive a (differential) equation for determining \\( \\rho(r) \\) at equilibrium, and write it in the following form:\n\n\\[ \\frac{d}{dr} \\left[ h_1(\\rho, r) \\frac{dp}{dr} \\right] + h_2(r)\\rho = 0. \\]\n\nFind the functions \\( h_1 \\) and \\( h_2 \\). Please give the answer in the format [[h1, h2]]",
+    "answer": "[[r^2 \\rho^{\\gamma-2}, \\frac{4 \\pi G r^2}{K \\gamma} \\rho(r)]]",
+    "difficulty": 4,
+    "length": "822",
+    "rule_id": "1"
+  },
+  {
+    "idx": "57",
+    "question": " Analysis of the Stability of a Star**\nIn this part, we study the stability of a single star. Consider a star containing a specific kind of matter with the equation of state \\( p = K \\rho^{\\gamma} \\), where \\( K \\) and \\( \\gamma \\) are constants. Let \\( p(r) \\) and \\( \\rho(r) \\) be the pressure and density at a distance \\( r \\) from the center of the star, respectively. The pressure and density at the center of the star are \\( p_c \\) and \\( \\rho_c \\), respectively. In all tasks of part B, take all outward vectors to be positive. Rewrite the (differential) equation of task B-2 , [[ \\frac{d}{dr} \\left[ h_1(\\rho, r) \\frac{dp}{dr} \\right] + h_2(r)\\rho = 0. ]], where h_1 = r^2 \\rho^{\\gamma-2} and h_2 = \\frac{4 \\pi G r^2}{K \\gamma} \\rho(r) in the following form:\n\n\\[ \\frac{d}{dx} \\left[ A_1(u, x) \\frac{du}{dx} \\right] + A_2(x) u(x) = 0, \\]\n\nwhere \\( x = \\frac{r}{r_0} \\) and \\( u = \\frac{\\\rho}{\\\rho_c} \\). Find the functions \\( A_1(u, x) \\) and \\( A_2(x) \\). Please give the answer in the format [[A1, A2]]",
+    "answer": "[[x^2 u^{\\gamma - 2}, \\frac{4 \\pi x^2}{\\gamma}]]",
+    "difficulty": 4,
+    "length": "1011",
+    "rule_id": "1"
+  },
+  {
+    "idx": "58",
+    "question": "A wooden plank of mass M and length l is initially at rest on a smooth horizontal surface. A small block of mass m (considered as a point mass) starts moving from the left end of the plank with an initial velocity v\u2080. The kinetic friction force between the block and the plank has a magnitude of f. When the block reaches the right end of the plank and leaves it, which of the following statements are correct?\n\nA. The kinetic energy of the plank must be equal to fl.\nB. The kinetic energy of the plank must be less than fl.\nC. The kinetic energy of the block must be greater than \\( \\frac{1}{2} m v_0^2 - fl \\).\nD. The kinetic energy of the block must be less than \\( \\frac{1}{2} m v_0^2 - fl \\). Please give the answer in the format [[A, B, D]] if A, B, D are correct.",
+    "answer": "[[B,D]]",
+    "difficulty": "4",
+    "length": "770",
+    "rule_id": "1"
+  },
+  {
+    "idx": "59",
+    "question": "A long vertical cylindrical tube is fixed in place. Inside the tube, a thin circular disk of mass M is initially at rest at the top opening of the tube, which is at a height l from the ground. The tube has a total length of 20l. A small ball of mass m = (1/3)M is dropped from rest at the top opening of the tube and falls directly downwards due to gravity. Upon reaching the disk, the ball collides elastically with it. The ball falls freely due to gravity and collides with the center of the disk. After the collision, the disk moves downward while the ball bounces back up. The force of sliding friction acting on the disk is equal in magnitude to its weight.The collision between the ball and the disk is perfectly elastic, and the duration of the collision is extremely short and can be neglected. Assuming the ball does not touch the tube walls and neglecting air resistance, given the gravitational acceleration g, determine the maximum vertical separation between the ball and the disk between the first and second collision.",
+    "answer": "[[l]]",
+    "difficulty": "4",
+    "length": "1033",
+    "rule_id": "1"
+  },
+  {
+    "idx": "60",
+    "question": "A long vertical cylindrical tube is fixed in place. Inside the tube, a thin circular disk of mass M is initially at rest at the top opening of the tube, which is at a height l from the ground. The tube has a total length of 20l. A small ball of mass m = (1/3)M is dropped from rest at the top opening of the tube and falls directly downwards due to gravity. Upon reaching the disk, the ball collides elastically with it. The ball falls freely due to gravity and collides with the center of the disk. After the collision, the disk moves downward while the ball bounces back up. The force of sliding friction acting on the disk is equal in magnitude to its weight.The collision between the ball and the disk is perfectly elastic, and the duration of the collision is extremely short and can be neglected. Assuming the ball does not touch the tube walls and neglecting air resistance, given the gravitational acceleration g,  how many total collisions occur between the ball and the disk before their relative motion ceases?",
+    "answer": "[[4]]",
+    "difficulty": "4",
+    "length": "1021",
+    "rule_id": "1"
+  },
+  {
+    "idx": "61",
+    "question": "A spacecraft of mass 8.00 \u00d7 10^4 kg returns to Earth from its flight orbit. The spacecraft enters the atmosphere at an altitude of 1.60 \u00d7 10^5 m with a velocity magnitude of 7.5 \u00d7 10^3 m/s, gradually slowing down until it reaches a velocity of 100 m/s when it lands on the ground. Taking the ground as the gravitational potential energy reference point, and assuming the gravitational acceleration remains constant at 9.8 m/s\u00b2, determine: (1) The mechanical energy of the spacecraft just when entering the atmosphere. Keep one significant digit and answer in the format [[1.2 \\times 10^{12}]] if the answer is 1.2 \\times 10^{12} J",
+    "answer": "[[2.4 \\times 10^{12}]]",
+    "difficulty": "4",
+    "length": "630",
+    "rule_id": "1"
+  },
+  {
+    "idx": "62",
+    "question": "A spacecraft of mass 8.00 \u00d7 10^4 kg returns to Earth from its flight orbit. The spacecraft enters the atmosphere at an altitude of 1.60 \u00d7 10^5 m with a velocity magnitude of 7.5 \u00d7 10^3 m/s, gradually slowing down until it reaches a velocity of 100 m/s when it lands on the ground. Taking the ground as the gravitational potential energy reference point, and assuming the gravitational acceleration remains constant at 9.8 m/s\u00b2, determine: (1) The mechanical energy of the spacecraft when it lands on the ground. Keep one significant digit and answer in the format [[1.2 \\times 10^{12}]] if the answer is 1.2 \\times 10^{12} J",
+    "answer": "[[4.0 \\times 10^{8}]]",
+    "difficulty": "4",
+    "length": "624",
+    "rule_id": "1"
+  },
+  {
+    "idx": "63",
+    "question": "A spacecraft of mass 8.00 \u00d7 10^4 kg returns to Earth from its flight orbit. The spacecraft enters the atmosphere at an altitude of 1.60 \u00d7 10^5 m with a velocity magnitude of 7.5 \u00d7 10^3 m/s, gradually slowing down until it reaches a velocity of 100 m/s when it lands on the ground. Taking the ground as the gravitational potential energy reference point, and assuming the gravitational acceleration remains constant at 9.8 m/s\u00b2, determine:  (2) The work done by air resistance during the descent of the spacecraft from an altitude of 600 m until it lands, given that the velocity at 600 m is 2.0% greater than its final landing velocity. Keep one significant digit and answer in the format [[1.2 \\times 10^{12}]] if the answer is 1.2 \\times 10^{12} J",
+    "answer": "[[9.7 \\times 10^{8}]]",
+    "difficulty": "4",
+    "length": "749",
+    "rule_id": "1"
+  },
+  {
+    "idx": "64",
+    "question": "A uniform electric field of magnitude E\u2081 exists in a vacuum. A charged oil drop moves vertically upward in this electric field with a constant velocity v\u2080. At a certain position A, the electric field strength is suddenly increased to a new value while maintaining the same direction. After maintaining this field strength for a duration t\u2081, the field direction is reversed but its magnitude remains the same. The oil drop then continues moving until it reaches point B. The gravitational acceleration is g. (1) Determine the velocity of the oil drop when it reaches point B. ",
+    "answer": "[[v_0 - 2gt_1]]",
+    "difficulty": "4",
+    "length": "575",
+    "rule_id": "1"
+  },
+  {
+    "idx": "65",
+    "question": "A uniform electric field of magnitude E\u2081 exists in a vacuum. A charged oil drop moves vertically upward in this electric field with a constant velocity v\u2080. At a certain position A, the electric field strength is suddenly increased to a new value while maintaining the same direction. After maintaining this field strength for a duration t\u2081, the field direction is reversed but its magnitude remains the same. The oil drop then continues moving until it reaches point B. The gravitational acceleration is g. (2) Find the new electric field strength necessary to ensure that the time interval t\u2081 and the initial velocity v\u2080 satisfy the condition that the maximum height reached by the oil drop in its vertical motion is exactly twice the distance between points A and B. Give all possible strength of the new electric field in [[E_possble_1, E_possble_2, ...]]",
+    "answer": "[[E_1(2- 2\\frac{v_0}{gt_1} + \\frac{v_0^2}{4g^2t_1^2}), E_1(2- 2\\frac{v_0}{gt_1} - \\frac{v_0^2}{4g^2t_1^2})]]",
+    "difficulty": "4",
+    "length": "858",
+    "rule_id": "1"
+  },
+  {
+    "idx": "66",
+    "question": "A U-shaped conductive frame with mass M = 0.06 kg  is placed reversely on a fixed smooth inclined plane at an angle \\(\\alpha\\). The frame has negligible electrical resistance. A metallic rod \\(CD\\) with a resistance of \\(R = 3\\Omega\\) is placed on the frame's rails' upper part, i.e. the top of U character, forming a rectangular circuit \\(CDEF\\). The bottom of the U-shaped frame \\(EF\\) is parallel to the bottom of the inclined plane. The length of the metallic rod is \\(L = 0.6m\\).\n\nInitially, the metallic rod \\(CD\\) is at rest and aligned with \\(EF\\) at a distance \\(s_0 = 0.4m\\). The metallic rod and the conductive frame start moving together from rest.  The open side of U is toward the bottom of the slope, so the rod CD would lead when sliding down. After sliding down a distance \\(s_1 = \\frac{3}{16}m\\), the rod enters a strong uniform magnetic field region perpendicular to the plane.  \n\nAfter entering the magnetic field, the metallic rod undergoes uniform motion until it exits the field. The moment the rod leaves the magnetic field, the bottom edge \\(EF\\) of the conductive frame enters the field, and the conductive frame begins to accelerate after moving a short distance at a uniform velocity. The contact between the metallic rod and the frame is always good. The magnetic field strength is given as \\(B = 1T\\), and gravity acceleration is taken as \\(g = 10m/s^2\\), with \\(\\sin \\alpha = 0.6\\).\n\n Note that The magnetic field region has a finite length along the slope, meaning the metallic rod and the conductive frame will leave the magnetic field after some time. The boundaries of the magnetic field are parallel to the bottom of the inclined plane.\n\nWhen the metallic rod passes through the magnetic field, its entire edge \\(CD\\) is within the field, and when the conductive frame passes through, its bottom edge \\(EF\\) is entirely within the field. determine: (1) The induced electromotive force (emf) in the metal rod while moving inside the magnetic field. Please only answer the value of force in the format [[0.12]] if the answer is 0.12 N",
+    "answer": "[[0.18]]",
+    "difficulty": "4",
+    "length": "1947",
+    "rule_id": "1"
+  },
+  {
+    "idx": "67",
+    "question": "A U-shaped conductive frame with mass M = 0.06 kg  is placed reversely on a fixed smooth inclined plane at an angle \\(\\alpha\\). The frame has negligible electrical resistance. A metallic rod \\(CD\\) with a resistance of \\(R = 3\\Omega\\) is placed on the frame's rails' upper part, i.e. the top of U character, forming a rectangular circuit \\(CDEF\\). The bottom of the U-shaped frame \\(EF\\) is parallel to the bottom of the inclined plane. The length of the metallic rod is \\(L = 0.6m\\).\n\nInitially, the metallic rod \\(CD\\) is at rest and aligned with \\(EF\\) at a distance \\(s_0 = 0.4m\\). The metallic rod and the conductive frame start moving together from rest.  The open side of U is toward the bottom of the slope, so the rod CD would lead when sliding down. After sliding down a distance \\(s_1 = \\frac{3}{16}m\\), the rod enters a strong uniform magnetic field region perpendicular to the plane.  \n\nAfter entering the magnetic field, the metallic rod undergoes uniform motion until it exits the field. The moment the rod leaves the magnetic field, the bottom edge \\(EF\\) of the conductive frame enters the field, and the conductive frame begins to accelerate after moving a short distance at a uniform velocity. The contact between the metallic rod and the frame is always good. The magnetic field strength is given as \\(B = 1T\\), and gravity acceleration is taken as \\(g = 10m/s^2\\), with \\(\\sin \\alpha = 0.6\\).\n\n Note that The magnetic field region has a finite length along the slope, meaning the metallic rod and the conductive frame will leave the magnetic field after some time. The boundaries of the magnetic field are parallel to the bottom of the inclined plane.\n\nWhen the metallic rod passes through the magnetic field, its entire edge \\(CD\\) is within the field, and when the conductive frame passes through, its bottom edge \\(EF\\) is entirely within the field. determine:  (2) The mass of the metal rod. Please give the answer in the format [[m]] if the answer is 0.06 kg",
+    "answer": "[[0.02]]",
+    "difficulty": "4",
+    "length": "1862",
+    "rule_id": "1"
+  },
+  {
+    "idx": "68",
+    "question": "A U-shaped conductive frame with mass M = 0.06 kg  is placed reversely on a fixed smooth inclined plane at an angle \\(\\alpha\\). The frame has negligible electrical resistance. A metallic rod \\(CD\\) with a resistance of \\(R = 3\\Omega\\) is placed on the frame's rails' upper part, i.e. the top of U character, forming a rectangular circuit \\(CDEF\\). The bottom of the U-shaped frame \\(EF\\) is parallel to the bottom of the inclined plane. The length of the metallic rod is \\(L = 0.6m\\).\n\nInitially, the metallic rod \\(CD\\) is at rest and aligned with \\(EF\\) at a distance \\(s_0 = 0.4m\\). The metallic rod and the conductive frame start moving together from rest.  The open side of U is toward the bottom of the slope, so the rod CD would lead when sliding down. After sliding down a distance \\(s_1 = \\frac{3}{16}m\\), the rod enters a strong uniform magnetic field region perpendicular to the plane.  \n\nAfter entering the magnetic field, the metallic rod undergoes uniform motion until it exits the field. The moment the rod leaves the magnetic field, the bottom edge \\(EF\\) of the conductive frame enters the field, and the conductive frame begins to accelerate after moving a short distance at a uniform velocity. The contact between the metallic rod and the frame is always good. The magnetic field strength is given as \\(B = 1T\\), and gravity acceleration is taken as \\(g = 10m/s^2\\), with \\(\\sin \\alpha = 0.6\\).\n\n Note that The magnetic field region has a finite length along the slope, meaning the metallic rod and the conductive frame will leave the magnetic field after some time. The boundaries of the magnetic field are parallel to the bottom of the inclined plane.\n\nWhen the metallic rod passes through the magnetic field, its entire edge \\(CD\\) is within the field, and when the conductive frame passes through, its bottom edge \\(EF\\) is entirely within the field. determine:  (2)  the coefficient of kinetic friction between the rod and the conductor. Please give the answer in the format [[\\mu]], i.e., answer in the format [[0.12]] if the coefficient of friction is 0.12",
+    "answer": "[[0.375]]",
+    "difficulty": "4",
+    "length": "1960",
+    "rule_id": "1"
+  },
+  {
+    "idx": "69",
+    "question": "A U-shaped conductive frame with mass M = 0.06 kg  is placed reversely on a fixed smooth inclined plane at an angle \\(\\alpha\\). The frame has negligible electrical resistance. A metallic rod \\(CD\\) with a resistance of \\(R = 3\\Omega\\) is placed on the frame's rails' upper part, i.e. the top of U character, forming a rectangular circuit \\(CDEF\\). The bottom of the U-shaped frame \\(EF\\) is parallel to the bottom of the inclined plane. The length of the metallic rod is \\(L = 0.6m\\).\n\nInitially, the metallic rod \\(CD\\) is at rest and aligned with \\(EF\\) at a distance \\(s_0 = 0.4m\\). The metallic rod and the conductive frame start moving together from rest.  The open side of U is toward the bottom of the slope, so the rod CD would lead when sliding down. After sliding down a distance \\(s_1 = \\frac{3}{16}m\\), the rod enters a strong uniform magnetic field region perpendicular to the plane.  \n\nAfter entering the magnetic field, the metallic rod undergoes uniform motion until it exits the field. The moment the rod leaves the magnetic field, the bottom edge \\(EF\\) of the conductive frame enters the field, and the conductive frame begins to accelerate after moving a short distance at a uniform velocity. The contact between the metallic rod and the frame is always good. The magnetic field strength is given as \\(B = 1T\\), and gravity acceleration is taken as \\(g = 10m/s^2\\), with \\(\\sin \\alpha = 0.6\\).\n\n Note that The magnetic field region has a finite length along the slope, meaning the metallic rod and the conductive frame will leave the magnetic field after some time. The boundaries of the magnetic field are parallel to the bottom of the inclined plane.\n\nWhen the metallic rod passes through the magnetic field, its entire edge \\(CD\\) is within the field, and when the conductive frame passes through, its bottom edge \\(EF\\) is entirely within the field. Here in the problem, we stated that 'the conductive frame begins to accelerate after moving a short distance at a uniform velocity' Find this short distance in the format [[s]] in the unit of meters. You may first need to find the mass of the metal rod and the coefficient of kinetic friction between the rod and the conductor to get the correct answer.",
+    "answer": "[[5/18]]",
+    "difficulty": "4",
+    "length": "1882",
+    "rule_id": "1"
+  },
+  {
+    "idx": "70",
+    "question": "A uniform thin plate of length l = 1.0 m is initially at rest on a frictionless platform, with its right edge aligned with the edge O of the platform. A small block on the plate starts sliding from the left end with an initial velocity to the right. When the plate has moved a distance \u0394l = (1/6) l, the block reaches the right edge of the plate and flies off horizontally. When the block lands on the ground, the center of the plate has just reached point O. Given that the mass of the block is equal to the mass of the plate, and the coefficient of kinetic friction between them is \u03bc = 0.3, with gravitational acceleration g = 10 m/s\u00b2, determine: (1) The time it spends on the plate. Answer in the format [[t]] in the unit of s, i.e. if the answer is 1/4 s, the answer should be [[1/4]]",
+    "answer": "[[1/3]]",
+    "difficulty": "4",
+    "length": "788",
+    "rule_id": "1"
+  },
+  {
+    "idx": "71",
+    "question": "A uniform thin plate of length l = 1.0 m is initially at rest on a frictionless platform, with its right edge aligned with the edge O of the platform. A small block on the plate starts sliding from the left end with an initial velocity to the right. When the plate has moved a distance \u0394l = (1/6) l, the block reaches the right edge of the plate and flies off horizontally. When the block lands on the ground, the center of the plate has just reached point O. Given that the mass of the block is equal to the mass of the plate, and the coefficient of kinetic friction between them is \u03bc = 0.3, with gravitational acceleration g = 10 m/s\u00b2, determine: (2) The height of the platform above the ground. Answer in the format [[h]] in the unit of m, i.e. if the answer is 14 m, the answer should be [[14]]",
+    "answer": "[[5/9]]",
+    "difficulty": "4",
+    "length": "798",
+    "rule_id": "1"
+  },
+  {
+    "idx": "72",
+    "question": "As shownThere are two segments of rope, one connecting M and A, and another conntecting A and B, with length l1 and l2 seperately, i.e. a light elastic spring of original length l is fixed at point O at one end, and the other end is connected to a small ball of mass m. The small ball is sleeved on a vertical fixed rough rod, and the friction coefficient between them is 0.5. The rod has two points M and N, both at a distance of l from O, and point P at a distance of l/2 from O. The segment OP is perpendicular to the rod. When the small ball is at point P, it is at rest. Assume that the maximum static friction is equal to the kinetic friction, and the gravitational acceleration is g. The small ball starts moving downward from point M. During this process, the spring always remains within its elastic limit. Which of the following statements are correct?options \n\nA: The stiffness coefficient of the spring is \\(\\frac{4mg}{l}\\)\n\nB: The acceleration of the ball at \\(\\frac{1}{2} l\\) below point P is \\((3\\sqrt{2} - 4) g\\)\n\nC: During the movement from M to N, the friction force acting on the ball first decreases and then increases.\n\nD: During the movement from M to P and from P to N, the work done by the friction force on the ball is the same. Answer in the format [[A,C,D]] if A, C,and D are correct.",
+    "answer": "[[A,D]]",
+    "difficulty": "4",
+    "length": "1311",
+    "rule_id": "1"
+  },
+  {
+    "idx": "73",
+    "question": "Consider a free electron gas at 0 K under the ultra-relativistic condition, where the energy-momentum relation is given by \\( \\varepsilon = cp \\). Given the number of electrons \\( N \\) and the Fermi energy \\( \\mu(0) \\), determine the internal energy \\( U \\).",
+    "answer": "[[\\frac{3}{4} N \\mu(0)]]",
+    "difficulty": "4",
+    "length": "258",
+    "rule_id": "1"
+  },
+  {
+    "idx": "74",
+    "question": "Consider a free electron gas at 0 K under the ultra-relativistic condition, where the energy-momentum relation is given by \\( \\varepsilon = cp \\).Given the density of electrons \\( n \\) and the Fermi energy \\( \\mu(0) \\), derive the pressure \\( p \\) of the system.",
+    "answer": "[[\\frac{1}{4} n \\mu(0)]]",
+    "difficulty": "4",
+    "length": "262",
+    "rule_id": "1"
+  },
+  {
+    "idx": "75",
+    "question": "Our country\u2019s large scientific installation, the spallation neutron source, was built and put into use in 2018. It has a wide range of applications in various fields. Historically, Chadwick first confirmed the existence of neutrons in 1932 and measured their mass. Hahn and others discovered in 1939 that neutron bombardment could induce nuclear fission in uranium nuclei, releasing energy and triggering chain reactions. To sustain the reaction and control energy output, moderators are used to slow down the emitted neutrons through elastic collisions. \n\n(1) A neutron (mass m) elastically collides with a stationary nucleus (either a hydrogen nucleus or a nitrogen-14 nucleus, mass m_H or 14m_H). Observing their motion, derive the relationship between the initial speed of the neutron v_0 and its outgoing speed v_1 and the final speed of the nucleus v. The maximum observed outgoing speed of the hydrogen nucleus is 3.30 \u00d7 10^7 m/s, while that of the nitrogen nucleus is 4.70 \u00d7 10^6 m/s. Determine the values of m using m_H, like [[1.12m_H]] if the answer is 1.12m_H",
+    "answer": "[[1.16m_H]]",
+    "difficulty": "4",
+    "length": "1071",
+    "rule_id": "1"
+  },
+  {
+    "idx": "76",
+    "question": "Our country\u2019s large scientific installation, the spallation neutron source, was built and put into use in 2018. It has a wide range of applications in various fields. Historically, Chadwick first confirmed the existence of neutrons in 1932 and measured their mass. Hahn and others discovered in 1939 that neutron bombardment could induce nuclear fission in uranium nuclei, releasing energy and triggering chain reactions. To sustain the reaction and control energy output, moderators are used to slow down the emitted neutrons through elastic collisions. \n\n(1) A neutron (mass m) elastically collides with a stationary nucleus (either a hydrogen nucleus or a nitrogen-14 nucleus, mass m_H or 14m_H). Observing their motion, derive the relationship between the initial speed of the neutron v_0 and its outgoing speed v_1 and the final speed of the nucleus v. The maximum observed outgoing speed of the hydrogen nucleus is 3.30 \u00d7 10^7 m/s, while that of the nitrogen nucleus is 4.70 \u00d7 10^6 m/s. Determine the values of v_0 in two decimal places, like [[1.12 \\times 10^7]] if the answer is 1.12 \\times 10^7 m/s",
+    "answer": "[[3.07 \\times 10^7]]",
+    "difficulty": "4",
+    "length": "1107",
+    "rule_id": "1"
+  },
+  {
+    "idx": "77",
+    "question": "Our country\u2019s large scientific installation, the spallation neutron source, was built and put into use in 2018. It has a wide range of applications in various fields. Historically, Chadwick first confirmed the existence of neutrons in 1932 and measured their mass. Hahn and others discovered in 1939 that neutron bombardment could induce nuclear fission in uranium nuclei, releasing energy and triggering chain reactions. To sustain the reaction and control energy output, moderators are used to slow down the emitted neutrons through elastic collisions. \n\n In the basic experiment, neutron (mass m) elastically collides with a stationary nucleus (either a hydrogen nucleus or a nitrogen-14 nucleus, mass m_H or 14m_H). In the experiment, a nitrogen nucleus may also undergo multiple consecutive collisions with neutrons. Assuming the nitrogen nucleus starts at rest, and each neutron has speed v_0 upon impact, calculate how many collisions are needed for the nitrogen nucleus to reach maximum speed. \n\n(3) Assuming after many collisions, the neutron reaches thermal equilibrium, where its velocity follows the Maxwell-Boltzmann distribution: \n\nf(v) = 4\u03c0 (m / 2\u03c0 k_B T)^(3/2) v^2 e^(-mv^2 / 2 k_B T) \n\nwhere k_B is the Boltzmann constant and T is the absolute temperature of the system. Calculate the most probable speed of the neutron at thermal equilibrium, as well as its corresponding energy and approximate kinetic energy.",
+    "answer": "[[\\frac{3}{4} n \\mu(0)]]",
+    "difficulty": "4",
+    "length": "1428",
+    "rule_id": "1"
+  },
+  {
+    "idx": "78",
+    "question": "Our country\u2019s large scientific installation, the spallation neutron source, was built and put into use in 2018. It has a wide range of applications in various fields. Historically, Chadwick first confirmed the existence of neutrons in 1932 and measured their mass. Hahn and others discovered in 1939 that neutron bombardment could induce nuclear fission in uranium nuclei, releasing energy and triggering chain reactions. To sustain the reaction and control energy output, moderators are used to slow down the emitted neutrons through elastic collisions. \n\n In the basic experiment, neutron (mass m) elastically collides with a stationary nucleus (either a hydrogen nucleus or a nitrogen-14 nucleus, mass m_H or 14m_H). In the experiment, a nitrogen nucleus may also undergo multiple consecutive collisions with neutrons. Assuming the nitrogen nucleus starts at rest, and each neutron has speed v_0 upon impact, calculate how many collisions are needed for the nitrogen nucleus to reach maximum speed. \n",
+    "answer": "[[2]]",
+    "difficulty": "4",
+    "length": "1003",
+    "rule_id": "1"
+  },
+  {
+    "idx": "79",
+    "question": "**Question 16** (2024 \u00b7 Zhejiang \u00b7 Mock exam for the second - round review) As shownThere are two segments of rope, one connecting M and A, and another conntecting A and B, with length l1 and l2 seperately, i.e. two smooth parallel metal rails are fixed on an insulating horizontal plane. The distances between the left - hand and right - hand rails are \\(d\\) and \\(2d\\) respectively. They are in a vertical upward magnetic field, and the magnitudes of the magnetic induction intensities are \\(2B\\) and \\(B\\) respectively. A capacitor with a capacitance of \\(C\\) is connected to the right - hand side of the rails. It is known that the resistance of the conductor rod \\(MN\\) is \\(R\\), its length is \\(d\\), and its mass is \\(m\\). The resistance of the conductor rod \\(PQ\\) is \\(2R\\), its length is \\(2d\\), and its mass is \\(2m\\). At the initial moment, the switch is open, the two rods are at rest, and a light - weight insulating spring is compressed between the two rods (but not connected), with the compression amount of the spring being \\(L\\). When the spring is released and returns to its original length, \\(MN\\) just leaves the rails, the speed of \\(PQ\\) is \\(v\\), and this triggers the switch to close. Throughout the whole process, the two rods always remain perpendicular to the rails and in good contact. The right - hand side rails are long enough, and the resistances of all rails are negligible. Find: What is the amount of charge passing through \\(PQ\\) throughout the whole motion process? ",
+    "answer": "[[\\frac{2BLd}{3R} + \\frac{2mvCBd}{m+2CB^2d^2}]]",
+    "difficulty": "4",
+    "length": "1505",
+    "rule_id": "1"
+  },
+  {
+    "idx": "80",
+    "question": "Two parallel smooth long-straight metal rails are placed horizontally, and the distance between them is \\(L\\). There is a uniform magnetic field in the area \\(abcd\\), with the magnitude of the magnetic induction intensity being \\(B\\), and the direction is vertically upward. At the initial moment, the thin metal rod \\(M\\) outside the magnetic field moves to the right with an initial velocity \\(v_{0}\\), and the thin metal rod \\(N\\) inside the magnetic field is at rest. The two metal rods make good contact with the rails and are always perpendicular to the rails during the movement. The mass of both rods is \\(m\\), and the resistance between the rails of each rod is \\(R\\). The magnetic field generated by the induced current and the resistance of the rails are ignored. (1) Find the magnitude and direction of the Ampere force \\(F\\) on \\(M\\) when it just enters the magnetic field. (2) If the two rods do not collide within the magnetic field and the velocity of \\(N\\) when it leaves the magnetic field is \\(\\frac{v_{0}}{3}\\), find: The minimum distance \\(x\\) from \\(N\\) to \\(ab\\) at the initial moment. ",
+    "answer": "[[\\frac{mv_{0}}{3BL}]]",
+    "difficulty": "4",
+    "length": "1109",
+    "rule_id": "1"
+  },
+  {
+    "idx": "81",
+    "question": "Two parallel smooth long-straight metal rails are placed horizontally, and the distance between them is \\(L\\). There is a uniform magnetic field in the area \\(abcd\\), with the magnitude of the magnetic induction intensity being \\(B\\), and the direction is vertically upward. At the initial moment, the thin metal rod \\(M\\) outside the magnetic field moves to the right with an initial velocity \\(v_{0}\\), and the thin metal rod \\(N\\) inside the magnetic field is at rest. The two metal rods make good contact with the rails and are always perpendicular to the rails during the movement. The mass of both rods is \\(m\\), and the resistance between the rails of each rod is \\(R\\). The magnetic field generated by the induced current and the resistance of the rails are ignored. (1) Find the magnitude and direction of the Ampere force \\(F\\) on \\(M\\) when it just enters the magnetic field. (2) If the two rods do not collide within the magnetic field and the velocity of \\(N\\) when it leaves the magnetic field is \\(\\frac{v_{0}}{3}\\), find: (2)The minimum distance \\(x\\) from \\(N\\) to \\(ab\\) at the initial moment. At the initial moment, if the distance from \\(N\\) to \\(cd\\) is the same as that in question (2) at the initial moment, and the distance from \\(N\\) to \\(ab\\) is \\(kx(k > 1)\\), find the range of values of \\(k\\) for the condition that \\(M\\) does not collide with \\(N\\) after leaving the magnetic field. Only answer (3) with format [[1<=k<2]] to imply the range of values of \\(k\\), be sure with <= and <, >= and > when you decide whether to include the boundary values.",
+    "answer": "[[2<=k<3]]",
+    "difficulty": "4",
+    "length": "1577",
+    "rule_id": "1"
+  },
+  {
+    "idx": "82",
+    "question": "The rings A and B can slide along the rods MN and PQ respectively. Since the rods are smooth, there is no frictional force to hinder the sliding motion of the rings along their respective rods in the vertical direction. This smooth - surface condition allows the rings to move freely under the influence of other forces such as gravity, the tension of the rope, and the normal forces from the rods MN and PQ are two fixed smooth vertical parallel rods, separated by a distance l. A light rope of length L > l is fixed at point M, passes through a smooth small ring A, and connects to another small ring B. Both rings A and B have the same mass m.There are two segments of rope, one connecting M and A, and another conntecting A and B, with length l1 and l2 seperately, i.e. the lengths of the two segments of the rope are denoted as l1 and l2, with L = l1 + l2, and alpha is the angle between the l2 segment and the PQ rod. Assume L > \\( \\frac{2}{\\sqrt{3}}l \\), and that the system is only under the influence of gravity, rope tension, and horizontal support forces from the rods. The system is in equilibrium at the position shown with angle alpha. Find the value of alpha and determine the stability of this equilibrium state. Define the gravitational potential energy to be zero when the rope segment is fully extended and l1 = 0. Answer in format [[value, stable/unstable]] like [[15, stable]] if you think alpht = 15\u00b0 and the equilibrium is stable.",
+    "answer": "[[60, stable]]",
+    "difficulty": "4",
+    "length": "1453",
+    "rule_id": "1"
+  },
+  {
+    "idx": "83",
+    "question": "The rings A and B can slide along the rods MN and PQ respectively. Since the rods are smooth, there is no frictional force to hinder the sliding motion of the rings along their respective rods in the vertical direction. This smooth - surface condition allows the rings to move freely under the influence of other forces such as gravity, the tension of the rope, and the normal forces from the rods MN and PQ are two fixed smooth vertical parallel rods, separated by a distance l. A light rope of length L > l is fixed at point M, passes through a smooth small ring A, and connects to another small ring B. Both rings A and B have the same mass m.There are two segments of rope, one connecting M and A, and another conntecting A and B, with length l1 and l2 seperately, i.e. the lengths of the two segments of the rope are denoted as l1 and l2, with L = l1 + l2, and alpha is the angle between the l2 segment and the PQ rod. Assume L > \\( \\frac{2}{\\sqrt{3}}l \\), and that the system is only under the influence of gravity, rope tension, and horizontal support forces from the rods. The system is in equilibrium at the position shown with angle alpha. Find the value of alpha and determine the stability of this equilibrium state. Suppose L > l, and consider only the process where A moves downward above B, and B moves upward below A. During this process, the system is influenced only by gravity, rope tension, and horizontal support forces from the rods. The rope segments MA and AB remain taut, i.e., L = l1 + l2 always holds. Determine the possible range of values for l1. Answer in format [[l1 < ...]]/[[l1 > ...]]/[[... < l1 < ...]]",
+    "answer": "[[l1 < L-l]]",
+    "difficulty": "4",
+    "length": "1637",
+    "rule_id": "1"
+  },
+  {
+    "idx": "84",
+    "question": "The rings A and B can slide along the rods MN and PQ respectively. Since the rods are smooth, there is no frictional force to hinder the sliding motion of the rings along their respective rods in the vertical direction. This smooth - surface condition allows the rings to move freely under the influence of other forces such as gravity, the tension of the rope, and the normal forces from the rods MN and PQ are two fixed smooth vertical parallel rods, separated by a distance l. A light rope of length L > l is fixed at point M, passes through a smooth small ring A, and connects to another small ring B. Both rings A and B have the same mass m.There are two segments of rope, one connecting M and A, and another conntecting A and B, with length l1 and l2 seperately, i.e. the lengths of the two segments of the rope are denoted as l1 and l2, with L = l1 + l2, and alpha is the angle between the l2 segment and the PQ rod. Suppose L > l, and consider only the process where A moves downward above B, and B moves upward below A. During this process, the system is influenced only by gravity, rope tension, and horizontal support forces from the rods. The rope segments MA and AB remain taut, i.e., L = l1 + l2 always holds. Find the upward velocity of B, expressed in terms of l, alpha, vA, and aA.",
+    "answer": "[[\\frac{1-\\cos(\\alpha)}{\\cos(\\alpha)}vA]]",
+    "difficulty": "4",
+    "length": "1298",
+    "rule_id": "1"
+  },
+  {
+    "idx": "85",
+    "question": "The rings A and B can slide along the rods MN and PQ respectively. Since the rods are smooth, there is no frictional force to hinder the sliding motion of the rings along their respective rods in the vertical direction. This smooth - surface condition allows the rings to move freely under the influence of other forces such as gravity, the tension of the rope, and the normal forces from the rods MN and PQ are two fixed smooth vertical parallel rods, separated by a distance l. A light rope of length L > l is fixed at point M, passes through a smooth small ring A, and connects to another small ring B. Both rings A and B have the same mass m.There are two segments of rope, one connecting M and A, and another conntecting A and B, with length l1 and l2 seperately, i.e. the lengths of the two segments of the rope are denoted as l1 and l2, with L = l1 + l2, and alpha is the angle between the l2 segment and the PQ rod. Suppose L > l, and consider only the process where A moves downward above B, and B moves upward below A. During this process, the system is influenced only by gravity, rope tension, and horizontal support forces from the rods. The rope segments MA and AB remain taut, i.e., L = l1 + l2 always holds. Find the upward acceleration of B, expressed in terms of l, alpha, vA, and aA.",
+    "answer": "[[\\frac{\\sin^3(\\alpha)}{\\cos^3(\\alpha)}\\frac{vA^2}{l} + \\frac{1-\\cos(\\alpha)}{\\cos(\\alpha)}aA]]",
+    "difficulty": "4",
+    "length": "1302",
+    "rule_id": "1"
+  },
+  {
+    "idx": "86",
+    "question": "The rings A and B can slide along the rods MN and PQ respectively. Since the rods are smooth, there is no frictional force to hinder the sliding motion of the rings along their respective rods in the vertical direction. This smooth - surface condition allows the rings to move freely under the influence of other forces such as gravity, the tension of the rope, and the normal forces from the rods MN and PQ are two fixed smooth vertical parallel rods, separated by a distance l. A light rope of length L > l is fixed at point M, passes through a smooth small ring A, and connects to another small ring B. Both rings A and B have the same mass m.There are two segments of rope, one connecting M and A, and another conntecting A and B, with length l1 and l2 seperately, i.e. the lengths of the two segments of the rope are denoted as l1 and l2, with L = l1 + l2, and alpha is the angle between the l2 segment and the PQ rod. Take L = 2l. Initially, l1 = 0, and A and B are at rest. After the system is released freely, assume the process follows the description in Question 2.(Question 2: Suppose L > l, and consider only the process where A moves downward above B, and B moves upward below A. During this process, the system is influenced only by gravity, rope tension, and horizontal support forces from the rods. The rope segments MA and AB remain taut, i.e., L = l1 + l2 always holds.)Find the instantaneous velocities accelerations of A aA immediately after releas. Answer in format [[3.219g]] since the value is numerical, and keep 3 decimal places",
+    "answer": "[[0.826g]]",
+    "difficulty": "4",
+    "length": "1553",
+    "rule_id": "1"
+  },
+  {
+    "idx": "87",
+    "question": "The rings A and B can slide along the rods MN and PQ respectively. Since the rods are smooth, there is no frictional force to hinder the sliding motion of the rings along their respective rods in the vertical direction. This smooth - surface condition allows the rings to move freely under the influence of other forces such as gravity, the tension of the rope, and the normal forces from the rods MN and PQ are two fixed smooth vertical parallel rods, separated by a distance l. A light rope of length L > l is fixed at point M, passes through a smooth small ring A, and connects to another small ring B. Both rings A and B have the same mass m.There are two segments of rope, one connecting M and A, and another conntecting A and B, with length l1 and l2 seperately, i.e. the lengths of the two segments of the rope are denoted as l1 and l2, with L = l1 + l2, and alpha is the angle between the l2 segment and the PQ rod. Take L = 2l. Initially, l1 = 0, and A and B are at rest. After the system is released freely, assume the process follows the description in Question 2.(Question 2: Suppose L > l, and consider only the process where A moves downward above B, and B moves upward below A. During this process, the system is influenced only by gravity, rope tension, and horizontal support forces from the rods. The rope segments MA and AB remain taut, i.e., L = l1 + l2 always holds.)Find the instantaneous velocities acceleration of B aB immediately after releas. Answer in format [[3.219g]] since the value is numerical, and keep 3 decimal places",
+    "answer": "[[0.128g]]",
+    "difficulty": "4",
+    "length": "1552",
+    "rule_id": "1"
+  },
+  {
+    "idx": "88",
+    "question": "The rings A and B can slide along the rods MN and PQ respectively. Since the rods are smooth, there is no frictional force to hinder the sliding motion of the rings along their respective rods in the vertical direction. This smooth - surface condition allows the rings to move freely under the influence of other forces such as gravity, the tension of the rope, and the normal forces from the rods MN and PQ are two fixed smooth vertical parallel rods, separated by a distance l. A light rope of length L > l is fixed at point M, passes through a smooth small ring A, and connects to another small ring B. Both rings A and B have the same mass m.There are two segments of rope, one connecting M and A, and another conntecting A and B, with length l1 and l2 seperately, i.e. the lengths of the two segments of the rope are denoted as l1 and l2, with L = l1 + l2, and alpha is the angle between the l2 segment and the PQ rod. Take L = 2l. Initially, l1 = 0, and A and B are at rest. After the system is released freely, assume the process follows the description in Question 2.(Question 2: Suppose L > l, and consider only the process where A moves downward above B, and B moves upward below A. During this process, the system is influenced only by gravity, rope tension, and horizontal support forces from the rods. The rope segments MA and AB remain taut, i.e., L = l1 + l2 always holds.)Find the the rope tension T immediately after release, expressed in terms of [[2.134mg]] if you get tension as 2.1336mg as answer, just keep three decimal places",
+    "answer": "[[1.302mg]]",
+    "difficulty": "4",
+    "length": "1549",
+    "rule_id": "1"
+  },
+  {
+    "idx": "89",
+    "question": "The rings A and B can slide along the rods MN and PQ respectively. Since the rods are smooth, there is no frictional force to hinder the sliding motion of the rings along their respective rods in the vertical direction. This smooth - surface condition allows the rings to move freely under the influence of other forces such as gravity, the tension of the rope, and the normal forces from the rods MN and PQ are two fixed smooth vertical parallel rods, separated by a distance l. A light rope of length L > l is fixed at point M, passes through a smooth small ring A, and connects to another small ring B. Both rings A and B have the same mass m.There are two segments of rope, one connecting M and A, and another conntecting A and B, with length l1 and l2 seperately, i.e. the lengths of the two segments of the rope are denoted as l1 and l2, with L = l1 + l2, and alpha is the angle between the l2 segment and the PQ rod. Take L = 2l. Initially, l1 = 0, and A and B are at rest. After the system is released freely, assume the process follows the description in Question 2.(Question 2: Suppose L > l, and consider only the process where A moves downward above B, and B moves upward below A. During this process, the system is influenced only by gravity, rope tension, and horizontal support forces from the rods. The rope segments MA and AB remain taut, i.e., L = l1 + l2 always holds.) Find the velocities vA, vB when alpha first reaches 60\u00b0 in format [[2.131*sqrt(gl), 3.121*sqrt(gl)]] and keep three decimal places for the numeric part please. ",
+    "answer": "[[0.732*sqrt(gl), 0.732*sqrt(gl)]]",
+    "difficulty": "4",
+    "length": "1549",
+    "rule_id": "1"
+  },
+  {
+    "idx": "90",
+    "question": "The rings A and B can slide along the rods MN and PQ respectively. Since the rods are smooth, there is no frictional force to hinder the sliding motion of the rings along their respective rods in the vertical direction. This smooth - surface condition allows the rings to move freely under the influence of other forces such as gravity, the tension of the rope, and the normal forces from the rods MN and PQ are two fixed smooth vertical parallel rods, separated by a distance l. A light rope of length L > l is fixed at point M, passes through a smooth small ring A, and connects to another small ring B. Both rings A and B have the same mass m.There are two segments of rope, one connecting M and A, and another conntecting A and B, with length l1 and l2 seperately, i.e. the lengths of the two segments of the rope are denoted as l1 and l2, with L = l1 + l2, and alpha is the angle between the l2 segment and the PQ rod. Take L = 2l. Initially, l1 = 0, and A and B are at rest. After the system is released freely, assume the process follows the description in Question 2.(Question 2: Suppose L > l, and consider only the process where A moves downward above B, and B moves upward below A. During this process, the system is influenced only by gravity, rope tension, and horizontal support forces from the rods. The rope segments MA and AB remain taut, i.e., L = l1 + l2 always holds.) Find the acceleration of A and B aA and aB when alpha first reaches 60\u00b0 in format [[2.11g, 3.21g]] and keep two decimal places for the numeric part please.  Note that the if you use a = -g in this problem, it means the acceleration is upward.",
+    "answer": "[[-1.39g, 1.39g]]",
+    "difficulty": "4",
+    "length": "1631",
+    "rule_id": "1"
+  },
+  {
+    "idx": "91",
+    "question": "The rings A and B can slide along the rods MN and PQ respectively. Since the rods are smooth, there is no frictional force to hinder the sliding motion of the rings along their respective rods in the vertical direction. This smooth - surface condition allows the rings to move freely under the influence of other forces such as gravity, the tension of the rope, and the normal forces from the rods MN and PQ are two fixed smooth vertical parallel rods, separated by a distance l. A light rope of length L > l is fixed at point M, passes through a smooth small ring A, and connects to another small ring B. Both rings A and B have the same mass m.There are two segments of rope, one connecting M and A, and another conntecting A and B, with length l1 and l2 seperately, i.e. the lengths of the two segments of the rope are denoted as l1 and l2, with L = l1 + l2, and alpha is the angle between the l2 segment and the PQ rod. Take L = 2l. Initially, l1 = 0, and A and B are at rest. After the system is released freely, assume the process follows the description in Question 2.(Question 2: Suppose L > l, and consider only the process where A moves downward above B, and B moves upward below A. During this process, the system is influenced only by gravity, rope tension, and horizontal support forces from the rods. The rope segments MA and AB remain taut, i.e., L = l1 + l2 always holds.)Find the the rope tension T when alpha first reaches 60\u00b0, expressed in terms of [[2.13mg]] if you get tension as 2.1336mg as answer, just keep two decimal places",
+    "answer": "[[4.78mg]]",
+    "difficulty": "4",
+    "length": "1549",
+    "rule_id": "1"
+  },
+  {
+    "idx": "92",
+    "question": "The rings A and B can slide along the rods MN and PQ respectively. Since the rods are smooth, there is no frictional force to hinder the sliding motion of the rings along their respective rods in the vertical direction. This smooth - surface condition allows the rings to move freely under the influence of other forces such as gravity, the tension of the rope, and the normal forces from the rods MN and PQ are two fixed smooth vertical parallel rods, separated by a distance l. A light rope of length L > l is fixed at point M, passes through a smooth small ring A, and connects to another small ring B. Both rings A and B have the same mass m.There are two segments of rope, one connecting M and A, and another conntecting A and B, with length l1 and l2 seperately, i.e. the lengths of the two segments of the rope are denoted as l1 and l2, with L = l1 + l2, and alpha is the angle between the l2 segment and the PQ rod. Take L = 2l. Initially, l1 = 0, and A and B are at rest. After the system is released freely, assume the process follows the description in Question 2.(Question 2: Suppose L > l, and consider only the process where A moves downward above B, and B moves upward below A. During this process, the system is influenced only by gravity, rope tension, and horizontal support forces from the rods. The rope segments MA and AB remain taut, i.e., L = l1 + l2 always holds.)Find the the velocity of B when alpha first approaches 90\u00b0, expressed in terms of [[2.131*sqrt(gl)]] if you get tension as 2.13123*sqrt(gl) as answer, just keep three decimal places",
+    "answer": "[[0.732*sqrt(gl)]]",
+    "difficulty": "4",
+    "length": "1569",
+    "rule_id": "1"
+  },
+  {
+    "idx": "93",
+    "question": "The rings A and B can slide along the rods MN and PQ respectively. Since the rods are smooth, there is no frictional force to hinder the sliding motion of the rings along their respective rods in the vertical direction. This smooth - surface condition allows the rings to move freely under the influence of other forces such as gravity, the tension of the rope, and the normal forces from the rods MN and PQ are two fixed smooth vertical parallel rods, separated by a distance l. A light rope of length L > l is fixed at point M, passes through a smooth small ring A, and connects to another small ring B. Both rings A and B have the same mass m.There are two segments of rope, one connecting M and A, and another conntecting A and B, with length l1 and l2 seperately, i.e. the lengths of the two segments of the rope are denoted as l1 and l2, with L = l1 + l2, and alpha is the angle between the l2 segment and the PQ rod. Take L = 2l. Initially, l1 = 0, and A and B are at rest. After the system is released freely, assume the process follows the description in Question 2.(Question 2: Suppose L > l, and consider only the process where A moves downward above B, and B moves upward below A. During this process, the system is influenced only by gravity, rope tension, and horizontal support forces from the rods. The rope segments MA and AB remain taut, i.e., L = l1 + l2 always holds.)Find the acceleration of A and B aA and aB when alpha first approacjes 90\u00b0 in format [[1.110g, 3.121g]] and keep three decimal places for the numeric part please. Note that the if you use a = -g in this problem, it means the acceleration is upward.",
+    "answer": "[[-0.536g, -1.000g]]",
+    "difficulty": "4",
+    "length": "1636",
+    "rule_id": "1"
+  },
+  {
+    "idx": "94",
+    "question": "The rings A and B can slide along the rods MN and PQ respectively. Since the rods are smooth, there is no frictional force to hinder the sliding motion of the rings along their respective rods in the vertical direction. This smooth - surface condition allows the rings to move freely under the influence of other forces such as gravity, the tension of the rope, and the normal forces from the rods MN and PQ are two fixed smooth vertical parallel rods, separated by a distance l. A light rope of length L > l is fixed at point M, passes through a smooth small ring A, and connects to another small ring B. Both rings A and B have the same mass m.There are two segments of rope, one connecting M and A, and another conntecting A and B, with length l1 and l2 seperately, i.e. the lengths of the two segments of the rope are denoted as l1 and l2, with L = l1 + l2, and alpha is the angle between the l2 segment and the PQ rod. Take L = 2l. Initially, l1 = 0, and A and B are at rest. After the system is released freely, assume the process follows the description in Question 2.(Question 2: Suppose L > l, and consider only the process where A moves downward above B, and B moves upward below A. During this process, the system is influenced only by gravity, rope tension, and horizontal support forces from the rods. The rope segments MA and AB remain taut, i.e., L = l1 + l2 always holds.)Find the the rope tension T when alpha first approaches 90\u00b0, expressed in terms of [[2.13mg]] if you get tension as 2.1336mg as answer, just keep two decimal places",
+    "answer": "[[1.54mg]]",
+    "difficulty": "4",
+    "length": "1552",
+    "rule_id": "1"
+  },
+  {
+    "idx": "95",
+    "question": "As shown in Figure 1, there is a horizontal - inward uniform magnetic field B in a vertical plane. A uniform metal rectangular frame ABCD is in a horizontal state with the AB side and freely falls in this vertical plane. Neglect air resistance. (Figure 1 shows a rectangular metal frame labeled ABCD in a vertical plane. There is a uniform magnetic field B indicated by \u00d7 symbols, which means the magnetic - field direction is perpendicular to the plane of the figure and inward. The AB side of the frame is in a horizontal state, and there is a gravitational - field vector g pointing vertically downward, representing the direction of the gravitational force acting on the frame as it falls.) During the falling process of the frame, the internal free electrons and positive ions are respectively affected by the magnetic forces to the left and right. The buoyancy force on the whole can be ignored, but the magnetic force will definitely make the frame move, forming an electric current. This current will generate an Ampere force, which makes the falling acceleration of the frame slightly less than g. The migration of free electrons accumulates negative charges on the left - hand side of the four rods and positive charges on the right - hand side, creating an electric field inside the frame, which in turn affects the migration speed of electrons and the electric current. The changes in the falling speed of the frame, the migration speed of free electrons, the accumulation of lateral charges, and the electric - field structure inside the frame are difficult to discuss quantitatively. For a simple quantitative discussion of the qualitative conclusion that the falling acceleration of the frame is less than g, a rectangular conductor block is used to replace the frame in Figure 1. As shown in Figure 2, for a rectangular conductor block ABCD with mass density \u03c1m and resistivity \u03c1, it is released from rest with the AB surface in a horizontal position at t = 0. (Figure 2 is similar to Figure 1. It depicts a rectangular conductor block also labeled ABCD in the same vertical - plane setting. The uniform magnetic field B is still represented by \u00d7 symbols, indicating its perpendicular - inward direction relative to the plane of the figure. And the gravitational - field vector g is again shown pointing vertically downward, signifying the gravitational force on the conductor block during its motion.) There is a uniform magnetic field perpendicular to the front and back surfaces of the conductor block and inward. Neglect air resistance and assume that the AD surface and CD surface of the conductor block have sufficient flexibility. Also, assume that the resistivity \u03c1 can be regarded as a constant within the time range of the discussion, and the electric field inside the conductor block can be treated as a time - varying uniform electric field. Neglect the magnetic field of the current inside the conductor block and the magnetic field excited by the change of the electric field. Given simplified parameter \u03b1 = (1/\u03c1)(1/\u03b5\u2080 + B\u00b2/\u03c1m), solve the function \u03c3 = \u03c3(t), and only the parameters g, B, \u03b1, and t, and of course \\rho can appear in the answer .Answer only the expression with parameters g, B, \u03b1, and t, you don't need to answer '\u03c3(t)=' in your answer",
+    "answer": "[[\\frac{g^B}{\\alpha \\rho} \\left[ t + \\frac{1}{\\alpha} (e^{-\\alpha t} - 1) \\right]]",
+    "difficulty": "5",
+    "length": "3279",
+    "rule_id": "1"
+  },
+  {
+    "idx": "96",
+    "question": "As shown in Figure 1, there is a horizontal - inward uniform magnetic field B in a vertical plane. A uniform metal rectangular frame ABCD is in a horizontal state with the AB side and freely falls in this vertical plane. Neglect air resistance. (Figure 1 shows a rectangular metal frame labeled ABCD in a vertical plane. There is a uniform magnetic field B indicated by \u00d7 symbols, which means the magnetic - field direction is perpendicular to the plane of the figure and inward. The AB side of the frame is in a horizontal state, and there is a gravitational - field vector g pointing vertically downward, representing the direction of the gravitational force acting on the frame as it falls.) During the falling process of the frame, the internal free electrons and positive ions are respectively affected by the magnetic forces to the left and right. The buoyancy force on the whole can be ignored, but the magnetic force will definitely make the frame move, forming an electric current. This current will generate an Ampere force, which makes the falling acceleration of the frame slightly less than g. The migration of free electrons accumulates negative charges on the left - hand side of the four rods and positive charges on the right - hand side, creating an electric field inside the frame, which in turn affects the migration speed of electrons and the electric current. The changes in the falling speed of the frame, the migration speed of free electrons, the accumulation of lateral charges, and the electric - field structure inside the frame are difficult to discuss quantitatively. For a simple quantitative discussion of the qualitative conclusion that the falling acceleration of the frame is less than g, a rectangular conductor block is used to replace the frame in Figure 1. As shown in Figure 2, for a rectangular conductor block ABCD with mass density \u03c1m and resistivity \u03c1, it is released from rest with the AB surface in a horizontal position at t = 0. (Figure 2 is similar to Figure 1. It depicts a rectangular conductor block also labeled ABCD in the same vertical - plane setting. The uniform magnetic field B is still represented by \u00d7 symbols, indicating its perpendicular - inward direction relative to the plane of the figure. And the gravitational - field vector g is again shown pointing vertically downward, signifying the gravitational force on the conductor block during its motion.) There is a uniform magnetic field perpendicular to the front and back surfaces of the conductor block and inward. Neglect air resistance and assume that the AD surface and CD surface of the conductor block have sufficient flexibility. Also, assume that the resistivity \u03c1 can be regarded as a constant within the time range of the discussion, and the electric field inside the conductor block can be treated as a time - varying uniform electric field. Neglect the magnetic field of the current inside the conductor block and the magnetic field excited by the change of the electric field. Given simplified parameter \u03b1 = (1/\u03c1)(1/\u03b5\u2080 + B\u00b2/\u03c1m), solve the functions of the falling acceleration of the conductor block with respect to t. Only the parameters g, B, \u03b1, and t can appear in the answers. Answer only the expression with parameters g, B, \u03b1, and t, and of course \\rho, \\rho_m. you don't need to answer 'a(t)=' in your answer",
+    "answer": "[[g - \\frac{g B^2}{\\alpha \\rho \\rho_m} (1 - e^{-\\alpha t}]]",
+    "difficulty": "5",
+    "length": "3345",
+    "rule_id": "1"
+  },
+  {
+    "idx": "97",
+    "question": "As shown in Figure 1, there is a horizontal - inward uniform magnetic field B in a vertical plane. A uniform metal rectangular frame ABCD is in a horizontal state with the AB side and freely falls in this vertical plane. Neglect air resistance. (Figure 1 shows a rectangular metal frame labeled ABCD in a vertical plane. There is a uniform magnetic field B indicated by \u00d7 symbols, which means the magnetic - field direction is perpendicular to the plane of the figure and inward. The AB side of the frame is in a horizontal state, and there is a gravitational - field vector g pointing vertically downward, representing the direction of the gravitational force acting on the frame as it falls.) During the falling process of the frame, the internal free electrons and positive ions are respectively affected by the magnetic forces to the left and right. The buoyancy force on the whole can be ignored, but the magnetic force will definitely make the frame move, forming an electric current. This current will generate an Ampere force, which makes the falling acceleration of the frame slightly less than g. The migration of free electrons accumulates negative charges on the left - hand side of the four rods and positive charges on the right - hand side, creating an electric field inside the frame, which in turn affects the migration speed of electrons and the electric current. The changes in the falling speed of the frame, the migration speed of free electrons, the accumulation of lateral charges, and the electric - field structure inside the frame are difficult to discuss quantitatively. For a simple quantitative discussion of the qualitative conclusion that the falling acceleration of the frame is less than g, a rectangular conductor block is used to replace the frame in Figure 1. As shown in Figure 2, for a rectangular conductor block ABCD with mass density \u03c1m and resistivity \u03c1, it is released from rest with the AB surface in a horizontal position at t = 0. (Figure 2 is similar to Figure 1. It depicts a rectangular conductor block also labeled ABCD in the same vertical - plane setting. The uniform magnetic field B is still represented by \u00d7 symbols, indicating its perpendicular - inward direction relative to the plane of the figure. And the gravitational - field vector g is again shown pointing vertically downward, signifying the gravitational force on the conductor block during its motion.) There is a uniform magnetic field perpendicular to the front and back surfaces of the conductor block and inward. Neglect air resistance and assume that the AD surface and CD surface of the conductor block have sufficient flexibility. Also, assume that the resistivity \u03c1 can be regarded as a constant within the time range of the discussion, and the electric field inside the conductor block can be treated as a time - varying uniform electric field. Neglect the magnetic field of the current inside the conductor block and the magnetic field excited by the change of the electric field. Given simplified parameter \u03b1 = (1/\u03c1)(1/\u03b5\u2080 + B\u00b2/\u03c1m), solve the functions of the falling  velocity of the conductor block with respect to t, v = v(t). Only the parameters g, B, \u03b1, and t can appear in the answers. Answer only the expression with parameters g, B, \u03b1, and t,and of course \\rho, \\rho_m. you don't need to answer 'v(t)=' in your answer",
+    "answer": "[[gt \\left( 1 - \\frac{B^2}{\\alpha^2 \\rho \\rho_m} \\right) + \\frac{g B^2}{\\alpha^2 \\rho \\rho_m} (1 - e^{-\\alpha t})]]",
+    "difficulty": "5",
+    "length": "3351",
+    "rule_id": "1"
+  },
+  {
+    "idx": "98",
+    "question": "In 3 - dimensional space, the number of vertices \\(N_3 = 8\\) and the number of edges \\(L_3=12\\) for a cube (i.e., a regular hexahedron). For the sake of consistency, a square in 2 - dimensional space is defined as a 2 - dimensional \"cube\", with the number of vertices \\(N_2 = 4\\) and the number of edges \\(L_2 = 4\\). A line - segment in 1 - dimensional space is defined as a 1 - dimensional \"cube\", with the number of vertices \\(N_1 = 2\\) and the number of edges \\(L_1 = 1\\). Try to use the recursive method to find out \\(N_K\\) (the number of vertices) and \\(L_K\\) (the number of edges) of the \\(K\\) - dimensional cube (\\(K\\geq1\\)). Take one of the diagonals (the straight - line connecting two farthest vertices) of the \\(K\\) - dimensional cube, and set one of its vertices as the origin. Use the side - length of a single edge of the cube as the unit length of the coordinate axis, and set up a \\(K\\) - dimensional orthogonal coordinate system \\(\\{x_1,x_2,\\cdots,x_K\\}\\). Then the coordinate values \\(x_i\\) of the selected origin are all zero. Simplify the cube: For the convenience of discussion, if the coordinate value \\(x_i\\) of any vertex of the cube is only 0 or 1, that is, not \\(\\pm2,\\pm3,\\cdots\\), then this cube is called a simplified cube. Unless otherwise specified, the cubes discussed below are all simplified cubes. Vertices with \\(\\sum_{i = 1}^{K}x_i=j\\) are collectively called the \\(j\\) - th group of vertices. The number of vertices in the \\(j\\) - th group of vertices is \\(C_{K}^{j}\\). That is, when \\(j = 0\\): \\(C_{K}^{0}=1\\) (The 0 - th group of vertices has only one vertex, which is the coordinate origin); When \\(j = 1\\): \\(C_{K}^{1}=K\\); When \\(j = K\\): \\(C_{K}^{K}=1\\) (The \\(K\\) - th group of vertices has only one vertex, which is the other vertex of the diagonal). (2) For a 4 - dimensional cube, the only vertex in its 0 - th group may be connected to a vertex in the 1 - st group through a certain edge, and may also be connected to another vertex in the 1 - st group through another edge. These possible edges are called the connecting edges between two adjacent vertex - groups. Denote the total number of possible connecting edges between the vertices of the 0 - th group and the vertices of the 1 - st group as \\(\\alpha_0\\). Denote the total number of possible connecting edges between the \\(j\\) - th group of vertices and the \\(j + 1\\) - th group of vertices of the \\(K\\) - dimensional cube as \\(\\alpha_j\\). Suppose that each edge of the \\(K\\) - dimensional cube is a resistance rod with a resistance of \\(R\\). Suppose that an external current flows in from the vertex \\(j = 0\\) and flows out from the vertex \\(j = K\\). Denote the voltage between these two vertices as \\(U_{0K}\\), and the equivalent resistance between these two vertices as \\(R_{0K}\\). Take a 4 - dimensional cube, and try to find \\(U_{0K}\\) and \\(R_{0K}\\). Only answer [[U_{0K}, R_{0K}]] in 4-dimensional case after you have done all the tasks and we will only judge your score based on this answer. Please only answer the value, like if you find U_{0K} == IR/12 and R_{0K} == R/12, just answer [[1/12, 1/12]].",
+    "answer": "[[2/3, 2/3]]",
+    "difficulty": "5",
+    "length": "3117",
+    "rule_id": "1"
+  },
+  {
+    "idx": "99",
+    "question": "#### Translation of the original question\n**III. Selective - answering questions (Select according to the candidate category)**\n15. (20 points) A homogeneous thin rod \\(AB\\) stands still and vertically on a smooth horizontal ground, as shown in Figure 1. Then, due to a slight disturbance, it slides and topples. Before it hits the ground, the lower - end \\(B\\) of the thin rod never leaves the ground. At a certain moment, the inclined shape of the thin rod is as shown in Figure 2, where point \\(C\\) is the mid - point of the thin rod.\n Given that the length \\(l\\) of the thin rod and the angle \\(\\phi\\) in Figure 2 are known quantities, determine the direction and magnitude of the acceleration \\(a_M\\) of the instantaneous center \\(M\\) at this moment.\n\n#### Explanation of \"instantaneous center\"\nIn the study of the planar motion of rigid bodies, the instantaneous center is a very important concept. At a certain instant, the motion of a rigid body in a plane can be regarded as pure rotation around a specific point. This point is called the instantaneous center of velocity, abbreviated as the instantaneous center.\n\nThe velocity of the instantaneous center itself is zero at that instant. The velocity directions of other points on the rigid body are perpendicular to the lines connecting these points and the instantaneous center, and their magnitudes are proportional to the distances from these points to the instantaneous center. For example, in the motion of a rolling wheel on a flat surface without slipping, the contact point between the wheel and the ground is the instantaneous center at that moment. Understanding the concept of the instantaneous center is very helpful for analyzing the velocity and acceleration of each point on a rigid body in planar motion, simplifying the complex planar motion into a rotational motion problem around the instantaneous center. Answer in format [[a_M]] and you don't need to write a_M = in your answer.",
+    "answer": "[[\\frac{1-\\cos \\phi}{1+3 \\sin^2 \\phi} 6g]]",
+    "difficulty": "5",
+    "length": "1959",
+    "rule_id": "1"
+  },
+  {
+    "idx": "100",
+    "question": "#### As shown in the figure, on a smooth horizontal plane, there is an inclined block with a mass of \\(M\\) and an inclination angle of \\(\\phi\\). On the inclined - surface of the block, there is a uniform small ball with a mass of \\(m\\), and the radius of the ball cannot be ignored. Initially, the system is in a stationary state. Then, a horizontal right - directed constant force is applied to the left side of the block, making the block move to the right in translation, while the small ball can either remain relatively stationary on the inclined surface or roll along the inclined surface. Assume that the coefficient of friction between the small ball and the inclined surface of the block is large enough so that there is no relative sliding between the small ball and the inclined surface.\n(1) If the small ball is exactly stationary relative to the inclined surface, find the translational acceleration \\(a_M(1)\\) of the block moving to the right.\n(2) Denote the magnitude of the thrust corresponding to (1) as \\(F_0\\). Change the thrust to \\(2F_0\\), then find the translational acceleration \\(a_M(2)\\) of the block moving to the right, and further determine whether the small ball rolls downward or upward along the inclined surface. The answer should not contain the parameter \\(F_0\\).\n\n#### Figure Description\nThe figure shows a two - object system on a horizontal plane marked as \"smooth\". One object is a wedge - shaped inclined block with mass \\(M\\) and an inclination angle \\(\\phi\\). The other object is a small ball with mass \\(m\\) placed on the inclined surface of the block. An arrow labeled \"thrust\" points horizontally to the right and is applied to the left - hand side face of the inclined block, indicating the direction of the external force acting on the block. Answer in format [[a_M(2), up/down]]",
+    "answer": "[[[[\\frac{14(M + m)g \\tan \\phi - 5mg \\sin \\phi \\cos \\phi}{7M + 5m\\sin^2 \\phi + 2m}, up]]",
+    "difficulty": "5",
+    "length": "1825",
+    "rule_id": "1"
+  }
+]

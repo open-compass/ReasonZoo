@@ -1,0 +1,855 @@
+[
+  {
+    "idx": "1",
+    "question": "Paddi was born on June 26, 3507 in the Goat Calendar. He thought it was too few to celebrate his birthday only once a year. So he decided to set a new birthday rule: from the day he was born until that day, if the number of days passed contains '26', then this day is his \"self - defined birthday\". For example, the 526th day, the 3261st day, the 10261st day, etc. are all his \"self - defined birthdays\", while the 236th day, the 623rd day, etc. are not. If calculated based on a lifespan of 30,000 days, how many \"self - defined birthdays\" can Paddi have in his life? ",
+    "answer": "[[1877]]",
+    "needle": "",
+    "rule_id": "1",
+    "difficulty": "3",
+    "length": "569"
+  },
+  {
+    "idx": "2",
+    "question": "There are 16 identical containers marked with integer - liter scales, arranged in a square array (as shown in Figure 1). Each circle in the figure represents a container, and the integer in the circle indicates the current water volume in this container. There are also some integers on the periphery of the square array, which represent the sum of the water volumes in the 4 containers on the row, column or diagonal pointed by the arrow. It is not difficult to see that these existing sums are not completely equal. Please select a container and pour all the water in this container into another 3 arbitrary containers, so that the integers on the periphery of the square array become equal. (Please fill the adjusted integers into Figure 2) ### Figure one: [[1,2,3,2,2,2,3,1,3,1,2,4,2,4,5,3]], row_sum(from top to bottom): 8,8,10,14; column_sum(from left to right): 8,9,13,10; diagonal_sum(from top left to bottom right):8; diagonal_sum(from top right to bottom left):8; Answer the 4*4 grid numbers in the Figure 2 format of [[_,_,_,_,_,_,_,_,_,_,_,_,_,...]] and you needn't answer the sum of the row, column or diagonal.",
+    "answer": "[[3,2,3,2,2,2,5,1,3,1,2,4,2,5,0,3]]",
+    "needle": "To solve this problem, first understand how the chess pieces are placed in a clockwise and counter-clockwise direction. Then analyze the number of pieces in each box based on the pattern. Finally, calculate the number of white and red pieces in each box.",
+    "difficulty": "5",
+    "length": "1124",
+    "rule_id": "1"
+  },
+  {
+    "idx": "3",
+    "question": "At each of the four vertices of the square ring - shaped road, there are stations numbered 1, 2, 3, and 4 in clockwise order. Four people, namely Jia, Yi, Bing, and Ding, set out simultaneously from stations numbered A, B, C, and D respectively (A, B, C, and D are all different), and drive uniformly in a clockwise direction. The speeds of the vehicles starting from stations 1, 2, 3, and 4 are 1, 2, 3, and 4 respectively, and the speeds remain unchanged thereafter. After the driving is completed, they make the following statements:Jia said: \"When I first caught up with Yi, it was exactly at Station 1.\"Yi said: \"When I first caught up with Bing, it was exactly at Station 2.\"Bing said: \"When I first caught up with Ding, it was exactly at Station 3.\"Ding said: \"When I first caught up with Jia, it was exactly at Station 4.\"It is known that two of them are telling the truth and two are telling lies. Then, the four - digit number ABCD=______.",
+    "answer": "[[2314]]",
+    "needle": "",
+    "rule_id": "1",
+    "difficulty": "2",
+    "length": "949"
+  },
+  {
+    "idx": "4",
+    "question": "In a school\u2019s fifth-grade three-class mixed doubles table tennis performance, each class sends one boy and one girl. The boys are A, B, and C, and the girls are A, B, and C. The rule is: boys and girls from the same class cannot pair together. It is known that in the first game, A and A pair with C and B; in the second game, C and C pair with B and A\u2019s same-class girl. Who is A\u2019s same-class girl?",
+    "answer": "[[B]]",
+    "needle": "According to the rule in the second game, 'C and C pair with B and A\u2019s same-class girl,' we can deduce that A\u2019s same-class girl is either A or B. Since boys and girls from the same class cannot pair together, A\u2019s same-class girl must be B.",
+    "rule_id": "1",
+    "difficulty": "3",
+    "length": "399"
+  },
+  {
+    "idx": "5",
+    "question": "Two - people, A and B, move at a constant speed along a circular track with a circumference of 400 meters. It takes A 4 minutes to walk one - circle and B 7 minutes to walk one - circle. They start simultaneously from the same place and in the same direction. After A has completed 10 circles, he changes to walking in the opposite direction. After the start, every time A catches up with B or meets B head - on, the two give each other a high - five as a signal. Question: When the two give each other the 15th high - five, how much time has A walked in total? And how much distance has B walked? Answer in format of [[A's total time, B's distance]] keeping 2 decimal places and answer only the value, unit minutes or meters is not required. For example [[123.45, 234.56]] if the answer is 123.45 minutes and 234.56 meters.",
+    "answer": "[[66.18, 3781.82]]",
+    "needle": "To solve this problem, we calculate A's total walking time and B's total distance when the 15th high-five occurs. A (100 m/min) and B (400/7 m/min) start moving clockwise on a 400m circular track. After 10 laps (40 minutes) with 4 same-direction meetings, A reverses direction. Using relative speeds (300/7 m/min same-direction, 1100/7 m/min opposite), we calculate 11 more meetings in opposite direction. The 15th high-five occurs at 66 2/11 minutes, with B walking 41600/11 meters.",
+    "rule_id": "1",
+    "difficulty": "4",
+    "length": "824"
+  },
+  {
+    "idx": "6",
+    "question": "Someone used black and white small cube - shaped building blocks of the same size to stack a 4*4*4 large cube on the table. Any two columns of the four building blocks from top to bottom do not have exactly the same corresponding color. Moreover, interestingly, among any two adjacent (with a common face) columns of building blocks, there is exactly one set (two in total) of horizontally adjacent building blocks with different colors. Then, how many ways are there to build such a large cube (rotation of the large cube is not allowed)? ",
+    "answer": "[[286]]",
+    "needle": "Assuming Lazy Lamb\u2019s first statement is correct, i.e., A is first, then Boiling Lamb\u2019s statement that B is first must be wrong. Therefore, C is second, which is correct. This means Happy Lamb\u2019s statement that C is third is wrong, so Happy Lamb\u2019s statement that D is second is correct. However, this contradicts the assumption of C being second. Therefore, Lazy Lamb's first statement that A is first must be wrong, but the statement that D is fourth is correct. Based on this, B must be first, C must be third, and A must be second. Therefore, the correct order is: B, A, C, D.",
+    "rule_id": "1",
+    "difficulty": "4",
+    "length": "540"
+  },
+  {
+    "idx": "7",
+    "question": "There is a 6*6 square, which is divided into 36 1*1 squares. Select some of these 1*1 squares and draw their diagonals so that any two drawn diagonals have no common points. Then the maximum number of diagonals that can be drawn is ______.",
+    "answer": "[[21]]",
+    "needle": "",
+    "rule_id": "1",
+    "difficulty": "4",
+    "length": "239"
+  },
+  {
+    "idx": "8",
+    "question": "After the spring semester started, the teacher asked six students from different positions to tell the numbers of two different factors, A to F. The statements are as follows:  A and B both say: 'I know how much this number is.'  C and D both say: 'After listening to them, I also know how much this number is.' E says: 'After listening to them, I know my number must be larger than F\u2019s.' F says: 'My number is between C and D\u2019s.'  What is the sum of the numbers held by these six students? Answer in format of [[number]]",
+    "answer": "[[141]]",
+    "needle": "Based on the analysis: The numbers held by the students are 70, 35, 14, 10, 7, and 5, respectively. The sum of these numbers is 70 + 35 + 14 + 10 + 7 + 5 = 141.",
+    "rule_id": "1",
+    "difficulty": "2",
+    "length": "521"
+  },
+  {
+    "idx": "9",
+    "question": "As shown in the right - hand figure, Lele uses 12 small wooden sticks to form a 3\u00d73 square. Fanfan uses 9 small wooden sticks to cut it into 3 small rectangles of 1\u00d72 and 3 small squares of 1\u00d71. If Lele uses 40 small wooden sticks to form an 8\u00d712 rectangle, then how many more small wooden sticks does Fanfan need to place to cut it into 40 small rectangles, where each small rectangle is either 1\u00d72 or 1\u00d73? Try to give the figure in txt for the first example showing a 3\u00d73 square made of small wooden sticks and how Fanfan cuts it into smaller rectangles and squares. Figure explanation: Every O is a 1*1 unit square and + is all the vertices of the squares. | and - are actual divisions. +-+-+-+ |O O|O| +-+-+ + |O O|O| +-+-+-+ |O|O|O| +-+-+-+",
+    "answer": "[[116]]",
+    "needle": "To solve this problem, express the sum of the numbers and calculate the digit-sum. Then, use constraints to minimize the value of x such that the digit-sum of a equals 50.",
+    "difficulty": "4",
+    "length": "745",
+    "rule_id": "1"
+  },
+  {
+    "idx": "10",
+    "question": "The distance between A and B is 105 kilometers. Two cyclists, Jia and Yi, start simultaneously from A and B respectively and move towards each other. Jia's speed is 40 kilometers per hour. They meet 1 hour and 45 minutes after starting, and then continue to ride in their respective directions. Three minutes after they meet, Jia meets Bing who is riding towards him. And Bing catches up with Yi at point C. If Jia travels at a speed of 20 kilometers per hour and Yi travels at a speed 2 kilometers per hour faster than the original speed, and the two start simultaneously from A and B respectively, then Jia and Yi will meet at point C. What is Bing's cycling speed? Answer in the format of [[Speed]] without unit km/s and keep two decimal places if the answer is not an integer.",
+    "answer": "[[23.16]]",
+    "needle": "From the analysis: A and D tie for first, meaning they each have 2 points for each win. Since C is in third place, C must have won two matches (against B and E), earning 4 points.",
+    "rule_id": "1",
+    "difficulty": "2",
+    "length": "780"
+  },
+  {
+    "idx": "11",
+    "question": "Fill in an arrow in each blank cell on the edge. The number in the grid indicates the number of arrows pointing to that number. The directions of the arrows can be up, down, left, right, upper - left, lower - left, upper - right, or lower - right, but each arrow must point to at least one number. For example, the filling method in Figure 2 is the answer to Figure 1. Please fill in the arrows in Figure 3 according to this rule. Then, answer the ABCDEFGHIJKL in format [['up', 'down', 'upperleft', ...]] specifying the direction of each arrow.\n| | | |\n|---|---|---|\n| | 3 | 4 | 1 |\n| | 5 | 2 | 0 |\n| | 5 | 6 | 3 |\n| | | |\nFigure 2:\n| | | |\n|---|---|---|\n| | down | down | lowerleft |\n| lowerright | 3 | 4 | 1 | left |\n| lowerright | 5 | 2 | 0 | lowerleft |\n| right | 5 | 6 | 3 | left |\n| | up | up | upperleft |\nFigure 3:\n| | | |\n|---|---|---|\n| | A | B | C |\n|D| 2 | 3 | 3 |E|\n|F| 1 | 1 | 4 |G|\n|H| 2 | 5 | 6 |I|\n| | J | K | L |",
+    "answer": "[['lowerright', 'down', 'down', 'lowerright', 'left', 'upperright', 'lowerleft', 'right', 'left', 'upperright', 'upperright', 'up']]",
+    "needle": "Python code can give direct answer",
+    "rule_id": "1",
+    "difficulty": "2",
+    "length": "931"
+  },
+  {
+    "idx": "12",
+    "question": "Four people, A, B, C, and D, are standing in a line and are numbered from left to right as 1, 2, 3, and 4. They have the following conversation: A: 'Both of my neighbors are taller than me.' B: 'Both of my neighbors are shorter than me.' C: 'I am the tallest.' D: 'There is no one to my right.' If all four of them are honest, what is the 4-digit number formed by their positions in order? Answer in format of [[number]]",
+    "answer": "[[2314]]",
+    "needle": "First, based on D's statement 'There is no one to my right,' we can conclude D is in position 4. Then, based on A's statement 'Both of my neighbors are taller than me' and B's statement 'Both of my neighbors are shorter than me,' it is clear that C must be in position 1. Since C is the tallest, they must be taller than the person in position 2, which is A. Finally, B must be in position 3. Therefore, the 4-digit number formed by their positions is 2314.",
+    "rule_id": "1",
+    "difficulty": "3",
+    "length": "420"
+  },
+  {
+    "idx": "13",
+    "question": "Forty matchsticks of the same length are arranged into the figure on the right. If each matchstick is regarded as a line - segment with a length of 1, then 30 squares can be counted. After removing 5 matchsticks, five people A, B, C, D, and E made the following judgments respectively:A: \"There are still 5 1   imes1 squares left.\"B: \"There are still 3 2   imes2 squares left.\"C: \"All 3   imes3 squares are retained.\"D: \"The straight lines where the removed matchsticks are located are all different.\"E: \"4 of the removed matchsticks are on the same straight line.\"It is known that exactly 2 of these 5 people made wrong judgments. Then, in the remaining figure,  ___  squares can still be counted. Figure : +-+-+-+-+ |O|O|O|O| +-+-+-+-+ |O|O|O|O| +-+-+-+-+ |O|O|O|O| +-+-+-+-+ |O|O|O|O| +-+-+-+-+ Each O is a 1*1 unit square and + is all the virtual vertices of the squares. | and - are actual matchsticks. Answer in format of [[number]]",
+    "answer": "[[14]]",
+    "needle": "",
+    "rule_id": "1",
+    "difficulty": "2",
+    "length": "935"
+  },
+  {
+    "idx": "14",
+    "question": "In a mathematics competition, the score of each question for the participating teams can only be 0 points, 3 points, or 5 points. When the competition ends, the total score of three teams is 32 points. If the total score of any team can reach 32 points in a certain scenario, how many different situations are there for the total scores of these three teams? Answer in format of [[number]]",
+    "answer": "[[255]]",
+    "needle": "Divide the points they got into different cases, and then calculate the number of different situations for the total scores of these three teams.",
+    "rule_id": "1",
+    "difficulty": "3",
+    "length": "389"
+  },
+  {
+    "idx": "15",
+    "question": "There are five cards labeled A, B, C, D, and E, which are arranged in a row from left to right. The following clues are given: (1) C and E are not next to each other. (2) C and E are not next to D. (3) B and E are not next to A. (4) The card to the right of A is D. Based on these clues, what is the order of the cards from left to right? Answer in format of [[ABCDE]]",
+    "answer": "[[ECADB]]",
+    "needle": "From (1) and (2), we know that C and E cannot be next to each other and must be placed 4 positions apart, and they can only be adjacent. From (4), we know the card to the right of A is D. Also, since both C and E cannot be adjacent to A, B and E must be in positions adjacent to AD. Therefore, the order of the cards from left to right is ECADB.",
+    "rule_id": "1",
+    "difficulty": "3",
+    "length": "368"
+  },
+  {
+    "idx": "16",
+    "question": "Five people, A, B, C, D, and E, participated in a chess competition. Each pair of people must compete in one match. The scoring rules are: the winner gets 2 points, a draw is 1 point, and the loser gets 0 points. The results are: the first and second place are tied, and the two people in third place are tied. Then, how many points does B get? Answer in format of [[number]]",
+    "answer": "[[4]]",
+    "needle": "Assuming A and E both win all their matches, then A and E cannot tie for first. With a total of 10 matches, if C and D win one match each, B must win one match. Since there\u2019s only one possible situation, the score for B is 4 points.",
+    "rule_id": "1",
+    "difficulty": "3",
+    "length": "375"
+  },
+  {
+    "idx": "17",
+    "question": "The results of the Yingchun Cup test are out. Four good friends, Xiao Hua, Xiao Yuan, Xiao Tan, and Xiao Mi, are chatting. They speak the truth about the person whose score is lower than theirs and lie about the person whose score is higher than theirs. The conversation goes as follows: Xiao Hua says to Xiao Yuan: 'Don't worry, your score is not the worst.' Xiao Yuan says to Xiao Tan: 'Your score is the best.' Xiao Tan says to Xiao Mi: 'Although your score is the worst, you will definitely do better next time.' Xiao Mi says to Xiao Hua: 'Don't be arrogant, your score is not the best.' What is the 4-digit number formed by their rankings from top to bottom? Answer in format of [[number]]",
+    "answer": "[[1324]]",
+    "needle": "First, analyzing Xiao Yuan's statement 'Your score is the best,' we deduce that Xiao Yuan is lying, so Xiao Tan's score is not the best but better than Xiao Yuan's.  Then, analyzing Xiao Hua's statement 'Your score is not the worst,' if Xiao Hua is lying, it means her score is lower than Xiao Yuan\u2019s, but this contradicts the statement. Thus, Xiao Hua is telling the truth, and her score is higher than Xiao Yuan's. Therefore, Xiao Mi's score is worse than Xiao Yuan's. Thus, Xiao Tan is telling the truth and Xiao Mi is lying.  Therefore, the 4-digit ranking is 1324.",
+    "rule_id": "1",
+    "difficulty": "3",
+    "length": "694"
+  },
+  {
+    "idx": "18",
+    "question": "Five students A, B, C, D, and E from the same school have birthdays on different days in March, and their birthdays are consecutive days. The difference in days between A and C's birthdays is the same as the difference between E and B's birthdays, and D's birthday is two days earlier than E's. What day in March is A's birthday? Answer in format of [[number]]",
+    "answer": "[[24]]",
+    "needle": "From the given clues, we can infer that A\u2019s birthday is 24th. The difference in days between A and C's birthdays is the same as between E and B's, and D's birthday is two days earlier than E's. Therefore, the dates for A, C, D, and E are derived logically as 24th, 23rd, and 25th, and A's birthday is the 24th.",
+    "rule_id": "1",
+    "difficulty": "3",
+    "length": "360"
+  },
+  {
+    "idx": "19",
+    "question": "Professor Wang arrived at the railway - station to wait for the train at 8:00 a.m. When he boarded the train, the hour - hand and the minute - hand of the clock on the platform were exactly symmetrical left and right. The train departed at 8:35 a.m. and arrived at the terminal station at 2:15 p.m. When Professor Wang got off the train, the hour - hand and the minute - hand of the clock on the platform were exactly symmetrical up and down, and it was exactly 3:00 p.m. when he walked out of the station. Then the total time that Professor Wang spent on the train was ________ minutes. Answer in format of [[time_spent_on_train_in_minutes]], for example [[123]] if the time spent is 123 minutes.",
+    "answer": "[[360]]",
+    "needle": "To solve this problem, we need to determine the total time Professor Wang spent on the train. Let's break down the problem step by step.",
+    "rule_id": "1",
+    "difficulty": "3",
+    "length": "697"
+  },
+  {
+    "idx": "20",
+    "question": "The knight, or horse, is a piece in chess with a unique movement pattern. Here are the detailed rules of its movement:Basic Movement Pattern: The knight moves in an \u201cL\u201d shape. Specifically, it can move two squares in one direction (either horizontally or vertically) and then one square perpendicular to that direction. For example, if the knight is on a square, it can move two squares up and then one square to the left or right. Or it can move two squares to the left and then one square up or down.Number of Possible Moves: Depending on its position on the chessboard, a knight can have a different number of available moves. In the middle of an 8x8 chessboard, a knight has 8 possible moves. However, when it is near the edges or corners of the chessboard, the number of available moves decreases. For instance, a knight in a corner of the chessboard has only 2 possible moves, and a knight on a square at the edge (but not in the corner) usually has 3 or 4 possible moves.If the knight is located in the second column of the first row on an 8\u00d78 chessboard of chess, and it needs to move to the fifth column of the eighth row, how many shortest routes are there?? Answer in format of [[number]]",
+    "answer": "[[12]]",
+    "needle": "Rules of add",
+    "rule_id": "1",
+    "difficulty": "5",
+    "length": "1199"
+  },
+  {
+    "idx": "21",
+    "question": "The following figure is a large square grid composed of 9 small \\(2   imes2\\) grids. It is required that the adjacent numbers in two adjacent small grids are exactly the same. (These small grids can be rotated, but not flipped). Now, one small grid has been placed in the large grid. Please place the remaining 8 grids as required. The number in the bottom - right grid is ______. \\(\\begin{bmatrix}3&1\\\\3&4\\end{bmatrix}\\), \\(\\begin{bmatrix}1&2\\\\1&2\\end{bmatrix}\\), \\(\\begin{bmatrix}2&4\\\\3&4\\end{bmatrix}\\) \\(\\begin{bmatrix}4&1\\\\3&1\\end{bmatrix}\\), \\(\\begin{bmatrix}4&1\\\\4&3\\end{bmatrix}\\) \\(\\begin{bmatrix}2&2\\\\3&2\\end{bmatrix}\\), \\(\\begin{bmatrix}4&1\\\\4&1\\end{bmatrix}\\), \\(\\begin{bmatrix}1&3\\\\4&1\\end{bmatrix}\\) Answer in format of [[number]]",
+    "answer": "[[3]]",
+    "needle": "",
+    "difficulty": "4",
+    "length": "743",
+    "rule_id": "1"
+  },
+  {
+    "idx": "22",
+    "question": "There is a box containing hats, among which 3 are red, and all the remaining hats except for 4 are yellow, with the other 4 hats being white. How many hats are there in the box in total? Answer in format of [[number]]",
+    "answer": "[[5]]",
+    "needle": "Based on the given conditions: Red + Yellow + White = 3 + 3 + 3 = 9 hats. Then, 3 + 4 + 4 + 4 + 4 = Blue + Yellow + White + Red + Blue + White + Red + Yellow = 15 hats. Thus, the total number of hats in the box is 5.",
+    "rule_id": "1",
+    "difficulty": "3",
+    "length": "217"
+  },
+  {
+    "idx": "23",
+    "question": "As shown in the figure, in a 6   imes6 grid table, the numbers from 1 to 6 are to be filled into the blank grids such that each row and each column contains exactly one occurrence of the numbers from 1 to 6. Some numbers have already been filled in the figure. Then, there are ______ ways to fill the remaining blank grids to meet the requirements. arr = np.array([[1, 2, 3, 4, 5, 6],[2, np.nan, np.nan, np.nan, np.nan,5][3, np.nan, np.nan, np.nan, np.nan, 4],[4, np.nan, np.nan, np.nan, np.nan, 3],[5, np.nan, np.nan, np.nan, np.nan, 2],[6, 5, 4, 3, 2, 1]]) Answer in format of [[number]]",
+    "answer": "[[16]]",
+    "needle": "Solve the problem step by step, considering the constraints and the operations performed.",
+    "difficulty": "4",
+    "length": "588",
+    "rule_id": "1"
+  },
+  {
+    "idx": "24",
+    "question": "In a certain year, July has 31 days, with 4 Wednesdays and 5 Sundays. What is the day of the week for the national holiday, October 1st, in that year? Answer in format of [[Monday]]/[[Tuesday]]/[[Wednesday]]/[[Thursday]]/[[Friday]]/[[Saturday]]/[[Sunday]]",
+    "answer": "[[Thursday]]",
+    "needle": "Since July has 31 days, the month has at least four Wednesdays and four Sundays, and the remaining 3 days can only be at the end of the month. Therefore, July 29, 30, and 31 are Wednesday, Thursday, and Friday respectively. From this, we know that the national holiday on October 1st will fall on a Thursday.",
+    "rule_id": "1",
+    "difficulty": "5",
+    "length": "255"
+  },
+  {
+    "idx": "25",
+    "question": "Both A and B have four cards each, and each card is marked with a number. The numbers marked on A's cards are 1, 3, 5, and 7 respectively, and the numbers marked on B's cards are 2, 4, 6, and 8 respectively. The two - person conduct four - round competitions. In each round of the competition, the two people randomly select one card from the cards they hold respectively, and compare the sizes of the numbers on the selected cards. The person with the larger number gets 1 point, and the person with the smaller number gets 0 points. Then they discard the cards selected in this round respectively (the discarded cards cannot be used in the subsequent rounds). Then what is the probability that after the four - round competitions, A's total score is not less than 2 ? Answer in format of [[number]] in a m/n format where m and n are coprime integers.",
+    "answer": "[[1/2]]",
+    "needle": "You can list out all 12 possibilities when A win the game. So the probability is 12/24=1/2",
+    "rule_id": "1",
+    "difficulty": "6",
+    "length": "852"
+  },
+  {
+    "idx": "26",
+    "question": "In the following equation (The equation is \\(\\frac{A}{B   imes C}+\\frac{D}{E   imes F}+\\frac{G}{H   imes I}=1.6\\) ) different letters represent different non - zero digits, and neither A, D nor G is an even number. Then, what is the value of \\(A   imes(B + C)+D   imes(E + F)+G   imes(H + I)\\)?  ",
+    "answer": "[[180]]",
+    "needle": "",
+    "rule_id": "1",
+    "difficulty": "6",
+    "length": "290"
+  },
+  {
+    "idx": "27",
+    "question": "There is currently a cube ABCD - EFGH. Three square - shaped surfaces passing through point B of it are dyed red. Now, several of its edges are cut open to obtain its planar development diagram. If the three red - colored squares in the development diagram have no common sides, then there are ______ different cutting methods. (Cutting the same edges but in different cutting sequences are regarded as the same cutting method.)  Try to use code to solve it in an identical way to simulate the edge cuting and unfold steps Answer in format of [[number]]",
+    "answer": "[[54]]",
+    "needle": "To solve this problem, we need to determine the number of different cutting methods for the cube ABCD-EFGH. We will simulate the process of cutting the edges and unfolding the cube to count the number of valid configurations.",
+    "rule_id": "1",
+    "difficulty": "4",
+    "length": "553"
+  },
+  {
+    "idx": "28",
+    "question": "Teacher D tells A and B two consecutive numbers from 1 to 10. A and B know one number each. The following conversation occurs:  A says: 'I don\u2019t know what number B has.'  B says: 'I don\u2019t know what number A has.'  A says: 'I know what number B has now.'  Assuming A and B are both clear, what number did Teacher D tell A? (If there are multiple possibilities, please list them.) Answer in format of [[number_1, number_2, ...]] from smallest to largest.",
+    "answer": "[[2, 3, 8, 9]]",
+    "needle": "Based on the analysis: If A knows the number is 2, then B knows the number is 3; if A knows the number is 9, then B knows the number is 8; if A knows the number is 8, then B knows the number is 7. Therefore, Teacher D must have told A the number 2, 3, 8, or 9.",
+    "rule_id": "1",
+    "difficulty": "5",
+    "length": "452"
+  },
+  {
+    "idx": "29",
+    "question": "As shown in the figure, in a 5*5 table, each cell is filled with a number so that the squares where the same numbers are located are all connected together (two adjacent squares must have a common side). Now, two 1s, two 2s, two 3s, and two 4s have been given. Then, the sum of all the numbers in the table is ________. Description of the grid:It is a 5 - row and 5 - column square grid. Some cells already have numbers filled in. In the top - left cell, the number is 3. In the second row, the third cell has the number 1, and the fifth cell has the number 2. In the third row, the third cell has the number 4, and the fifth cell also has the number 4. In the fourth row, the second cell has the number 2, and the fourth cell has the number 1. In the fifth row, the second cell has the number 3. Answer in format [[your_answer]]",
+    "answer": "[[66]]",
+    "needle": "",
+    "rule_id": "1",
+    "difficulty": "5",
+    "length": "829"
+  },
+  {
+    "idx": "30",
+    "question": "Fold a rectangular paper with a width of 1 centimeter n times (n is an integer greater than 1). A small rectangle is obtained. Its width is still 1 centimeter, and its length is an integer number of centimeters. Then, starting from one end of the small rectangle, make a cut every 1 centimeter. Finally, some square paper pieces with an area of 1 square centimeter and rectangular paper pieces with an area of 2 square centimeters are obtained. If there are exactly 1282 such square paper pieces, then there are ____ different possible values for the number of folding times n. Answer in format of [[number]]",
+    "answer": "[[8]]",
+    "needle": "",
+    "rule_id": "1",
+    "difficulty": "4",
+    "length": "608"
+  },
+  {
+    "idx": "31",
+    "question": "As shown in Figure 1, it is a game lock with 16 buttons on it. The game rules are as follows: Press all the buttons according to the instructions on the buttons to unlock the lock. For example, when you press the second button \"Right 2\" in the first row, you need to move 2 grids to the right according to the instruction and press the \"Down 2\" button, and then press the \"Down 1\" button according to the instruction,...... In order to unlock this game lock, please select the first button to press. It is in the ____ row and the ____ column.\n \nFrom left to right, top to bottom: [[\"Start\", \"Right 2\", \"Left 2\", \"Down 2\"], [\"Down 1\", \"Down 2\", \"Right 1\", \"Left 2\"], [\"Right 1\", \"Up 2\", \"Up 2\", \"Down 1\"], [\"Up 2\", \"Left 1\", \"Up 1\", \"Left 1\"]]. Answer in format of [[row, column]] (Assume row and column start from 1)",
+    "answer": "[[2, 3]]",
+    "difficulty": "3",
+    "rule_id": "1",
+    "length": "816"
+  },
+  {
+    "idx": "32",
+    "question": "Twelve children each have a luggage - bag numbered 1, 2, 3, \u2026, 12, and they pick up the luggage with their number - plates respectively. The luggage is arranged in a row in the order of the numbers, and the children are arranged in a row randomly. However, only the luggage with the smallest number among the un - picked - up luggage can be taken away. Otherwise, the child who tries to take the luggage has to go to the end of the queue (the child who gets the luggage doesn't need to queue again), and it takes one minute to check a number. The number - plate checking starts at 4:00. The luggage numbered 3 is taken away at 4:33, and the luggage numbered 8 is taken away at 4:40. Ask what are the initial queuing orders of the children holding the number - plates 1, 2, 3 and 8 respectively? Answer in format of [[initial_queuing_order_of_children_holding_number_plates_1, initial_queuing_order_of_children_holding_number_plates_2, initial_queuing_order_of_children_holding_number_plates_3, initial_queuing_order_of_children_holding_number_plates_8]]",
+    "answer": "[[12, 11, 10, 7]]",
+    "difficulty": "2",
+    "rule_id": "1",
+    "length": "1053"
+  },
+  {
+    "idx": "33",
+    "question": "Today is December 17, 2011. In this date, there are four 1s, two 2s, one 0, and one 7. Use these eight digits to form several composite numbers and then find their sum (each digit is used exactly once, and the first - digit cannot be 0. For example, the sum of 21110 and 217 is 21327). The minimum value of the sum of these composite numbers is ___",
+    "answer": "[[231]]",
+    "difficulty": "3",
+    "rule_id": "1",
+    "length": "348"
+  },
+  {
+    "idx": "34",
+    "question": "Find all sets of consecutive integers that add up to 1000. Answer in format [[(start, end(contained)), (start, end(contained)), ...]]",
+    "answer": "[[(-999, 1000), (-197, 202), (-54, 70), (-27, 52), (28, 52), (55, 70), (198, 202)]]",
+    "difficulty": "4",
+    "rule_id": "1",
+    "length": "133"
+  },
+  {
+    "idx": "35",
+    "question": "As shown in the figure, it is a 6\u00d76 grid table. Fill the numbers 1 - 6 into the blank grids so that each of the numbers 1 - 6 appears exactly once in each row and each column. The grid table is also divided into 6 regions by bold lines, and each of the numbers 1 - 6 also appears exactly once in each region. Then, the original grid is ? Answer in format [[1,2,3,4,5,6,6,5,4,3,1,2,...]](this is a wrong solution! just to show the format) without any spaces or special characters in double brackets, answer all 36 numbers from left to right, top to bottom.# print a 6x6 grid table\n\n+-+-+-+-+-+-+\n|1 2 O|O O O|\n+ +-+ +-+-+ +\n|O|O|O O|O|2|\n+-+ +-+-+ + +\n|O|O 4 5|O|O|\n+ +-+-+ + + +\n|O O|5|2|O|O|\n+ + + + + +-+\n|4 O|O|O|O O|\n+ +-+ +-+-+ +\n|O|O O O 6|5|\n+-+-+-+-+-+-+",
+    "answer": "[[1,2,3,6,5,4,5,4,6,4,1,2,3,6,4,5,2,1,6,1,5,2,4,3,4,5,2,1,3,6,2,4,1,3,6,5]]",
+    "difficulty": "3",
+    "rule_id": "1",
+    "length": "762"
+  },
+  {
+    "idx": "36",
+    "question": "A small cube - shaped die with an edge length of 1 has a capital English letter E, G, I, O, N, or D written on each of its six faces. First, place it on the small square in the upper - left corner of a 4   imes5 chessboard composed of 20 small squares with a side length of 1, with the letter D facing up (as shown in the figure). Then, continuously flip it to adjacent squares, and it just passes through each of the remaining 19 small squares on the 4   imes5 chessboard exactly once (a total of 19 flips), and finally stops on the small square in the lower - right corner of the chessboard. If the given letter in a small square in the figure is the letter written on the upward - facing side of the die when the die is flipped to that small square (the letter can be 'upright', 'horizontal', or 'upside - down'). Then, when the die is flipped to the small square marked with '*', the letter written on the upward - facing side of the die is [[]](Only answer the capital letter)chessboard:(? means not given here)D(0) ? G(0) I(0) ?\nI(0) O(0) O(0) ? ?\n? ? I(1) ? *\nE(0) ? ? N(0) N(1)\nWe use A(0) to represent the letter upright, A(1) to represent a 90-degree clockwise rotation, A(2) to represent a 180-degree clockwise rotation, A(3) to represent a 270-degree clockwise rotation. Note that for H, A(0) = A(2) and A(1) = A(3). So if we see H(2) on the chessboard, it can be H(0) or H(2), and similar for other letters with at least two axes of symmetry.",
+    "answer": "[[O]]",
+    "difficulty": "4",
+    "rule_id": "1",
+    "length": "1453"
+  },
+  {
+    "idx": "37",
+    "question": "Square ceramic tiles with a side - length of 1 are used to pave a 4*6 rectangle in a black - and - white alternating pattern. The tile in the top - left corner and the bottom - right corner are black, while the tile in the bottom - left corner and the top - right corner are white. An ant starts from point A in the top - left corner of the top-left  tile and crawls along the sides of the squares to point B in the bottom - right corner of the bottom-right tile. If the ant must always have a black ceramic tile on its left during crawling, then how many centimeters at least does the ant crawl? Answer in format of [[distance]]",
+    "answer": "[[12]]",
+    "difficulty": "3",
+    "rule_id": "1",
+    "length": "629"
+  },
+  {
+    "idx": "38",
+    "question": "King Arthur summons 6 knights in the royal palace. Each of these knights has exactly 2 friends. They sit around a round - table (the names and seats of the knights are shown in the right - hand figure). As a result, it is found that in this seating arrangement, any two adjacent knights are exactly friends. King Arthur wants to rearrange the seats. Then, how many different ways does King Arthur have to arrange the seats so that each knight is not adjacent to his friend? (Rotations that result in the same arrangement are considered the same method.)  Answer in format of [[number]]",
+    "answer": "[[6]]",
+    "needle": "To solve this problem, calculate each term in the series step by step, simplifying both the numerator and the denominator. Then add the results together.",
+    "difficulty": "3",
+    "length": "585",
+    "rule_id": "1"
+  },
+  {
+    "idx": "39",
+    "question": "### Problem Information1. **Rules**:- Fill all the given number strings into the grid. Each number string should be used exactly once, and each cell in the grid should contain exactly one digit.- The digits within the same number string cannot be separated by the shaded areas (represented by the non-fillable positions x in the grid). - The directions of the number strings are either from top to bottom or from left to right.2. **Given Number Strings**: 11, 120, 1022, 10024, 12, 210, 1024, 10224, 01, 220, 0110, 21, 410, 0102, 40, 0022, 42, 2224.\n 3. **Example**:- Given Number Strings: 15, 153, 1353, 35, 315, 5315, 51, 513, 53.\n- The Unfilled Grid: It is a 5*5 grid.- The Filled Result (the only filling method that conforms to the rules): [[5,1,x,x,1],[x,5,3,1,5],[5,x,1,x,3],[1,3,5,3,x],[3,x,x,5,3]], where x represents the non-fillable positions. 4. **The Grid to be Filled**:- The grid is a 7*7 grid, and some positions are marked as the non-fillable x. Its shape is [[o,o,o,o,o,x,E],[o,x,o,x,o,C,o],[o,o,o,o,x,o,x],[o,x,o,o,o,x,o],[x,o,x,o,o,o,D],[o,o,o,x,o,x,o],[A,x,o,o,B,o,o]], where o represents the fillable positions.- The final requirement is to obtain the value of the five-digit number represented by {ABCDE}. ",
+    "answer": "[[12204]]",
+    "difficulty": "4",
+    "rule_id": "1",
+    "length": "1229"
+  },
+  {
+    "idx": "40",
+    "question": "In a 7x7 grid that is colored black and white, if the number of columns where black cells are less than white cells is m, and the number of rows where black cells are more than white cells is n, find the maximum value of m+n.",
+    "answer": "[[12]]",
+    "difficulty": "3",
+    "rule_id": "1",
+    "length": "225"
+  },
+  {
+    "idx": "41",
+    "question": "Place two identical chess - pieces in a 3*3 grid (each grid is a 1*1 square), with at most one chess - piece in each grid. There are ______ different placement methods. (If two placement methods can coincide by rotation, they are regarded as the same placement method).",
+    "answer": "[[10]]",
+    "difficulty": "3",
+    "rule_id": "1",
+    "length": "269"
+  },
+  {
+    "idx": "42",
+    "question": "First, write down a series of numbers on the black - board: 1, 2, 3, \u2026, 100. If we erase the first 6 numbers each time and write the sum of the 6 erased numbers at the end of this series of numbers to get a new series of numbers, and then perform the same operation until there are less than 6 numbers left on the black - board. Question: (1) What is the sum of these remaining numbers on the black - board? (2) What is the last number written? Answer in format of [[sum, last number]]",
+    "answer": "[[5050, 2394]]",
+    "needle": "To solve this problem, perform the operation step by step, tracking the numbers on the blackboard. Analyze how the sum changes and identify the smallest number left on the blackboard when the process terminates.",
+    "difficulty": "4",
+    "length": "485",
+    "rule_id": "1"
+  },
+  {
+    "idx": "43",
+    "question": "The figure shows a regular hexagon with a side length of 1. It is divided into six small triangles. One each of the numbers 4, 6, 8, 10, 12, 14, and 16 is filled into the seven circles. Two adjacent small equilateral triangles can form 6 rhombuses. Add up the numbers at the four vertices of each rhombus and fill the sum in the positions of the centers A, B, C, D, E, and F of the rhombus (for example: a + b + g + f = A). It is known that A, B, C, D, E, and F can be divided evenly by 2, 3, 4, 5, 6, and 7 in turn. Then a * g * d = ______; Picture: The vertices of the regular hexagon (in a clockwise direction): a, b, c, d, e, f. In the center of ag is A, and the center of bg is B, and so on.",
+    "answer": "[[320]]",
+    "difficulty": "3",
+    "rule_id": "1",
+    "length": "696"
+  },
+  {
+    "idx": "44",
+    "question": "There are 11 ones, 22 twos, 33 threes, and 44 fours on the black - board. Do the following operation: Erase 3 different numbers each time and write 2 more of the fourth number that is not erased. For example, if in a certain operation, 1 one, 1 two, and 1 three are erased, then write 2 fours. After several operations, there are only 3 numbers left on the black - board and no further operation can be carried out. Then the product of the last 3 remaining numbers is ? Answer in the format of [[your_answer]].",
+    "answer": "[[12]]",
+    "difficulty": "3",
+    "rule_id": "1",
+    "length": "510"
+  },
+  {
+    "idx": "45",
+    "question": "Two submarines, the Pacific and the Arctic, are navigating in a straight - line and in the same direction underwater. The Arctic is in front and the Pacific is behind. At a certain moment during the navigation, the Pacific emits a sound wave. Two seconds later, it emits a sound wave again. When the sound wave reaches the Arctic, the Arctic will reflect the sound wave. It is known that the navigation speed of the Pacific is 54 kilometers per hour. The time interval between the first and the second detection of the echo reflected by the Arctic is 2.01 seconds, and the propagation speed of the sound wave is 1185 meters per second. What is the navigation speed of the Arctic per hour? (Accurate to 1 kilometer per hour)",
+    "answer": "[[65]]",
+    "difficulty": "4",
+    "rule_id": "1",
+    "length": "723"
+  },
+  {
+    "idx": "46",
+    "question": "Select 4 numbers from the 6 numbers ranging from 0 to 5 and fill them into the circles in the following figure. Calculate the differences between the numbers at both ends of each line - segment, and 5 differences can be obtained. These 5 differences are exactly 1 to 5. One filling method is already given in the figure below. Then, there are ______ filling methods that meet the requirements. (Note: In the following figure, swapping the positions of 3 and 5 or 0 and 1 is considered a new filling method).The first figure shows a quadrilateral - like structure with four unfilled circles at its four vertices. There are five line - segments in total, including the four sides of the quadrilateral and one diagonal. The second figure has the same quadrilateral - like structure as the first one. It has four vertices and five edges. The top - left circle is filled with 3, the top - right circle is filled with 1, the bottom - left circle is filled with 0, and the bottom - right circle is filled with 5. the diagonal connects 1 and 0. Answer in format [[number]]",
+    "answer": "[[32]]",
+    "difficulty": "2",
+    "rule_id": "1",
+    "length": "1064"
+  },
+  {
+    "idx": "47",
+    "question": "The non - zero natural number n is the sum of 2010 natural numbers with the same digit sum, and also the sum of 2012 natural numbers with the same digit sum, and also the sum of 2013 natural numbers with the same digit sum. Then what is the minimum value of n? Note that when we say the digit sum of 123, we calculate 1+2+3=6, so 123 has the same digit sum as 6. Answer the problem in format [[your answer]].",
+    "answer": "[[6036]]",
+    "difficulty": "3",
+    "rule_id": "1",
+    "length": "408"
+  },
+  {
+    "idx": "48",
+    "question": "Color the six - faces of a cube with five different colors. If two adjacent faces cannot be painted with the same color, then how many different coloring methods are there? (Only the coloring methods that are still different after any rotation of the cube are considered different.) Answer in format of [[number]]",
+    "answer": "[[15]]",
+    "difficulty": "3",
+    "rule_id": "1",
+    "length": "313"
+  },
+  {
+    "idx": "49",
+    "question": "Connect all the black dots and white dots with horizontal or vertical lines to form a non - self - intersecting loop. At a black dot, the loop must make a right - angled turn, and it must pass straight through the cell before and the cell after the black dot. At a white dot, the loop must pass straight through, and make a right - angled turn at either the cell before or the cell after (at least one of them). If a loop is drawn in Figure 1 according to this rule, then how many right - angled turns does this loop make in total? Suppose both rows and columns are numbered starting from 1. In Figure 1, the black dots are located at (1, 2), (3, 7), (5, 6), (7, 4), and the white dots are located at (1, 4), (1, 7), (4, 4), (5, 2), (6, 8), (8, 5).",
+    "answer": "[[20]]",
+    "difficulty": "4",
+    "rule_id": "1",
+    "length": "748"
+  },
+  {
+    "idx": "50",
+    "question": "Q.1. Stranded on a deserted island, Harry Puttar is left with only a 40 litres container of milk. To conserve his milk he decides that on the first day he will drink one litre of milk and then refill the container back up with water. On the 2nd day he will drink 2 litres and refill the container. On the 3rd day he will drink 3 litres and so on... By the time all the milk is gone, how much water has he drunk?",
+    "answer": "[[780]]",
+    "difficulty": "4",
+    "rule_id": "1",
+    "length": "411"
+  },
+  {
+    "idx": "51",
+    "question": " Select k numbers from the 50 consecutive odd numbers 1,3,5,\u2026,99 such that their sum is 1949. We need to determine the maximum possible value of k. Answer in format [[k]]",
+    "answer": "[[43]]",
+    "difficulty": "4",
+    "rule_id": "1",
+    "length": "170"
+  },
+  {
+    "idx": "52",
+    "question": "As shown in the figure, please divide the 7*7 grid table along the inner border into several rectangles, such that each rectangle contains exactly one number, and this number is the area of this rectangle. \n+-+-+-+-+-+-+-+\n|O|O|O|2|O|O|2|\n+-+-+-+-+-+-+-+\n|O|2|2|4|O|O|O|\n+-+-+-+-+-+-+-+\n|O|O|O|O|4|O|5|\n+-+-+-+-+-+-+-+\n|4|O|O|O|O|4|O|\n+-+-+-+-+-+-+-+\n|O|O|8|O|O|3|O|\n+-+-+-+-+-+-+-+\n|3|O|O|O|2|O|O|\n+-+-+-+-+-+-+-+\n|O|O|O|O|4|O|O|\n+-+-+-+-+-+-+-+. The 'O' represents an empty square without a number, which is just placed here for the sake of format neatness. If the row and colomn start from one from top to bottom, left to right, please answer 7 small squares in each column or row belong to ______ different rectangular squares in this order: [[answer_for_row_1, answer_for_row_2, ... , answer_for_row_7, answer_for_column_1, ..., answer_for_column_7]]",
+    "answer": "[[6, 7, 6, 6, 6, 5, 4, 2, 3, 3, 4, 4, 2, 2]]",
+    "difficulty": "4",
+    "rule_id": "1",
+    "length": "855"
+  },
+  {
+    "idx": "53",
+    "question": "There are 2,015 flags evenly - spaced on a circular track. A and B start simultaneously in the same direction from a certain flag. When A and B return to the starting - point simultaneously again, A has run 23 laps and B has run 13 laps. Excluding the starting - point flag position, how many times does A just overtake B at the flag positions? Answer in format of [[times_A_overtakes_B]]",
+    "answer": "[[4]]",
+    "difficulty": "4",
+    "rule_id": "1",
+    "length": "388"
+  },
+  {
+    "idx": "54",
+    "question": "There are 3 colored boxes - Yellow, Black and Orange. Each box contains 2 envelopes. Each envelope contains cash - two of them contain Rs. 250000 each, two of them contain Rs. 150000 each and remaining two contain Rs. 100000 each. There is one statement written on the cover of each box. Yellow Box: Both, a yellow box and a orange box contain Rs. 100000 each. Black Box: Both, a black box and a yellow box contain Rs. 250000 each. Orange Box: Both, a orange box and a black box contain Rs. 150000 each. Only one of the above 3 statements is true and the corresponding box contains the maximum amount. Can you tell which box contains the maximum amount and how much?",
+    "answer": "[[400000]]",
+    "difficulty": "4",
+    "rule_id": "1",
+    "length": "666"
+  },
+  {
+    "idx": "55",
+    "question": "Color each simplest fraction m/n (where m and n are co-prime non-zero natural numbers) either red or blue. The coloring rules are as follows: 1) Color 1 red; 2) Two numbers with a difference of 1 have different colors; 3) A number other than 1 and its reciprocal have different colors. Question: What colors are m and n colored respectively? Answer in format of [[color_m, color_n]]",
+    "answer": "[[blue, red]]",
+    "difficulty": "4",
+    "rule_id": "1",
+    "length": "382"
+  },
+  {
+    "idx": "56",
+    "question": "As shown in the \\(5   imes5\\) table in the figure, there are 6 letters. Please divide the right - hand figure along the grid lines into 6 small rectangles (including squares) with different areas, so that there is exactly one letter in each rectangle, and each letter is in the grid at the corner of the small rectangle. If these six letters are equal to the areas of the small rectangles where they are located respectively, then the five - digit number ABCDE is the answer. Answer in format of [[ABCDE]], like[[12345]](a wrong answer just to show the format) Grid: [[A, _, _, B, _], [_, C, D, _, _], [_, E, _, _, F], [_, _, _, _, _], [_, _, _, _, _]]",
+    "answer": "[[34216]]",
+    "difficulty": "4",
+    "rule_id": "1",
+    "length": "651"
+  },
+  {
+    "idx": "57",
+    "question": "The problem describes a piece of paper in the shape of a trapezoid, where the top length is 2015 and the bottom length is 2016. We are asked to determine how many identical isosceles triangles can be cut from this piece of paper, with certain constraints:The trapezoid is cut in such a way that the two sharp corners of the resulting triangles align with the sharp corners of the original trapezoid. The question then asks for the maximum number of identical isosceles triangles that can be cut out of the trapezoid. Answer in format of [[maximum number of identical isosceles triangles]]",
+    "answer": "[[4029]]",
+    "difficulty": "4",
+    "rule_id": "1",
+    "length": "588"
+  },
+  {
+    "idx": "58",
+    "question": "A youth tech team has created a simple calculator that can only compute the absolute difference between two integers. The process is as follows: First, input the first integer x1 (it is displayed but no computation is performed). Then, input the second integer x2, and the calculator will display |x1 - x2|. Afterward, each subsequent integer input will be compared with the last result, and the calculator will compute the absolute difference between the current integer and the previous result. The puzzle asks for the maximum possible value of p when 1991 randomly selected integers are input, and the final result is displayed after all integers are input. Answer in format of [[maximum possible value]]",
+    "answer": "[[1990]]",
+    "needle": "The problem involves computing the absolute difference between two integers at each step, with the process involving repeated calculations based on the previous result. The input integers are non-negative numbers, and the absolute difference between x1 and x2 will not exceed the largest of x1, x2. The goal is to determine the maximum possible final result after all 1991 integers are input into the calculator. The largest possible value of p can be achieved by selecting input numbers in such a way that each subsequent calculation maximizes the absolute difference. A specific strategy is outlined: the calculations should proceed in an alternating fashion where the result at each step is the maximum possible difference. This strategy leads to a final result where p equals 1990, as shown in the calculation sequence.",
+    "rule_id": "1",
+    "difficulty": "3",
+    "length": "707"
+  },
+  {
+    "idx": "59",
+    "question": "In a 7x7 grid, each cell is filled with a number such that numbers of the same value are connected (adjacent cells must share an edge). We give some numbers here while others are not given to you. Please answer: what is the sum of all the numbers in the grid after we fill every grid? grid: [[1, _, _, _, _, _, 2],[5, 3, _, _, 3, 4, _],[_, _, _, _, 2, _, _],[_, _, _, _, _, _, _],[_, _, _, _, _, 1, _],[_, _, 5, _, _, _, _],[4, _, _, _, _, _, _]]",
+    "answer": "[[150]]",
+    "needle": "",
+    "rule_id": "1",
+    "difficulty": "2",
+    "length": "446"
+  },
+  {
+    "idx": "60",
+    "question": "There is a robot toy device equipped with two runways of different lengths: a long runway and a short runway. The long runway is 400 centimeters in length, and the short runway is 300 centimeters in length, with a 200 - centimeter shared runway (as shown in Figure 5). Robot A runs counter - clockwise on the long runway at a speed of 6 centimeters per second, and Robot B runs clockwise on the short runway at a speed of 4 centimeters per second. If Robot A and Robot B start simultaneously from point A, then when the two robots meet head - on for the second time on the runways, how many centimeters has Robot A run in total? The diagram in the picture shows the runway layout of the robot toy device. There is a long runway with a length of 400 centimeters and a short runway with a length of 300 centimeters. A part of these two runways is shared, and the length of the shared part is 200 centimeters. The short runway uses only the right half of the long runway as the shared runway, and then a 100 - centimeter curved path connects the two ends of the long runway, which makes up its 300 - centimeter length. The non - shared parts and the shared part of the long and short runways together form their respective lengths. Robot A moves counter - clockwise along the long runway, and Robot B moves clockwise along the short runway. They both start from point A simultaneously. Answer in format [[number]] without centimeter unit",
+    "answer": "[[660]]",
+    "needle": "",
+    "rule_id": "1",
+    "difficulty": "3",
+    "length": "1434"
+  },
+  {
+    "idx": "61",
+    "question": "Please fill 1 one, 2 twos, 3 threes, \u2026, 8 eights, 9 nines into the table in Figure 4, so that the squares where the same numbers are located are all connected together (two connected squares must have a common side). Now the numbers in 8 of the squares have been given, and it is known that A, B, C, D, E, F, and G are all different. Then, the seven - digit number ABCDEFG is ______. (note: the row lengths are 5 7 7 7 7 7 5 from top to bottom and the four corners has nothing in it, so the first row has only 5 blocks and the last row has only 5 blocks.) Answer in format [[number]]",
+    "answer": "[[6732489]]",
+    "needle": "To solve this problem, we need to determine the starting speed of Jia and the distance between points A and D. Let's break down the problem step by step.",
+    "rule_id": "1",
+    "difficulty": "3",
+    "length": "583"
+  },
+  {
+    "idx": "62",
+    "question": "Below are two 4cm*4cm grids composed of 16 1cm*1cm squares. In Table 1 below, a straight - line passes through several of the squares. The sum of the numbers in the crossed - through squares is 15+13+10+5+6=49. Please draw a straight line in Table 2 to pass through several of the squares. The maximum sum of the numbers in the crossed - through squares is ( ).\nTable 1:\n|14|17|4 |6 |\n|15|7 |11|18|\n|2 |13|10|9 |\n|3 |12|5 |6 |\nTable 2:\n|14|17|4 |8 |\n|15|7 |11|18|\n|2 |13|10|9 |\n|3 |12|5 |6 | Answer in format [[number]]",
+    "answer": "[[76]]",
+    "needle": "",
+    "rule_id": "1",
+    "difficulty": "3",
+    "length": "519"
+  },
+  {
+    "idx": "63",
+    "question": "Please fill each cell of the following 5\u00d75 table with one of the numbers 1, 2, 3, 4, 5, so that the 5 numbers filled in each row, each column, and each diagonal are all different. Moreover, the number in cell A is greater than the number in cell B, the number in cell B is greater than the number in cell C, the number in cell C is greater than the number in cell D, the number in cell E is greater than the number in cell F, and the number in cell G is greater than the number in cell H. Then, the 5 numbers in the second row, from left to right, are ( ). Grid: x A B C x; x x x D x; x G F E x; x H x x x; x x x x x, please answer all 25 grid numbers in format of [[number1, number2, number3, number4, number5,... number25]] from left to right, top to bottom",
+    "answer": "[[1, 4, 3, 2, 5, 4, 5, 2, 1, 3, 2, 3, 4, 5, 1, 5, 2, 1, 3, 4, 3, 1, 5, 4, 2]]",
+    "needle": "",
+    "rule_id": "1",
+    "difficulty": "3",
+    "length": "759"
+  },
+  {
+    "idx": "64",
+    "question": "In American date format, June 3, 2004 is written as 6/3/2004, while in British format it's written as 3/6/2004. Dates like 6/3/2004 are hard to determine whether they follow American or British convention, and thus which day they represent - these are called ambiguous dates. Meanwhile, 4/18/2004 is clearly American format and can be determined as April 18, 2004; 18/4/2004 is clearly British format and can be determined as April 18, 2004; 2/2/2004, while the format is unclear, can be determined as February 2, 2004 - these are unambiguous dates. How many ambiguous dates are there in each month? How many unambiguous dates are there in total for the year 2004? Answer in format of [[ambiguous_dates_per_month, total_unambiguous_dates_in_2004]]",
+    "answer": "[[11, 234]]",
+    "needle": "For ambiguous dates per month: When both the day and month are \u226412 and not equal, the date is ambiguous. For each month m, there are 11 such days (all numbers 1-12 except m itself). For total unambiguous dates: These include dates where day>12 (222 days across all months in 2004) plus dates where day=month (12 days), totaling 234 unambiguous dates.",
+    "rule_id": "1",
+    "difficulty": "3",
+    "length": "747"
+  },
+  {
+    "idx": "65",
+    "question": "A small cube - shaped seal has a number from 1 to 6 engraved on each face. The numbers on each face are different from each other, and the sum of the numbers on opposite faces is always 7. Xiaoming rolls this small cube - shaped seal in the grid of Figure 5. Each square is passed exactly once. Then the maximum sum of the numbers printed in all small squares is ______.Description of the gridThe grid is a rectangular - like structure. It has 4 rows. The first row and the fourth row each have 7 available squares (represented by O), while the second row and the third row have some unavailable areas. In the second and third rows, there are 2 pairs of non - accessible squares (represented by x) in the middle, and there are also available squares (represented by O) on both sides of these non - accessible squares. When rolling the cube, the areas marked with x cannot be entered  The grid is like: OOOOOOO;OxxOxxO;OxxOxxO;OOOOOOO Answer in format [[sum]]",
+    "answer": "[[82]]",
+    "needle": "",
+    "rule_id": "1",
+    "difficulty": "3",
+    "length": "958"
+  },
+  {
+    "idx": "66",
+    "question": "You are given a small regular tetrahedral seal. Each of its four faces is engraved with a distinct number: 1, 2, 3, or 4. Xiaoming rolls this tetrahedral seal across a triangular grid composed of 13 small equilateral triangles, arranged as follows:The grid has 3 rows:Row 1: 3 small triangles, oriented as up, down, up.Row 2: 5 small triangles, oriented as up, down, up, down, up.Row 3: 5 small triangles, oriented as down, up, down, up, down.Here, \"up\" means the triangle points upward (\u25b3), and \"down\" means the triangle points downward (\u25bd). The small triangles are placed together with no gaps, forming a larger triangular grid. This grid can also be visualized as a large equilateral triangle originally made of four rows with 1, 3, 5, and 7 small triangles respectively (a total of 16 triangles), where each side of the large triangle has a length of 4 small triangle edges. Then, the three corner triangles (one from each vertex) are removed, leaving a grid of 13 small triangles. The perimeter of this resulting large grid is 9 small triangle edges.Xiaoming starts rolling the tetrahedral seal from any small triangle in the grid, with any initial placement of the tetrahedron (i.e., any face can be down initially). He rolls it across the grid, moving from one small triangle to an adjacent one with each roll, such that each of the 13 small triangles is visited exactly once. He can end at any small triangle. As the tetrahedron rolls, it \"prints\" the number of the downward face onto each small triangle it visits. The goal is to determine how many different possible values the sum of the numbers printed across all 13 small triangles can take. Answer in format [[number_of_different_values]]",
+    "answer": "[[4]]",
+    "needle": "",
+    "rule_id": "1",
+    "difficulty": "3",
+    "length": "1702"
+  },
+  {
+    "idx": "67",
+    "question": "Here are the products of the pairwise multiplication of five rational numbers:-10, 0.168, 0.2, 80, -12.6, -15, -6000, 0.21, 84, 100. Please determine the five rational numbers and briefly explain your reasoning. Answer in format of [[a, b, c, d, e]] from smallest to largest",
+    "answer": "[[-200, -0.5, -0.42, -0.4, 30]]",
+    "needle": "Let's assume there are four negative numbers and one positive number. The product of two negative numbers is positive, and the product of a negative and a positive number is negative. We can use this information to find the five rational numbers. x1 < x2 < x3 < x4 < 0 < x5, so x1x5 < x2x5< x3x5 <x4x5 < 0 < x3x4 < x2x4 < (x1x4,x2x3)(not sure which is bigger yet) < x1x3 <x1x2, this is enough to find the answer.",
+    "rule_id": "1",
+    "difficulty": "3",
+    "length": "274"
+  },
+  {
+    "idx": "68",
+    "question": "The track between points A and B is 16.8 meters long. There is a station every 2.4 meters along the track from A to B. Robots A and B both start from station A and travel towards station B, and once they reach station B, they return to station A. They continue to move back and forth between stations A and B. Both robots have a speed of 0.8 meters per second. Robot A takes a 1-second rest at each station it reaches, while Robot B never rests. If both robots finish their movements 2 minutes after starting from station A, how many times have they both reached the same station simultaneously (including both the starting station and the terminal station)?",
+    "answer": "[[6]]",
+    "needle": "Draw a diagram to visualize the movement of both robots. Robot A rests at each station it reaches, while Robot B moves continuously without resting. Calculate the number of times both robots reach the same station simultaneously.",
+    "rule_id": "1",
+    "difficulty": "3",
+    "length": "658"
+  },
+  {
+    "idx": "69",
+    "question": "If the ten digits displayed by an electronic timer are a string like \"0126093028\", it represents January 26th, 9:30:28. In this string, \"0\" appears 3 times, \"2\" appears 2 times, \"1\", \"3\", \"6\", \"8\", and \"9\" each appear once, while \"4\", \"5\", and \"7\" do not appear. If in the string displayed by the electronic timer, each of the ten digits \"0\", \"1\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\", \"8\", and \"9\" appears only once, we call the time it represents a \"perfect time\". Then, in the year 2003, there are ______ such \"perfect times\".",
+    "answer": "[[768]]",
+    "needle": "To solve this problem, identify the pattern in the sequence. Find the cycle length of the sequence. Then, find the position of the 2012th number within the cycle.",
+    "difficulty": "3",
+    "length": "521",
+    "rule_id": "1"
+  },
+  {
+    "idx": "70",
+    "question": "9. As shown in Table 1, please fill 1 one, 2 twos, 3 threes, \u2026, 7 sevens, 8 eights into a 6\u00d76 table so that the squares with the same number are all connected together (two connected squares must have a common side). Now the numbers in 8 of the squares have been given, and it is known that A, B, C, D, E, F are all different. Then, what is ABCDEF? | 5 |  |  |  |  |  |\n| --- | --- | --- | --- | --- | --- |\n| A | B | C | D | E | F |\n|  |  | 1 | 2 |  |  |\n|  |  | 3 | 4 |  |  |\n|  |  |  |  |  |  |\n| 7 |  |  |  |  | 8 |\n Table 1 Answer in format of pure numbers like [[012345]] for ABCDEF if A=0,B=1,C=2,... ",
+    "answer": "[[096325]]",
+    "needle": "To solve this problem, first analyze the table to find the relationship between the rows and columns. Use the known values to derive the constants 'm' and 'n', and then find the sum of 'm + n'. Finally, solve for 'xy + zu' based on the table structure.",
+    "difficulty": "4",
+    "length": "608",
+    "rule_id": "1"
+  },
+  {
+    "idx": "71",
+    "question": "In an m \u00d7 n grid, where the rows are numbered from bottom to top and the columns from left to right, there is a chess piece that moves like a knight in chess, with an L-shaped move (2 steps in one direction and then 1 step perpendicular to it). The grid is made up of points that are labeled by their row and column. For example, a point (a, b) means the point in row a and column b. Example\uff1aIn a 4-row 5-column board, we have all the positions (1,1) (1,2) (1,3) (1,4) (1,5) (2,1) (2,2) (2,3) (2,4) (2,5) (3,1) (3,2) (3,3) (3,4) (3,5) (4,1) (4,2) (4,3) (4,4) (4,5). Start from (2,3), you can go to (1,1) (3,1) (4,2) (4,4) (3,5) (1,5). Now you are asked to consider a larger 9 \u00d7 9 grid (which is a typical chessboard layout) with 81 positions. The task asks you to follow the knight's movement rules and check how far the knight can go on this 9x9 grid. Starting from point (1, 1), we wonder if the knight can reach all the positions in the 9 \u00d7 9 grid. How many positions are there that the knight can never reach? Answer the number in format [[number]]",
+    "answer": "[[0]]",
+    "needle": "To solve this knight's tour problem on a 9x9 grid, we need to use breadth-first search (BFS) to find the shortest path to each square. From position (1,1), a knight can reach all squares. ",
+    "difficulty": "4",
+    "length": "1052",
+    "rule_id": "1"
+  },
+  {
+    "idx": "72",
+    "question": "In an m \u00d7 n grid, where the rows are numbered from bottom to top and the columns from left to right, there is a chess piece that moves like a knight in chess, with an L-shaped move (2 steps in one direction and then 1 step perpendicular to it). The grid is made up of points that are labeled by their row and column. For example, a point (a, b) means the point in row a and column b. Example\uff1aIn a 4-row 5-column board, we have all the positions (1,1) (1,2) (1,3) (1,4) (1,5) (2,1) (2,2) (2,3) (2,4) (2,5) (3,1) (3,2) (3,3) (3,4) (3,5) (4,1) (4,2) (4,3) (4,4) (4,5). Start from (2,3), you can go to (1,1) (3,1) (4,2) (4,4) (3,5) (1,5). Now you are asked to consider a larger 9 \u00d7 9 grid (which is a typical chessboard layout) with 81 positions. The task asks you to follow the knight's movement rules and check how far the knight can go on this 9x9 grid. Starting from point (1, 1), we define the minimum steps needed to reach each point (m,n) as K_mn. Please find the maximum value of K_mn.",
+    "answer": "[[6]]",
+    "needle": "We can do this by BFS. The maximum value of K_mn is 6.",
+    "difficulty": "4",
+    "length": "989",
+    "rule_id": "1"
+  },
+  {
+    "idx": "73",
+    "question": "In an m \u00d7 n grid, where the rows are numbered from bottom to top and the columns from left to right, there is a chess piece that moves like a knight in chess, with an L-shaped move (2 steps in one direction and then 1 step perpendicular to it). The grid is made up of points that are labeled by their row and column. For example, a point (a, b) means the point in row a and column b. Example\uff1aIn a 4-row 5-column board, we have all the positions (1,1) (1,2) (1,3) (1,4) (1,5) (2,1) (2,2) (2,3) (2,4) (2,5) (3,1) (3,2) (3,3) (3,4) (3,5) (4,1) (4,2) (4,3) (4,4) (4,5). Start from (2,3), you can go to (1,1) (3,1) (4,2) (4,4) (3,5) (1,5). Now you are asked to consider a larger 9 \u00d7 9 grid (which is a typical chessboard layout) with 81 positions. The task asks you to follow the knight's movement rules and check how far the knight can go on this 9x9 grid.  Starting from point (1, 1), we define the minimum steps needed to reach each point (m,n) as K_mn. We define the maximum value of K_mn for all m,n as K_max. Find the number of positions that have the K_mn == K_max. For example, if you find 2 positions that have their K_mn == K_max, you should answer [[2]].",
+    "answer": "[[4]]",
+    "needle": "We can do this by BFS. The maximum value of K_mn is 6. There are 4 such positions.",
+    "difficulty": "4",
+    "length": "1160",
+    "rule_id": "1"
+  },
+  {
+    "idx": "74",
+    "question": "In an m \u00d7 n grid, where the rows are numbered from bottom to top and the columns from left to right, there is a chess piece that moves like a knight in chess, with an L-shaped move (2 steps in one direction and then 1 step perpendicular to it). The grid is made up of points that are labeled by their row and column. For example, a point (a, b) means the point in row a and column b. Example\uff1aIn a 4-row 5-column board, we have all the positions (1,1) (1,2) (1,3) (1,4) (1,5) (2,1) (2,2) (2,3) (2,4) (2,5) (3,1) (3,2) (3,3) (3,4) (3,5) (4,1) (4,2) (4,3) (4,4) (4,5). Start from (2,3), you can go to (1,1) (3,1) (4,2) (4,4) (3,5) (1,5). Now you are asked to consider a larger 9 \u00d7 9 grid (which is a typical chessboard layout) with 81 positions. The task asks you to follow the knight's movement rules and check how far the knight can go on this 9x9 grid.  Starting from point (1, 1), we define the minimum steps needed to reach each point (m,n) as K_mn. We define the maximum value of K_mn for all m,n as K_max. Find all positions (m,n) that have the K_mn == K_max. Answer in format of [[(m1,n1), (m2,n2), (m3,n3), ...]] from the top row to the bottom row and from the left column to the right column.",
+    "answer": "[[(7,9), (8,8), (9,7), (9,9)]]",
+    "needle": "We can do this by BFS. The maximum value of K_mn is 6. There are 4 such positions.",
+    "difficulty": "4",
+    "length": "1199",
+    "rule_id": "1"
+  },
+  {
+    "idx": "75",
+    "question": "In a class of 60 students, each student records their birthday as a month and a day. Each student is asked two questions: How many people have the same birth month as you? How many people have the same birth day as you? (For example, January 12 and December 12 have the same day number.) It turns out that the answers include all integers from 0 to 14. How many students in the class must have the same birthday? Answer in format [[your_answer]]",
+    "answer": "[[2]]",
+    "needle": "",
+    "difficulty": "5",
+    "length": "445",
+    "rule_id": "1"
+  },
+  {
+    "idx": "76",
+    "question": "Huanhuan, Yingying, and Nini have a total of 2,712 cards in their hands, and there are some cards on the table as well. The three of them carried out the following operations: The first time, Huanhuan took 1 card each from Yingying and Nini's hands;The second time, Nini took 2 cards from the table, and asked the one with fewer cards among Huanhuan and Yingying to take 1 card from the one with more cards;The third time, Yingying took 4 cards from the table. If the number of cards in her hand is an even number, she gave half of the cards in her hand to the one with fewer cards among Huanhuan and Nini; if it is an odd number, the game ends.We call the above three operations a round of operations. If they carried out 50 rounds of operations smoothly without the game ending. At this time, the number of cards in their hands forms an arithmetic sequence in the order of Nini, Huanhuan, and Yingying. Then, originally, Huanhuan had ______ cards. Answer in format [[number]] ",
+    "answer": "[[754]]",
+    "needle": "",
+    "difficulty": "5",
+    "length": "978",
+    "rule_id": "1"
+  },
+  {
+    "idx": "77",
+    "question": "The problem in the image asks about a scenario where six points are labeled A,B,C,D,E,F on a hexagon, and the six Chinese characters are placed randomly on these points. The goal is to determine how many different ways the six characters can be placed such that each point gets exactly one character, and no two characters end up on adjacent points.",
+    "answer": "[[4]]",
+    "needle": "To solve this problem, evaluate each term individually using the greatest integer function. Calculate the individual terms, and then sum the results.",
+    "difficulty": "4",
+    "length": "349",
+    "rule_id": "1"
+  },
+  {
+    "idx": "78",
+    "question": "As shown in the figure, circles represent rooms, solid lines represent above - ground passages, and dashed lines represent underground passages. Initially, a policeman and a thief are in two different rooms. Each time, the policeman moves from the room he is in to an adjacent room through an above - ground passage. At the same time, the thief moves from the room he is in to an adjacent room along an underground passage. If the policeman and the thief have not met in any room after moving 3 times, then how many different routes do they have? (Note: the rooms are just six nodes on a ring, and solid lines and dashed lines are both the ring it self, these two passages are parallel with each other but connects all rooms totally in the same way.) Answer in format of [[number]]",
+    "answer": "[[1476]]",
+    "needle": "",
+    "difficulty": "4",
+    "length": "781",
+    "rule_id": "1"
+  },
+  {
+    "idx": "79",
+    "question": "There are currently five honest security guards, A, B, C, D, and E. Each of them is on duty for three days from December 1st to 5th, 2016. There will be 3 security guards on duty every day, and the duty arrangement of each security guard is on a 5-day cycle. Today (Sunday, January 1st, 2017), regarding their duty situation last month, the 5 people had the following conversation:A: B and I had more duty days on weekends (Saturdays and Sundays) than the other 3 people.B: I have been on duty with the other 4 people this month.C: I was supposed to be off on December 3rd, but that day happened to be the preliminary round of the Mathematical Garden Exploration Competition, so I came to help. Unfortunately, it doesn't count as being on duty.D: E is always arranged to be on duty with me.E: A and I were both on duty on Christmas Day (December 25th).Then, the five-digit number formed by arranging in sequence the dates of the second, sixth, and tenth duty days of security guard A in December is",
+    "answer": "[[41016]]",
+    "needle": "",
+    "difficulty": "5",
+    "length": "998",
+    "rule_id": "1"
+  },
+  {
+    "idx": "80",
+    "question": "Fill the empty cells of the 6 *6 grid below with the integers 1 through 6 so that all of the following constraints are satisfied: Row and Column Uniqueness: Each integer 1-6 appears exactly once in each row and exactly once in each column. 2 *3 'Palaces': The grid is partitioned into six non-overlapping 2 * 3 blocks (called 'palaces'). Each palace must also contain the integers 1-6 exactly once. The palace boundaries are as follows (rows 1-2, 3-4, 5-6 and columns 1-3, 4-6): 2 *3 'Palaces':The grid is partitioned into six non-overlapping 2 *3 blocks (called 'palaces'). Each palace must also contain the integers 1-6 exactly once. The palace boundaries are as follows (rows 1-2, 3-4, 5-6 and columns 1-3, 4-6):Palace 1: rows 1-2, columns 1-3Palace 2: rows 1-2, columns 4-6Palace 3: rows 3-4, columns 1-3 Palace 4: rows 3-4, columns 4-6Palace 5: rows 5-6, columns 1-3 Palace 6: rows 5-6, columns 4-6 Certain groups of cells (cages) are outlined by dashed borders; each cage has a target sum (displayed at its top-left corner). The numbers placed within a cage must be distinct and must sum exactly to the cage's target. The cages are specified by their target sum and constituent cell coordinates (row, column), where rows and columns are 1-indexed: Sum   Cells (row,col)   Notes 12   (1,1), (2,1), (3,1)   a 3-cell cage  13   (1,2), (2,2), (3,2),(4,2)   a 4-cell cage  11   (1,3), (2,3)   a 2-cell cage   6   (1,4), (1,5)   a 2-cell cage 7   (1,6), (2,6)   a 2-cell vertical cage 11   (2,4), (3,4) (4,4) a 3-cell L vertical cage 14   (2,5), (3,5),(3,6),(4,6)   a 4-cell lighting shape cage 6   (4,1), (5,1)   a 2-cell vertical cage  9   (5,4), (6,4)   a 2-cell vertical cage 7   (3,6), (4,6)   a 2-cell vertical cage11   (5,2), (6,1), (6,2)    a 3-cell vertical cage 9   (4,5), (5,5), (6,5)    a 3-cell vertical cage  10 (3,3),(4,3),(5,3),(6,3) a 4-cell vertical cage Provide a fully filled 6 * 6 grid (as a nested list) that meets all of the above constraints. ",
+    "answer": "[[2, 3, 6, 1, 5, 4, 4, 1, 5, 2, 6, 3, 6, 4, 2, 3, 1, 5, 1, 5, 3, 6, 4, 2, 5, 2, 1, 4, 3, 6, 3, 6, 4, 5, 2, 1]]",
+    "needle": "To solve this problem, apply the correct order of operations (multiplication first, then addition) to the expression and compute the correct result.",
+    "difficulty": "3",
+    "length": "2049",
+    "rule_id": "1"
+  },
+  {
+    "idx": "81",
+    "question": "The large circle is approximately circular but irregular, with a 400-meter track. Point A is connected to point B through the 'diameter' of this irregular circle, with the line AB passing through the 'center' of the circle. When running along the track, the distance from A to B is 200 meters, but when running along the 'diameter' AB, the straight-line distance is 50 meters.\n\nA father and his son both start from point A, running counterclockwise along the track for their exercise. The son runs the large circle and never runs along the 'diameter' AB, while the father runs the small circle. Each time the father reaches point B, he runs along the straight line AB back to A. The father takes 20 seconds to run 100 meters, and the son takes 19 seconds to run 100 meters.\n\nAt what lap will the son first meet the father again, assuming they both run at these speeds? Answer in format of [[lap]]",
+    "answer": "[[3]]",
+    "needle": "To solve this problem, first calculate the speeds of both the father and the son. Then calculate the time it takes for each to run a lap. Use their relative speeds to determine when they will first meet. The time it takes for the father to reach point B and back should be factored in as well.",
+    "difficulty": "5",
+    "length": "896",
+    "rule_id": "1"
+  },
+  {
+    "idx": "82",
+    "question": "Fill the four operation symbols '+', '-', '*', '\u00f7' into the following four boxes respectively to maximize the value of the expression. \n\n1/2 () 1/3 () 1/4 () 1/5 () 1/6. Use each symbol once and only once. Answer the maximum value in format of [[maximum value]]. Answer in format of [[number]] in a m/n format where m and n are coprime integers.",
+    "answer": "[[9/5]]",
+    "needle": "To solve this problem, consider the order of operations and how each operator affects the value of the fraction. Evaluate the best arrangement of the operators to maximize the result.",
+    "difficulty": "3",
+    "length": "345",
+    "rule_id": "1"
+  },
+  {
+    "idx": "83",
+    "question": "10. The numbers have already been filled in the 3*3 table in Figure 3. Select a black - grid as the starting point. If one of the four operations (addition, subtraction, multiplication, division, with the larger number in front during calculation) is performed on the number in this black - grid and the number in the adjacent white - grid, and the calculation result is an integer multiple of the number in the other black - grid adjacent to the white - grid, then you can move to the next black - grid through this white - grid. It is required that each grid is passed exactly once. (For example, in Figure 4, you can move from 7 to 5 through 8, and 7 8 5 4 1 2 3 6 9 shows a correct way of moving.) Please find the correct way of moving in Figure 3. If the numbers filled in the first 3 grids of the correct way of moving in Figure 3 are A, B, C in turn, then the three - digit number ABC is __________. Figure 3:| 4 | 9 | 2 |\n| 3 | 5 | 7 |\n| 8 | 1 | 6 | Figure 4: | 1 | 2 | 3 |\n| 4 | 5 | 6 |\n| 7 | 8 | 9 |\n; path: 7 8 5 4 1 2 3 6 9. Answer in format [[ABC]]",
+    "answer": "[[834]]",
+    "needle": "To solve this problem, analyze the pattern of winning and losing positions. Consider different values of m and n, and apply game theory principles to determine the winning strategy for player A.",
+    "difficulty": "4",
+    "length": "1061",
+    "rule_id": "1"
+  },
+  {
+    "idx": "84",
+    "question": "In the 5*5 grid table of Figure 1, fill in the four letters A, B, C, and D with the requirement that each of the four letters appears exactly once in each row and each column.If a letter is marked on the left side of a certain row, it indicates the first letter that appears in this row; if a letter is marked on the right side of a certain row, it indicates the last letter that appears in this row. Similarly, if a letter is marked above (or below) a certain column, it indicates the first (or last) letter that appears in this column. Please fill in all the positions. \n   - - C - A\n  +-+-+-+-+-+\n A|O|O|O|O|O|\n  +-+-+-+-+-+\n  |O|O|O|O|O|\n  +-+-+-+-+-+\n D|O|O|O|O|O|\n  +-+-+-+-+-+\n A|O|O|O|O|O|\n  +-+-+-+-+-+\n  |O|O|O|O|O|B\n  +-+-+-+-+-+\n   - D - A - Answer in format [[C,O,A,D,B,D,A,...]] where give all rows from top to bottom without any thing to seperate the rows, and if you didn't fill in the letter, please fill in O.",
+    "answer": "[[A,B,C,D,O,B,C,D,O,A,D,O,A,B,C,O,A,B,C,D,C,D,O,A,B]]",
+    "needle": "To solve this problem, minimize (x_4 + x_5 + x_6 + x_7)by choosing the smallest possible values for (x_1, x_2, x_3)while maintaining the condition that the sum of all seven numbers equals 2015. Then calculate the minimum sum of the last four numbers.",
+    "difficulty": "4",
+    "length": "927",
+    "rule_id": "1"
+  },
+  {
+    "idx": "85",
+    "question": "Let m be a natural number, a = m\u00b2 + 4, b = (m + 1)\u00b2 + 4, then what is the maximum value of the greatest common divisor (GCD) of a and b?",
+    "answer": "[[7]]",
+    "length": "136",
+    "rule_id": "1"
+  },
+  {
+    "idx": "86",
+    "question": "Nine small squares of equal size are arranged to form a nine-square grid. Now, starting from point A at the lower left corner of the lower left square, and walking to point B at the upper right corner of the upper right square, each step can only be along the diagonal of a small square from one vertex to another vertex, and it is not allowed to take a repeated route. Then, there are ____ different ways to walk from point A to point B.",
+    "answer": "[[9]]",
+    "length": "438",
+    "rule_id": "1"
+  },
+  {
+    "idx": "87",
+    "question": "The \"H calculation\" for a given integer n is defined as: When n is odd, H = 3n + 13. When n is even, H = n * 1/2 * 1/2 * ... (with the number of halves depending on the number of times n is even, until H is odd). For example, when n = 3, after 1 \"H calculation\", the result is 22. After 2 \"H calculations\", the result is 11. After 3 \"H calculations\", the result is 46. Now, if we find that when we do many iterations of \"H calculations\" to a certain number, the result of the \"H calculation\" is always a constant number a, find all the possible values of a. Answer in format of [[a1, a2, a3, ...]] from smallest to largest",
+    "answer": "[[1, 13]]",
+    "length": "622",
+    "rule_id": "1"
+  },
+  {
+    "idx": "88",
+    "question": "As shown in the right - hand figure, there are 2009 points on the circumference, numbered from 1 to 2009. Starting from the point numbered 1, remove one point every 6 points. For example, the first point removed is the point numbered 8, and the second point removed is the point numbered 15. Find the number of the point removed for the 500th time.",
+    "answer": "[[1748]]",
+    "needle": "Use mod calculation to find the rules.",
+    "rule_id": "1",
+    "difficulty": "4",
+    "length": "348"
+  },
+  {
+    "idx": "89",
+    "question": "Fill the numbers from 1 to 16 into a 4*4 table. It is required that for the same row, the number on the right is greater than the number on the left; for the same column, the number below is greater than the number above. Among them, 4 and 13 have been filled. There are ______ different filling methods for the remaining 14 integers. The table is presented as:[[x,x,x,x],[x,4,x,x],[x,x,13,x],[x,x,x,x]] . Answer in format of [[number]]",
+    "answer": "[[1120]]",
+    "needle": "",
+    "rule_id": "1",
+    "difficulty": "3",
+    "length": "436"
+  },
+  {
+    "idx": "90",
+    "question": "Place B is to the east of Place A. Jia and Yi respectively start simultaneously from Places A and B and move eastward at a constant - speed. A small dog starts at the same time as Jia and shuttles back and forth between Jia and Yi (that is, runs from Jia to Yi, turns around to run towards Jia after catching up with Yi, and turns around to run towards Yi again after meeting Jia). When the small dog returns to Jia's position for the first time, Jia has exactly walked 140 meters. When the small dog returns to Jia's position for the second time, Jia has walked a total of 350 meters. If the speed of the small dog is three times that of Yi, then when the small dog catches up with Yi for the third time, the distance between Jia and Yi is ______ meters. Answer in format of [[number]]",
+    "answer": "[[1080]]",
+    "length": "786",
+    "rule_id": "1"
+  },
+  {
+    "idx": "91",
+    "question": "There are n  cards, each with a non - zero natural number written on it, and they are all different from each other. Xiao Li and  other (n-1)children play a game. Each person randomly takes one card, and the process is repeated n times. Each time, everyone writes down the number they get and then puts the card back. Finally, everyone calculates the sum of the numbers they get as their score and ranks according to the scores. It is known that the numbers that Xiao Li gets in n times are all different. The scores of the other children are all different from each other, and the sum of their scores (excluding Xiao Li) is 2001. Question: What is the value of n? What is the highest rank that Xiao Li can get? Answer in format of [[n, highest rank]], for example, [[6, 1]] if you think n equals 6 and the highest rank that Xiao Li can get is 1",
+    "answer": "[[667, 2]]",
+    "length": "845",
+    "rule_id": "1"
+  },
+  {
+    "idx": "92",
+    "question": "You are given a graph with 6 nodes labeled A, B, C, D, E, and F. The edges of the graph are as follows:\n\nA is connected to B and C.\nB is connected to A, C, and D.\nC is connected to A, B, and E.\nD is connected to B, E, and F.\nE is connected to C, D, and F.\nF is connected to D and E.\n\nNode B is assigned the value 1. You need to fill in the remaining 5 nodes (A, C, D, E, and F) with numbers from the set {2, 3, 4, 5, 6}, such that:\n\n- No two nodes in the graph have the same number.\n- The difference between the numbers assigned to two nodes connected by an edge must be at least 2.\n\nYour task is to determine how many different ways the numbers can be assigned to the nodes under these constraints.",
+    "answer": "[[3]]",
+    "needle": "To solve this problem, systematically assign the numbers to the nodes while respecting the constraints. Use backtracking or other combinatorial methods to find how many different ways the assignment can be done.",
+    "difficulty": "5",
+    "length": "699",
+    "rule_id": "1"
+  },
+  {
+    "idx": "93",
+    "question": "There's a graph with 18 nodes, and each node is a circle that needs to be filled with a digit from 1 to 9, but none of them can be zero. The rules are:For any two circles that are directly connected by a line, the difference between the numbers in those circles has to be at least 2.Each digit from 1 to 9 must appear exactly twice in the entire graph. The graph structure has total 18 nodes, horizontal edges: 4-C-D-1 A-E-8 8-4-F-5 2-G-H I-B-J-K vertial edges: 4-8-I 1-5-K diagonal from top left to bottom right: 8-A-C I-2-4-E-D B-G-F-8-1 J-H-5 K top right to bottom left:   D-8-5  C-E-F-H-K 4-A-4-G-J 8-2-B. Answer in format [[4-C-D-1, A-E-8, 8-4-F-5 2-G-H, I-B-J-K]] with all these unknown number solved",
+    "answer": "[[4-3-5-1,2-6-8,8-4-1-5,2-7-3,6-9-5-7]]",
+    "length": "706",
+    "rule_id": "1"
+  },
+  {
+    "idx": "94",
+    "question": "2016. There will be 3 security guards on duty every day, and the duty arrangement of each security guard is on a 5-day cycle. Today (Sunday, January 1st, 2017), regarding their duty situation last month, the 5 people had the following conversation:A: B and I had more duty days on weekends (Saturdays and Sundays) than the other 3 people.B: I have been on duty with the other 4 people this month.C: I was supposed to be off on December 3rd, but that day happened to be the preliminary round of the Mathematical Garden Exploration Competition, so I came to help. Unfortunately, it doesn't count as being on duty.D: E is always arranged to be on duty with me.E: A and I were both on duty on Christmas Day (December 25th).Then, the five-digit number formed by arranging in sequence the dates of the second, sixth, and tenth duty days of security guard A in December is [[]]",
+    "answer": "[[41016]]",
+    "length": "870",
+    "rule_id": "1"
+  },
+  {
+    "idx": "95",
+    "question": "As shown in Figure 1, it is a 3\u00d73 grid table. Each grid (except the last one) contains a number from 1 to 9 and an arrow. The arrow in each grid points exactly to the direction of the grid where the next - numbered grid is located. For example, the arrow in the grid numbered 1 points to the right, which means that the grid numbered 2 is to the right of the grid numbered 1. The arrow in the grid numbered 2 points diagonally downward, which means that the grid numbered 3 is diagonally below the grid numbered 2. The arrow in the grid numbered 3 points upward, which means that the grid numbered 4 is above the grid numbered 3, ...... (The pointed - to grid does not have to be adjacent). In this way, the entire grid table can be traversed from 1 to 9. Figure 2 is a grid table with only arrows and the numbers 1 and 9 marked. If the entire grid table can also be traversed from 1 to 9 according to the above requirements, then the number that should be marked in the grid where A is located is ________.Fig1 [[left down leftdown right right leftup up right star]] Fig 2 [[right right down rightdown leftdown left rightup rightup star]] Anwer in number [[]]",
+    "answer": "[[6]]",
+    "needle": "",
+    "difficulty": "5",
+    "length": "1160",
+    "rule_id": "1"
+  },
+  {
+    "idx": "96",
+    "question": "In order to welcome the arrival of the Spring Festival in 2010, the bee kingdom built a honeycomb as follows. In each regular hexagonal honeycomb cell, there is a number 0, 1 or 2 formed by the condensation of honey. When the Spring Festival arrives, the bees will dance on the honeycomb. Each beat of the dance steps just passes through the four - digit number: 2010 (starting from a certain 2 and returning to 2 after four steps in the figure for one dance step), and the bee can only move from one regular hexagonal cell to another regular hexagonal cell with a common side in each step. The bee needs to pass through four regular hexagonal cells and the obtained numbers are 2010 in sequence. There are ____ ways in total. Note: the figure is likea traditional hexagonal honeycomb cell, one cell is at the center with number 1, surrounded by six cells with number 6, and the third and the outmost layer is 12 regular hexagonal cells with number 2. Answer in format [[number]]",
+    "answer": "[[30]]",
+    "needle": "",
+    "difficulty": "4",
+    "length": "979",
+    "rule_id": "1"
+  },
+  {
+    "idx": "97",
+    "question": "Fill each blank with a number from 1 to 6 so that the numbers in each row, each column, and each 2\u00d73 'palaces' has no repeated numbers. The fraction between two cells represents the quotient of the smaller number divided by the larger number of the two. Then, what is all the numbers in each row from top to bottom? Answer in [[1,2,3,4,5,6,...]] format to fill all 36 grids and you needn't add special characters to indicate different rows, just put 36 numbers in double brackets. RELATION\n (1,1)(1,2) 1/5; (1,6)(2,6) 2/5; (2,2)(3,2) 2/3; (2,4)(3,4) 1/2; (3,1)(4,1) 4/5; (3,6)(4,6) 1/4; (4,3)(5,3) 3/4; (4,5)(5,5) 5/6; (5,1)(6,1) 1/3; (6,5)(6,6) 2/3;  Note: the palaces are just 2row*3col grids composed of 6 cells, and we have 1 2\n 3 4\n 5 6\n six 'palaces' in this 6*6 grid.",
+    "answer": "[[1,5,6,4,3,2,3,4,2,6,1,5,5,6,1,3,2,4,4,2,3,5,6,1,6,1,4,2,5,3,2,3,5,1,4,6]]",
+    "length": "1098",
+    "rule_id": "1"
+  },
+  {
+    "idx": "98",
+    "question": "As shown in the figure, a 5\u00d75 grid is divided into five regions. You need to fill each cell with one of the numbers 1, 2, 3, 4, or 5, such that each row, each column, and each diagonal contains five different numbers, and the sum of the numbers in each region is equal. Currently, two cells are already filled with 1 and 2 respectively. Please fill in the appropriate numbers in the other cells. Answer in this format: [[5,4,3,1,2,3,4,5,...]] listing all numbers from left to right, top to bottom, with commas between numbers and no special markers between rows.\n+-+-+-+-+-+\n|O O O 1|2|\n+-+ +-+-+ +\n|O|O|O O O|\n+ +-+-+ + +\n|A|B C|D E|\n+ + + +-+-+\n|O|O O|O O|\n+ +-+ + + +\n|O O|O|O O| \n+-+-+-+-+-+",
+    "answer": "[[3,5,4,1,2,5,2,1,3,4,1,4,5,2,3,2,1,3,4,5,4,3,2,5,1]]",
+    "length": "695",
+    "rule_id": "1"
+  },
+  {
+    "idx": "99",
+    "question": "In the 5*12 grid, some cells are shaded(x) forming '2007'. Meanwhile, o means the cell is not shaded. If we hope to devide the shaded area into several 1*2 rectangles, how many ways are there? Ansewr in format [[number]] Grid: xxxxxxxxxxxx\nooxxoxxoxoox\nxxxxoxxoxoox\nxooxoxxoxoox\nxxxxxxxxxoox",
+    "answer": "[[15]]",
+    "length": "291",
+    "rule_id": "1"
+  },
+  {
+    "idx": "100",
+    "question": "In the 5*12 grid, some cells are shaded(x) forming '0000'. Meanwhile, o means the cell is not shaded. If we hope to devide the shaded area into several 1*2 rectangles, how many ways are there? Ansewr in format [[number]] Grid:xxxxxxxxxxxx\nxoxxoxxoxxox\nxoxxoxxoxxox\nxoxxoxxoxxox\nxxxxxxxxxxxx\n",
+    "answer": "[[432]]",
+    "length": "291",
+    "rule_id": "1"
+  }
+]

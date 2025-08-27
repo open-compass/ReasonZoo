@@ -1,0 +1,561 @@
+boolean_logic_prompt_format:
+  - |
+    You are an intelligent assistant that helps with various logical calculation tasks, like set operation, finite state machine, digital logic, etc.
+     After you have written an answer in plain text, if you can write python code, you must use coding to solve the problem. Please start coding with '''python and end with ''', and remember to use return statement to return the answer.
+       - First try your best to solve the problem without code as usual  and give an answer.
+       - Then write the code between exactly '''python and ''' delimiters
+       - You  may use outer packages, including but not limited to sympy, nltk, numpy, cvxpy, pulp, ortools, scipy, pandas, networkx,   to assist you implement better algorithm     
+       Example:
+       '''python
+       def calculate_sum(a: int, b: int) -> int:
+           return a + b
+       def main():
+           answer = calculate_sum(1,1)
+           return "The answer is [[", + answer + "]]"
+       '''
+       
+    ### Logic Calculation Rule:
+
+    {}
+
+    ### Question:
+    {}
+
+    ### Answer:
+
+dailylogic_prompt_format:
+  - |
+    You are an intelligent assistant specializing in solving logic grid puzzles (also known as dailylogic puzzles). Your task is to solve the given puzzle by carefully analyzing the clues and constraints provided.
+
+    ### Instructions:
+
+    1. Carefully analyze all given information about houses, occupants, and their attributes.
+    2. Use the provided clues to establish logical connections and constraints.
+    3. Present your solution in the specified JSON format.
+    4. Include clear reasoning that explains how you arrived at the solution.
+    5. After you have written an answer in plain text, if you can write python code, you must use coding to solve the problem.
+
+    Here's a working example using constraint programming to solve Einstein's dailylogic Puzzle:
+
+    '''python
+    from typing import Dict, List
+    from constraint import Problem, AllDifferentConstraint
+
+    def solve_dailylogic_puzzle() -> Dict[str, List[tuple]]:
+        """Solves the Einstein's dailylogic Puzzle using constraint programming."""
+        problem = Problem()
+        
+        # Houses are numbered 1-5 from left to right
+        houses = range(1, 6)
+        
+        # Variables for each attribute
+        colors = ["red", "green", "ivory", "yellow", "blue"]
+        nationalities = ...
+        
+        # Add variables to the problem
+        for items in [colors, nationalities, pets, drinks, cigarettes]:
+            for item in items:
+                problem.addVariable(item, houses)
+        
+        # All values in each category must be different
+        for items in [colors, nationalities, pets, drinks, cigarettes]:
+            problem.addConstraint(AllDifferentConstraint(), items)
+        
+        # Add all the given constraints
+        problem.addConstraint(lambda e, r: e == r, ("Englishman", "red"))
+        problem.addConstraint(lambda s, d: s == d, ("Spaniard", "dog"))
+        ...
+        
+        # Get solution
+        solution = problem.getSolution()
+        if not solution:
+            return "No solution found"
+            
+        # Format results
+        result =...
+        
+        return result
+
+    def main() -> str:
+        """Main function that returns the formatted answer."""
+        try:
+            result = solve_dailylogic_puzzle()
+            return ...
+        except Exception as e:
+            return ...
+
+    if __name__ == "__main__":
+        print(main())
+    '''
+
+    ### Puzzle Rule:
+    {}
+
+    ### Question:
+    {}
+
+    ### Answer:
+ 
+
+communication_code_prompt_format:
+- |
+  You are an intelligent assistant that specializes in solving formal language tasks. You can write python code to solve the problem.  Note that you should use python to design algorithm and solve the problem automatically instead of return an answer you assume directly. In other words, program helps you think and return the answer. Please start coding with '''python and end with ''', and remember to use return statement to return the answer.
+  ### Instructions:
+
+  1. Identify the relevant properties and objects specified in the rule.
+  2. Follow the specified operations precisely as described in the rules.
+  3. Ensure your output is formatted according to the specified notation and symbols.
+  4. When writing Python code:
+      - First write your reasoning and solution approach in plain text
+      - Then provide a complete, self-contained Python solution between '''python and ''' delimiters
+      - Your code must include a main() function that returns the final answer and use print() to print the answer
+      - The answer should be in the format of [[...]]
+
+    Here's a working example that finds the sum of prime numbers under 20:
+    
+    '''python
+    from typing import List
+    import math
+    
+    def is_prime(n: int) -> bool:
+        """Helper function to check if a number is prime."""
+        if n < 2:
+            return False
+        for i in range(2, int(math.sqrt(n)) + 1):
+            if n % i == 0:
+                return False
+        return True
+    
+    def main() -> str:
+        """Main function that solves the problem and returns formatted answer."""
+        try:
+            # Find all primes under 20
+            primes = [n for n in range(2, 20) if is_prime(n)]
+            # Calculate their sum
+            result = sum(primes)
+            # Return formatted answer
+            return ...
+        except Exception as e:
+            return ...
+    
+    if __name__ == "__main__":
+        print(main())
+    '''
+    
+    - You may use these packages: numpy, sympy, scipy, pandas, networkx, pulp, ortools, cvxpy
+    - Always include necessary imports at the top
+    - Always include type hints
+    - Always include error handling
+    - Always include docstrings for main functions
+    - Always include the if __name__ == "__main__" block
+    - Always return answer in the format: [[answer]]
+       
+
+  ### Cipher Rule:
+
+  {}
+
+  ### Question:
+  {}
+
+  ### Answer:
+
+operation_research_prompt_format:
+  - |
+    You are an intelligent assistant that specializes in solving formal language tasks. You can write python code to solve the problem.  Note that you should use python to design algorithm and solve the problem automatically instead of return an answer you assume directly. In other words, program helps you think and return the answer. Please start coding with '''python and end with ''', and remember to use return statement to return the answer.
+    ### Instructions:
+
+    1. Identify the relevant properties and objects specified in the rule.
+    2. Follow the specified operations precisely as described in the rules.
+    3. Ensure your output is formatted according to the specified notation and symbols.
+    4. After you have written an answer in plain text, if you can write python code, you must use coding to solve the problem. Please start coding with '''python and end with ''', and remember to use return statement to return the answer.
+       - First try your best to solve the problem without code as usual and give an answer.
+       - Then write the code between exactly '''python and ''' delimiters
+       - You may use outer packages, including but not limited to sympy, nltk, numpy, cvxpy, pulp, ortools, scipy, pandas, networkx, to assist you implement better algorithm
+
+      Example solving a simple optimization problem (maximize 3x + 2y subject to x + y ≤ 4, x ≥ 0, y ≥ 0):
+      
+      '''python
+      from pulp import *
+      from typing import Dict
+      
+      def solve_optimization() -> Dict[str, float]:
+          """Solve a simple linear programming problem using PuLP."""
+          # Create the model
+          model = LpProblem(name="simple_maximize", sense=LpMaximize)
+          
+          # Define the variables
+          x = LpVariable(name="x", lowBound=0)
+          y = LpVariable(name="y", lowBound=0)
+          
+          # Define the objective function
+          model += 3 * x + 2 * y
+          
+          # Define the constraints
+          model += (x + y <= 4, "resource_constraint")
+          
+          # Solve the model
+          model.solve()
+          
+          # Get the results
+          solution = model.objective.value()
+          return ...
+      
+      def main() -> str:
+          """Main function that returns the formatted answer."""
+          try:
+              result = solve_optimization()
+              return ...
+          except Exception as e:
+              return ...
+      
+      if __name__ == "__main__":
+          print(main())
+      '''
+    - You may use these packages: numpy, sympy, scipy, pandas, networkx, pulp, ortools, cvxpy
+    - Always include necessary imports at the top
+    - Always include type hints
+    - Always include error handling
+    - Always include docstrings for main functions
+    - Always include the if __name__ == "__main__" block
+    - Always return answer in the format: [[answer]]
+       
+    ### Operation Research Rule:
+
+    {}
+
+    ### Question:
+    {}
+
+    ### Answer:
+    
+number_calculation_prompt_format:
+  - |
+    1. Identify the relevant properties and objects specified in the rule.
+    2. Follow the specified operations precisely as described in the rules.
+    3. Ensure your output is formatted according to the specified notation and symbols.
+    4. After you have written an answer in plain text, if you can write python code, you must use coding to solve the problem. Please start coding with '''python and end with ''', and remember to use return statement to return the answer.
+       - First try your best to solve the problem without code as usual and give an answer.
+       - Then write the code between exactly '''python and ''' delimiters
+       - You may use outer packages, including but not limited to sympy, nltk, numpy, cvxpy, pulp, ortools, scipy, pandas, networkx, to assist you implement better algorithm
+
+    Example of rotating a point around a line in 4D space:
+    
+    '''python
+    import numpy as np
+    from typing import Tuple, List
+    
+    def rotate_point_around_line_4d(
+        point: np.ndarray,
+        line_point: np.ndarray,
+        line_direction: np.ndarray,
+        angle: float
+    ) -> np.ndarray:
+        """
+        Rotate a point around a line in 4D space.
+        
+        Args:
+            point: The point to rotate (4D vector)
+            line_point: A point on the rotation line (4D vector)
+            line_direction: Direction vector of the rotation line (4D vector)
+            angle: Rotation angle in radians
+        
+        Returns:
+            Rotated point as 4D vector
+        """
+        # Normalize the direction vector
+        line_direction = line_direction / np.linalg.norm(line_direction)
+        
+        # Translate point so line passes through origin
+        translated = point - line_point
+        
+        # Project point onto line
+        projection = np.dot(translated, line_direction) * line_direction
+        
+        # Get perpendicular component
+        perpendicular = translated - projection
+        
+        # Find two orthonormal vectors perpendicular to line_direction
+        v1 = perpendicular / np.linalg.norm(perpendicular)
+        v2 = np.cross(np.cross(line_direction, v1), line_direction)
+        v2 = v2 / np.linalg.norm(v2)
+        
+        # Rotate in the plane defined by v1 and v2
+        r = np.linalg.norm(perpendicular)
+        rotated = (r * (v1 * np.cos(angle) + v2 * np.sin(angle)) + projection)
+        
+        # Translate back
+        return rotated + line_point
+    
+    def main() -> str:
+        """Example of rotating a point in 4D."""
+        try:
+            # Example inputs
+            point = np.array([1.0, 0.0, 0.0, 0.0])
+            line_point = np.array([0.0, 0.0, 0.0, 0.0])
+            ...
+        except Exception as e:
+            return ...
+    
+    if __name__ == "__main__":
+        print(main())
+    '''
+    - You may use these packages: numpy, sympy, scipy, pandas, networkx, pulp, ortools, cvxpy
+    - Always include necessary imports at the top
+    - Always include type hints
+    - Always include error handling
+    - Always include docstrings for main functions
+    - Always include the if __name__ == "__main__" block
+    - Always return answer in the format: [[answer]]
+       
+    ### Instructions:
+
+    {}
+
+    ### Question:
+    {}
+
+    ### Answer:
+
+gradeschoolmath_prompt_format:
+  - |
+    1. Identify the relevant properties and objects specified in the rule.
+    2. Follow the specified operations precisely as described in the rules.
+    3. Ensure your output is formatted according to the specified notation and symbols.
+    4. After you have written an answer in plain text, if you can write python code, you must use coding to solve the problem. Please start coding with '''python and end with ''', and remember to use return statement to return the answer.
+       - First try your best to solve the problem without code as usual and give an answer.
+       - Then write the code between exactly '''python and ''' delimiters
+       - You may use outer packages, including but not limited to sympy, nltk, numpy, cvxpy, pulp, ortools, scipy, pandas, networkx, to assist you implement better algorithm
+      Example calculating the day of the week, given that 2001/1/3 was Wednesday, what day is 2006/4/1:
+      '''python
+      from datetime import datetime, timedelta
+      from typing import Tuple, str
+      
+      def get_day_of_week(date: datetime) -> str:
+          """Convert day number to day name."""
+          days = ["Monday", "Tuesday", "Wednesday", 
+                  "Thursday", "Friday", "Saturday", "Sunday"]
+          return days[date.weekday()]
+          
+      def calculate_future_day(
+          known_date: Tuple[int, int, int],
+          known_day: str,
+          target_date: Tuple[int, int, int]
+      ) -> str:
+          """
+          Calculate the day of week for a target date given a known reference date.
+          
+          Args:
+              known_date: Tuple of (year, month, day) for reference date
+              known_day: Day of week for the reference date
+              target_date: Tuple of (year, month, day) for target date
+          """
+          # Convert known day to number (0 = Monday, 6 = Sunday)
+          days = ["Monday", "Tuesday", "Wednesday", 
+                  "Thursday", "Friday", "Saturday", "Sunday"]
+          known_day_num = days.index(known_day)
+          
+          # Create datetime objects
+          known = datetime(known_date[0], known_date[1], known_date[2])
+          target = datetime(target_date[0], target_date[1], target_date[2])
+          
+          # Calculate the difference in days
+          diff_days = (target - known).days
+          
+          # Calculate the target day number (modulo 7)
+          target_day_num = (known_day_num + diff_days) % 7
+          
+          return days[target_day_num]
+      
+      def main() -> str:
+          """Calculate what day 2006/4/1 falls on, given 2001/1/3 was Wednesday."""
+          try:
+              result = calculate_future_day(
+                  known_date=(2001, 1, 3),
+                  known_day="Wednesday",
+                  target_date=(2006, 4, 1)
+              )
+              return ...
+          except Exception as e:
+              return ...
+      
+      if __name__ == "__main__":
+          print(main())
+      '''
+     - You may use these packages: numpy, sympy, scipy, pandas, networkx, pulp, ortools, cvxpy
+    - Always include necessary imports at the top
+    - Always include type hints
+    - Always include error handling
+    - Always include docstrings for main functions
+    - Always include the if __name__ == "__main__" block
+    - Always return answer in the format: [[answer]]
+       
+    ### Instructions:
+
+    {}
+
+    ### Question:
+    {}
+
+    ### Answer:
+
+formal_language_prompt_format:
+  - |
+    You are an intelligent assistant that specializes in solving formal language tasks. 
+    If you can write python code, you must use coding to solve the problem after you have written an answer in plain text. Please start coding with '''python and end with ''', and remember to use return statement to return the answer.\n  
+     When writing Python code:
+       - First try your best to solve the problem without code as usual  and give an answer.
+       - Then write the code between exactly '''python and ''' delimiters
+       - You  may use outer packages, including but not limited to sympy, nltk, numpy, cvxpy, pulp, ortools, scipy, pandas, networkx,   to assist you implement better algorithm     
+       Example:
+       '''python
+       import nltk
+       from typing import Dict, List
+       def generate_sentence(grammar: Dict[str, List[str]]) -> str:
+           """Generate a sentence from a grammar using NLTK."""
+           # Convert grammar to NLTK format
+           grammar = nltk.CFG.fromstring(grammar)
+           
+           # Generate a sentence
+           sentence = nltk.generate(grammar)
+           return ...
+       def main():
+           grammar = ...
+           result = generate_sentence(grammar)
+           return ...
+       if __name__ == "__main__":
+           print(main())
+       '''
+           - You may use these packages: numpy, sympy, scipy, pandas, networkx, pulp, ortools, cvxpy
+    - Always include necessary imports at the top
+    - Always include type hints
+    - Always include error handling
+    - Always include docstrings for main functions
+    - Always include the if __name__ == "__main__" block
+    - Always return answer in the format: [[answer]]
+    ### Instructions:
+
+    {}
+
+    ### Question:
+    {}
+
+    ### Answer:
+
+physics_prompt_format:
+  - |
+    1. You are an intelligent assistant that specializes in solving physics tasks. Use undergraduate physics knowledge to solve the problem.
+    2. If you can write python code, you must use coding to solve the problem after you have written an answer in plain text. Please start coding with '''python and end with ''', and remember to use return statement to return the answer.
+    When writing Python code:
+       - First try your best to solve the problem without code as usual  and give an answer.
+       - Then write the code between exactly '''python and ''' delimiters
+       - You  may use outer packages, including but not limited to sympy, nltk, numpy, cvxpy, pulp, ortools, scipy, pandas, networkx,   to assist you implement better algorithm     
+       Example:
+       '''python
+       import sympy
+       def solve_function():
+           ...
+       def main():
+           result = solve_function()
+           return ...
+       if __name__ == "__main__":
+           print(main())
+       '''
+    - You may use these packages: numpy, sympy, scipy, pandas, networkx, pulp, ortools, cvxpy
+    - Always include necessary imports at the top
+    - Always include type hints
+    - Always include error handling
+    - Always include docstrings for main functions
+    - Always include the if __name__ == "__main__" block
+    - Always return answer in the format: [[answer]]
+       
+    ### Instructions:
+
+    {}
+
+    ### Question:
+    {}
+
+    ### Answer:
+
+puzzle_and_code_prompt_format:
+  - |
+    You are an intelligent assistant that specializes in solving formal language tasks. If you can write python code, you must use coding to solve the problem after you have written an answer in plain text. Please start coding with '''python and end with ''', and remember to use return statement to return the answer.
+    When writing Python code:
+       - First try your best to solve the problem without code as usual and give an answer.
+       - Then write the code between exactly '''python and ''' delimiters
+       - You may use outer packages, including but not limited to sympy, nltk, numpy, cvxpy, pulp, ortools, scipy, pandas, networkx, to assist you implement better algorithm
+
+       Example solving the Water Jug Problem (Given two jugs of capacity x and y, find steps to measure z units of water):
+       '''python
+       from typing import List, Tuple
+       from collections import deque
+       
+       def water_jug_bfs(capacity_x: int, capacity_y: int, target: int) -> List[Tuple[int, int]]:
+           """
+           Solve the Water Jug Problem using BFS.
+           
+           Args:
+               capacity_x: Capacity of first jug
+               capacity_y: Capacity of second jug
+               target: Target amount of water
+           Returns:
+               List of steps as (jug1, jug2) amounts
+           """
+           # Store states and their parent states
+           ...
+           
+           def get_next_states(state: Tuple[int, int]) -> List[Tuple[int, int]]:
+               """Generate all possible next states from current state."""
+               x, y = state
+               next_states = [
+                   (capacity_x, y),  # Fill jug1
+                   (x, capacity_y),  # Fill jug2
+                   (0, y),          # Empty jug1
+                   (x, 0),          # Empty jug2
+                   # Pour jug1 to jug2
+                   (max(0, x - (capacity_y - y)), min(capacity_y, y + x)),
+                   # Pour jug2 to jug1
+                   (min(capacity_x, x + y), max(0, y - (capacity_x - x)))
+               ]
+               return [s for s in next_states if s not in visited]
+           
+           # BFS
+           start = (0, 0)
+           queue = deque([start])
+           visited.add(start)
+           
+          ...
+       
+       def main() -> str:
+           """Solve example water jug problem: jugs of 4L and 3L, target 2L."""
+           try:
+               solution = water_jug_bfs(4, 3, 2)
+               if solution:
+                   result = 
+                       "steps": len(solution) - 1,
+                       "path": solution
+                   
+                   return ...
+               return ...
+           except Exception as e:
+               return ...
+       
+       if __name__ == "__main__":
+           print(main())
+       '''
+    - You may use these packages: numpy, sympy, scipy, pandas, networkx, pulp, ortools, cvxpy
+    - Always include necessary imports at the top
+    - Always include type hints
+    - Always include error handling
+    - Always include docstrings for main functions
+    - Always include the if __name__ == "__main__" block
+    - Always return answer in the format: [[answer]]
+    ### Instructions:
+
+    {}
+
+    ### Question:
+    {}
+
+    ### Answer:
